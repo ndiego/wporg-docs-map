@@ -26,7 +26,7 @@
         "method": "REST pages on the WordPress.org main site (landing + guides index)",
         "date": "2026-10-14"
       },
-      "content_model": "WordPress pages on the main site; the guides index lists Squarespace, Tumblr, HTML, RSS, Wix, Drupal and Blogger guides",
+      "content_model": "Two WordPress pages on the main site (landing and guides index). The guides themselves are Markdown files in the guides/ folder of WordPress/data-liberation (15 files); the index links 7 of them (Squarespace, Tumblr, HTML, RSS, Wix, Drupal, Blogger) as github.com/WordPress/move-to-wp/blob/trunk/guides/*.md, a renamed repo that redirects",
       "source_of_truth": "WordPress database",
       "import_mechanism": "wp-admin editing",
       "editing_path": "Main-site editors (Meta / Marketing)",
@@ -37,13 +37,17 @@
       "translation": "Rosetta main-site translation of theme strings only [unverified for page content]",
       "markdown_output": "yes",
       "rest_api": "wordpress.org/wp-json/wp/v2/pages",
-      "repo_links": [],
-      "status": "stale",
-      "last_activity_signal": "Guides page modified 2024-12-13",
-      "notes": "Where the individual guides live (separate pages, Playground blueprints or external) was not verified. An imported handbook at /data-liberation/and/ was configured but returned 404 (prior research).",
+      "repo_links": [
+        "https://github.com/WordPress/data-liberation"
+      ],
+      "status": "active",
+      "last_activity_signal": "Landing modified 2026-09-14; guides index modified 2024-12-13; WordPress/data-liberation trunk last commit 2026-04-03",
+      "notes": "The guides are read on GitHub, not on WordPress.org: the index page links straight to the Markdown files. An imported handbook at /data-liberation/and/ was configured but returned 404 (prior research).",
       "evidence": [
         "REST /wp-json/wp/v2/pages listing 2026-10-14",
-        "notes/research/01-inventory.md section 14"
+        "notes/research/01-inventory.md section 14",
+        "curl wordpress.org/data-liberation/guides/ link targets 2026-10-14",
+        "gh api repos/WordPress/data-liberation/contents/guides 2026-10-14"
       ],
       "related_rows": [
         "project-about"
@@ -76,11 +80,12 @@
         "https://github.com/WordPress/Documentation-Issue-Tracker"
       ],
       "status": "active",
-      "last_activity_signal": "56 open 'HelpHub feedback' issues (2026-10-11)",
+      "last_activity_signal": "56 open 'helphub feedback' issues of 469 open (2026-10-14); newest published comment 2026-05-08",
       "notes": "Routed to Documentation-Issue-Tracker with the helphub-feedback-reports template.",
       "evidence": [
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/05-process-governance-deployment.md section 1.1 and 1.3",
-        "notes/research/01-inventory.md front-end stacks table"
+        "notes/research/01-inventory.md front-end stacks table",
+        "gh api search/issues label count 2026-10-14"
       ],
       "related_rows": [
         "helphub-articles"
@@ -103,7 +108,7 @@
       "import_mechanism": "wp-admin editing (block editor)",
       "editing_path": "HelpHub Editor / HelpHub Manager roles, granted by the Docs team to established contributors; others propose changes as Markdown in issues on WordPress/Documentation-Issue-Tracker",
       "owner_team": "Documentation team",
-      "maintainers_if_public": "Publishing group named in prior research: Estela Rueda, Milana Cap, Andrea Roenning, Akira Tachibana",
+      "maintainers_if_public": null,
       "rendering": "wporg-documentation-2022 block theme + support-helphub plugin (meta SVN)",
       "search": "No on-site search: ?s= redirects to wordpress.org/search/{q}/?in=support_docs (Google Programmable Search)",
       "translation": "Separate Rosetta copies at {locale}.wordpress.org/support/ (see rosetta-helphub)",
@@ -158,11 +163,12 @@
         "https://github.com/WordPress/wporg-documentation-2022"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Newest page modified 2024-08-09 (/documentation/overview/); theme repo WordPress/wporg-documentation-2022 trunk last commit 2026-09-09",
       "notes": "Includes site-health and update-php pages linked from wp-admin.",
       "evidence": [
         "notes/research/01-inventory.md section 1",
-        "notes/research/04-rendering-architecture.md section 1.3"
+        "notes/research/04-rendering-architecture.md section 1.3",
+        "curl REST pages orderby=modified 2026-10-14"
       ],
       "related_rows": [
         "helphub-articles"
@@ -172,8 +178,8 @@
       "id": "helphub-media",
       "name": "HelpHub media library",
       "category": "end-user docs",
-      "url": "https://wordpress.org/documentation/files/",
-      "example_url": null,
+      "url": "https://wordpress.org/documentation/wp-json/wp/v2/media",
+      "example_url": "https://wordpress.org/documentation/files/2026/10/distraction-free-location-edited.png",
       "site_or_host": "wordpress.org/documentation (path subsite of wordpress.org)",
       "page_count": {
         "value": 7239,
@@ -189,15 +195,16 @@
       "rendering": "wporg-documentation-2022 block theme + support-helphub plugin (meta SVN)",
       "search": "No on-site search: ?s= redirects to wordpress.org/search/{q}/?in=support_docs (Google Programmable Search)",
       "translation": "Not shared with Rosetta copies (each imported attachments once)",
-      "markdown_output": "yes",
+      "markdown_output": "n/a",
       "rest_api": "wordpress.org/documentation/wp-json/wp/v2/media",
       "repo_links": [],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Newest upload 2026-10-05",
       "notes": "Also used as an image host by the Advanced Administration handbook (31 images). About 450 attachment-page URLs leak into the Jetpack sitemap.",
       "evidence": [
         "notes/research/01-inventory.md section 1",
-        "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md section 3"
+        "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md section 3",
+        "curl /documentation/files/ 404 and REST media 200, 2026-10-14"
       ],
       "related_rows": [
         "helphub-articles",
@@ -212,9 +219,9 @@
       "example_url": "https://ja.wordpress.org/support/",
       "site_or_host": "{locale}.wordpress.org/support/ on 17 of about 200 Rosetta sites",
       "page_count": {
-        "value": 983,
-        "method": "Sum of REST X-WP-Total articles on all Rosetta sites: fr 296, ja 264, it 239, es-mx 59, ru 48, es 22, cn 13, br 13, ve 11, pt-ao 11, sr 3, ko 3 (fr and ja re-checked 2026-10-14)",
-        "date": "2026-10-12"
+        "value": 982,
+        "method": "Sum of REST X-WP-Total articles over the 17 of 201 Rosetta sites that expose the endpoint: fr 296, ja 264, it 239, es-mx 59, ru 48, es 22, cn 13, br 13, ve 11, pt-ao 11, sr 3, ko 3; 5 more expose it with 0 published",
+        "date": "2026-10-14"
       },
       "content_model": "helphub_article on each Rosetta site (same plugin)",
       "source_of_truth": "WordPress database on each locale site",
@@ -231,11 +238,12 @@
         "https://github.com/WordPress/Documentation-Issue-Tracker-fr_FR"
       ],
       "status": "active",
-      "last_activity_signal": "fr, ja, it near complete; 5 locales enabled with 0 published",
+      "last_activity_signal": "fr, ja, it near complete; 5 locales enabled with 0 published; fr newest modified 2026-06-15",
       "notes": "Path is /support/ on Rosetta (fr.wordpress.org/documentation/ returns 404, 2026-10-14) while English moved to /documentation/ in 2023. No change notification; third-party trackers (wp-info.org, developerka.org) fill the gap. GlotPress long-form PR #1856 open since 2024-08.",
       "evidence": [
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/05-process-governance-deployment.md section 6",
-        "curl fr.wordpress.org/documentation/ 404 and /support/ 200, 2026-10-14"
+        "curl fr.wordpress.org/documentation/ 404 and /support/ 200, 2026-10-14",
+        "Probe of 201 Rosetta sites /support/wp-json/wp/v2/articles 2026-10-14"
       ],
       "related_rows": [
         "helphub-articles",
@@ -289,7 +297,7 @@
       "import_mechanism": "wporg-markdown importer via DevHub_Docs_Importer subclass, WP-Cron every 15 minutes, pull only, never trashes removed pages; manifest https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/bin/handbook-manifest.json (hand-edited, no CI)",
       "editing_path": "Pull request to the source repo; live 4 to 15 minutes after merge. 'Edit on GitHub' link on the page.",
       "owner_team": "Documentation and Hosting teams",
-      "maintainers_if_public": "Recent mergers kittenkamala, mindctrl (prior research)",
+      "maintainers_if_public": null,
       "rendering": "wporg-developer-2023 block theme (child of wporg-parent-2021) + wporg-mu-plugins blocks",
       "search": "On-site WP_Query search scoped to the current handbook (inc/search.php); Jetpack Search on production unverified",
       "translation": "None",
@@ -299,8 +307,8 @@
         "https://github.com/WordPress/Advanced-administration-handbook"
       ],
       "status": "active",
-      "last_activity_signal": "Repo pushed 2026-09-29",
-      "notes": "Most Codex links of any surface (21 of 75). Images on four hosts. Median merge time about 34 days.",
+      "last_activity_signal": "Repo pushed 2026-09-29; main last commit 2026-09-29; newest page modified 2026-09-29",
+      "notes": "Most Codex links of any surface (21 of 75). Images on four hosts. Median merge time about 34 days. Most 2025-2026 merges by GitHub users kittenkamala and mindctrl (merge history, not a published maintainer list). The landing page links the repo by its old name WordPress/WordPress-Advanced-administration-handbook, which GitHub redirects.",
       "evidence": [
         "notes/research/01-inventory.md (REST and manifest counts 2026-10-13)",
         "notes/research/04-rendering-architecture.md section 1.2",
@@ -328,8 +336,8 @@
       "source_of_truth": "GitHub: https://github.com/WordPress/gutenberg (docs/)",
       "import_mechanism": "wporg-markdown importer via DevHub_Docs_Importer subclass, WP-Cron every 15 minutes, pull only, never trashes removed pages; manifest https://raw.githubusercontent.com/WordPress/gutenberg/trunk/docs/manifest.json (generated from docs/toc.json by npm run docs:gen, CI-checked)",
       "editing_path": "Pull request to the source repo; live 4 to 15 minutes after merge. 'Edit on GitHub' link on the page.",
-      "owner_team": "Gutenberg contributors and committers (Core Editor)",
-      "maintainers_if_public": null,
+      "owner_team": "Gutenberg contributors (Core Editor), with the Documentation team",
+      "maintainers_if_public": "CODEOWNERS for /docs in WordPress/gutenberg: @juanmaguitar, @fabiankaegy",
       "rendering": "wporg-developer-2023 block theme (child of wporg-parent-2021) + wporg-mu-plugins blocks",
       "search": "On-site WP_Query search scoped to the current handbook (inc/search.php); Jetpack Search on production unverified",
       "translation": "None",
@@ -339,13 +347,15 @@
         "https://github.com/WordPress/gutenberg (docs/)"
       ],
       "status": "active",
-      "last_activity_signal": "555 of 576 modified in last 12 months (sync activity), newest 2026-10-13",
+      "last_activity_signal": "555 of 576 modified in last 12 months (sync activity), newest 2026-10-13; gutenberg trunk last commit 2026-10-14",
       "notes": "About 25 orphan posts from renames. About 70 hard-coded redirects in import-block-editor.php. Tracks trunk only. Images hot-linked from raw.githubusercontent.com.",
       "evidence": [
         "notes/research/01-inventory.md (REST and manifest counts 2026-10-13)",
         "notes/research/04-rendering-architecture.md section 1.2",
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md",
-        "local fork wporg-developer-2023/inc/import-*.php (grep of manifest URLs 2026-10-14)"
+        "local fork wporg-developer-2023/inc/import-*.php (grep of manifest URLs 2026-10-14)",
+        "gh api repos/WordPress/gutenberg/contents/.github/CODEOWNERS 2026-10-14",
+        "make.wordpress.org/docs/handbook/get-involved/team-roles/project-based/developer-roles/ (read 2026-10-14)"
       ],
       "related_rows": [
         "upstream-gutenberg-docs",
@@ -379,7 +389,7 @@
         "https://github.com/WordPress/wpcs-docs"
       ],
       "status": "active",
-      "last_activity_signal": "Repo pushed 2026-05-19; newest modified 2026-05-25",
+      "last_activity_signal": "Repo pushed 2026-05-19; master last commit 2026-05-05; newest modified 2026-05-25",
       "notes": "Removed pages must be deleted on DevHub by hand. Includes inline documentation standards (make/core URL 301s here). Moved out of make/core handbook in 2018.",
       "evidence": [
         "notes/research/01-inventory.md (REST and manifest counts 2026-10-13)",
@@ -408,7 +418,7 @@
       "source_of_truth": "WordPress database",
       "import_mechanism": "wp-admin editing (no importer)",
       "editing_path": "wp-admin with the handbook_editor role; issues in Documentation-Issue-Tracker (APIs label)",
-      "owner_team": "Docs team reps",
+      "owner_team": "Documentation team",
       "maintainers_if_public": null,
       "rendering": "wporg-developer-2023 block theme (child of wporg-parent-2021) + wporg-mu-plugins blocks",
       "search": "On-site WP_Query search scoped to the current handbook (inc/search.php); Jetpack Search on production unverified",
@@ -416,11 +426,12 @@
       "markdown_output": "yes",
       "rest_api": "developer.wordpress.org/wp-json/wp/v2/apis-handbook",
       "repo_links": [],
-      "status": "stale",
-      "last_activity_signal": "Median modified 2022-11-21; 26 of 45 untouched since before 2023-10-13; newest 2026-10-09",
+      "status": "active",
+      "last_activity_signal": "13 of 45 modified in the last 12 months; newest 2026-10-09; median modified 2022-11-21",
       "notes": "Oldest-looking DevHub handbook. 5 pages link to the Codex.",
       "evidence": [
-        "notes/research/01-inventory.md section 5"
+        "notes/research/01-inventory.md section 5",
+        "curl REST apis-handbook modified dates 2026-10-14"
       ],
       "related_rows": [
         "devhub-plugins"
@@ -489,7 +500,7 @@
         "https://github.com/WordPress/wporg-developer"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Pages last modified 2017-07-13 (home), 2014 (reference, resource); theme repo WordPress/wporg-developer trunk last commit 2026-10-12",
       "notes": "Home links: Block Editor, Themes, Plugins, Common APIs, REST API, Coding Standards, Advanced Administration, Playground, WP-CLI, Code Reference, Developer Blog; footer links to make/core and make/docs handbooks. SCF is not linked.",
       "evidence": [
         "curl developer.wordpress.org/ link list 2026-10-14",
@@ -506,13 +517,17 @@
       "url": "https://docs.openverse.org/",
       "example_url": null,
       "site_or_host": "docs.openverse.org (outside WordPress.org; Sphinx 8.1.3 with Furo)",
-      "page_count": null,
+      "page_count": {
+        "value": 523,
+        "method": "Markdown and reST files under documentation/ in WordPress/openverse (gh api git tree); sitemap.xml returns 404",
+        "date": "2026-10-14"
+      },
       "content_model": "Sphinx-built static site from Markdown",
       "source_of_truth": "GitHub: https://github.com/WordPress/openverse (documentation/)",
-      "import_mechanism": "Sphinx build and deploy from the monorepo [deploy workflow unverified]",
+      "import_mechanism": "Sphinx build in .github/workflows/ci_cd.yml of WordPress/openverse, published to the gh-pages branch and served by GitHub Pages; PR previews under /_preview/<PR>/",
       "editing_path": "PR to WordPress/openverse",
       "owner_team": "Openverse team",
-      "maintainers_if_public": null,
+      "maintainers_if_public": "@dhruvkb, @fcoveram, @krysal, @obulat (docs.openverse.org Current maintainers page); CODEOWNERS for /documentation/: @WordPress/openverse-maintainers",
       "rendering": "Sphinx + Furo",
       "search": "Sphinx client-side search",
       "translation": "None",
@@ -522,11 +537,13 @@
         "https://github.com/WordPress/openverse"
       ],
       "status": "active",
-      "last_activity_signal": "Repo pushed 2026-10-14",
-      "notes": "wordpress.org/openverse/ 301s to openverse.org. The only WordPress project docs site on Sphinx. Sitemap returned 0 URLs.",
+      "last_activity_signal": "Repo pushed 2026-10-14; main last commit 2026-10-13",
+      "notes": "wordpress.org/openverse/ 301s to openverse.org. The only WordPress project docs site on Sphinx. sitemap.xml returns 404 (2026-10-14).",
       "evidence": [
         "curl docs.openverse.org generator meta, 2026-10-14",
-        "gh api repos/WordPress/openverse/contents/documentation"
+        "gh api repos/WordPress/openverse/contents/documentation (re-run as git tree 2026-10-14)",
+        "gh api repos/WordPress/openverse ci_cd.yml and git tree 2026-10-14",
+        "curl docs.openverse.org/general/contribution/current_maintainers.html 2026-10-14"
       ],
       "related_rows": [
         "contrib-openverse"
@@ -559,7 +576,7 @@
         "https://github.com/WordPress/wordpress-playground (packages/docs/)"
       ],
       "status": "active",
-      "last_activity_signal": "Importer added 2026-07-15; manifest generation PR #4332 2026-09-30",
+      "last_activity_signal": "Importer added 2026-07-15; manifest generation PR #4332 2026-09-30; trunk last commit 2026-10-13; newest page modified 2026-10-14",
       "notes": "Only importer that sideloads images and transforms MDX. Known bugs: raw-URL edit link, changelog link '#'. 'Also available in' links point to translated Docusaurus pages.",
       "evidence": [
         "notes/research/01-inventory.md (REST and manifest counts 2026-10-13)",
@@ -585,10 +602,10 @@
         "date": "2026-10-13"
       },
       "content_model": "Hierarchical handbook post type `plugin-handbook`",
-      "source_of_truth": "WordPress database (a GitHub mirror exists but is not imported)",
+      "source_of_truth": "WordPress database (the WordPress/developer-plugins-handbook mirror is not imported)",
       "import_mechanism": "wp-admin editing (no importer)",
       "editing_path": "wp-admin with the handbook_editor role; issues in Documentation-Issue-Tracker (plugins label)",
-      "owner_team": "Docs team reps; Plugin Review team for /plugins/wordpress-org/ policy pages",
+      "owner_team": "Documentation team; Plugins team (Plugin Review) for /plugins/wordpress-org/ policy pages",
       "maintainers_if_public": null,
       "rendering": "wporg-developer-2023 block theme (child of wporg-parent-2021) + wporg-mu-plugins blocks",
       "search": "On-site WP_Query search scoped to the current handbook (inc/search.php); Jetpack Search on production unverified",
@@ -599,7 +616,7 @@
         "https://github.com/WordPress/developer-plugins-handbook"
       ],
       "status": "active",
-      "last_activity_signal": "Median modified 2023-12-14; 16 modified in last 12 months (2026-10-13)",
+      "last_activity_signal": "Median modified 2023-12-14; 16 modified in last 12 months; newest 2026-09-13",
       "notes": "WordPress/developer-plugins-handbook still merges PRs (pushed 2026-10-14) that never reach the site. Contains the Plugin Directory guidelines and readme docs (separate rows).",
       "evidence": [
         "notes/research/01-inventory.md section 4",
@@ -639,7 +656,7 @@
         "https://github.com/WP-API/docs"
       ],
       "status": "stale",
-      "last_activity_signal": "Repo last push 2025-06-04; nothing modified in last 12 months",
+      "last_activity_signal": "Repo last push 2025-06-04; master last commit 2025-06-04; newest page modified 2025-06-04; nothing modified in last 12 months",
       "notes": "Endpoint reference pages generated from templates (bin/regenerate.php), not live from core schema. api.wordpress.org redirects here (302, 2026-10-14), which is misleading: that API is not the WP REST API.",
       "evidence": [
         "notes/research/01-inventory.md (REST and manifest counts 2026-10-13)",
@@ -679,7 +696,7 @@
         "https://github.com/WordPress/secure-custom-fields (docs/)"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "trunk last commit 2026-08-26 (pushed 2026-09-29); newest page modified 2026-08-07",
       "notes": "Best current example of the GitHub model. Not linked from the DevHub home page (2026-10-13/14).",
       "evidence": [
         "notes/research/01-inventory.md (REST and manifest counts 2026-10-13)",
@@ -707,8 +724,8 @@
       "source_of_truth": "WordPress database",
       "import_mechanism": "wp-admin editing (no importer)",
       "editing_path": "wp-admin with the handbook_editor role; issues in Documentation-Issue-Tracker (themes label)",
-      "owner_team": "Themes team with Docs team reps",
-      "maintainers_if_public": "Justin Tadlock, Cheyne (@chekle)",
+      "owner_team": "Documentation team, in collaboration with the Themes team",
+      "maintainers_if_public": null,
       "rendering": "wporg-developer-2023 block theme (child of wporg-parent-2021) + wporg-mu-plugins blocks",
       "search": "On-site WP_Query search scoped to the current handbook (inc/search.php); Jetpack Search on production unverified",
       "translation": "None",
@@ -716,8 +733,8 @@
       "rest_api": "developer.wordpress.org/wp-json/wp/v2/theme-handbook",
       "repo_links": [],
       "status": "active",
-      "last_activity_signal": "Median modified 2023-12-14; 19 modified in last 12 months (2026-10-13)",
-      "notes": "No GitHub repo yet; the sibling repo's migration plan moves it to the DevHub importer with zero structure change. 19 pages link to the Codex. theme.json reference duplicated with Block Editor Handbook.",
+      "last_activity_signal": "Median modified 2023-12-14; 19 modified in last 12 months; newest 2026-07-22",
+      "notes": "No GitHub repo yet; the sibling repo's migration plan moves it to the DevHub importer with zero structure change. 19 pages link to the Codex. theme.json reference duplicated with Block Editor Handbook. No maintainer list is published; Justin Tadlock is the largest author on record.",
       "evidence": [
         "notes/research/01-inventory.md section 3",
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md section 9",
@@ -756,7 +773,7 @@
         "https://github.com/WordPress/wporg-developer-blog"
       ],
       "status": "active",
-      "last_activity_signal": "First post 2022-11-17; latest 2026-09-10 (REST 2026-10-13); monthly 'What's new for developers'",
+      "last_activity_signal": "First post 2022-11-17; latest 2026-09-10 (REST 2026-10-14); monthly 'What's new for developers'; developer-blog-content trunk last commit 2026-10-01",
       "notes": "Editorial, dated content. Acts as release documentation via monthly roundups.",
       "evidence": [
         "notes/research/01-inventory.md section 13",
@@ -783,7 +800,7 @@
       "import_mechanism": "Separate DevHub_CLI importer (reimplementation, twicedaily, no ETag); manifest https://raw.githubusercontent.com/wp-cli/handbook/main/bin/commands-manifest.json (generated by wp handbook gen-commands-manifest, bot PR)",
       "editing_path": "Change the docblock in the wp-cli command repo; regenerate via GitHub Action bot PR to wp-cli/handbook",
       "owner_team": "WP-CLI maintainers",
-      "maintainers_if_public": "Bot PRs request @swissspidy",
+      "maintainers_if_public": "CODEOWNERS in wp-cli/handbook: @wp-cli/committers",
       "rendering": "wporg-developer-2023 block theme (child of wporg-parent-2021) + wporg-mu-plugins blocks",
       "search": "On-site WP_Query search scoped to the current handbook (inc/search.php); Jetpack Search on production unverified",
       "translation": "None",
@@ -794,12 +811,14 @@
         "https://github.com/wp-cli/wp-cli"
       ],
       "status": "active",
-      "last_activity_signal": null,
-      "notes": "Own templates (archive-command.html, single-command.html). command-history.json drives 'Available since'. wp-cli.org now 301s to wordpress.org/cli/.",
+      "last_activity_signal": "wp-cli/handbook main last commit 2026-10-11",
+      "notes": "Own templates (archive-command.html, single-command.html). command-history.json drives 'Available since'. wp-cli.org (every path) 301s to wordpress.org/cli/. developer.wordpress.org/cli/ 301s to /cli/commands/cli/ (the page for the `wp cli` command), so DevHub has no CLI landing. Manifest bot PRs request review from @swissspidy.",
       "evidence": [
         "notes/research/01-inventory.md section 11",
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md section 5",
-        "curl wp-cli.org 301 2026-10-14"
+        "curl wp-cli.org 301 2026-10-14",
+        "gh api repos/wp-cli/handbook/contents/.github/CODEOWNERS 2026-10-14",
+        "curl developer.wordpress.org/cli/ 301 2026-10-14"
       ],
       "related_rows": [
         "contrib-cli",
@@ -836,7 +855,7 @@
         "https://github.com/WordPress/wporg-developer"
       ],
       "status": "active",
-      "last_activity_signal": "225 items tagged since 7.1.0, so parse current to 7.1 (2026-10-13); restored 2026-02-25 after stalling 6.4 to 6.9.1",
+      "last_activity_signal": "225 items tagged since 7.1.0 (2026-10-14), so parse current to 7.1; restored 2026-02-25 after stalling 6.4 to 6.9.1; wordpress-develop trunk last commit 2026-10-14 (reaches the site only at the next parser run)",
       "notes": null,
       "evidence": [
         "notes/research/01-inventory.md section 12",
@@ -877,7 +896,7 @@
         "https://github.com/WordPress/wporg-developer"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Newest explanation modified 2026-08-23",
       "notes": "72 explanations still link to codex.wordpress.org.",
       "evidence": [
         "notes/research/01-inventory.md section 12"
@@ -915,7 +934,7 @@
         "https://github.com/WordPress/wporg-developer"
       ],
       "status": "active",
-      "last_activity_signal": "225 items tagged since 7.1.0, so parse current to 7.1 (2026-10-13); restored 2026-02-25 after stalling 6.4 to 6.9.1",
+      "last_activity_signal": "225 items tagged since 7.1.0 (2026-10-14), so parse current to 7.1; restored 2026-02-25 after stalling 6.4 to 6.9.1; wordpress-develop trunk last commit 2026-10-14 (reaches the site only at the next parser run)",
       "notes": "Rendered by about 25 wporg/code-reference-* blocks (parameters, return, source, related, changelog table). Methods routed by a custom rewrite rule.",
       "evidence": [
         "notes/research/01-inventory.md section 12",
@@ -958,7 +977,7 @@
         "https://github.com/WordPress/wporg-developer"
       ],
       "status": "active",
-      "last_activity_signal": "225 items tagged since 7.1.0, so parse current to 7.1 (2026-10-13); restored 2026-02-25 after stalling 6.4 to 6.9.1",
+      "last_activity_signal": "225 items tagged since 7.1.0 (2026-10-14), so parse current to 7.1; restored 2026-02-25 after stalling 6.4 to 6.9.1; wordpress-develop trunk last commit 2026-10-14 (reaches the site only at the next parser run)",
       "notes": null,
       "evidence": [
         "notes/research/01-inventory.md section 12",
@@ -1001,7 +1020,7 @@
         "https://github.com/WordPress/wporg-developer"
       ],
       "status": "active",
-      "last_activity_signal": "225 items tagged since 7.1.0, so parse current to 7.1 (2026-10-13); restored 2026-02-25 after stalling 6.4 to 6.9.1",
+      "last_activity_signal": "225 items tagged since 7.1.0 (2026-10-14), so parse current to 7.1; restored 2026-02-25 after stalling 6.4 to 6.9.1; wordpress-develop trunk last commit 2026-10-14 (reaches the site only at the next parser run)",
       "notes": null,
       "evidence": [
         "notes/research/01-inventory.md section 12",
@@ -1044,7 +1063,7 @@
         "https://github.com/WordPress/wporg-developer"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "wordpress-develop trunk last commit 2026-10-14 (reaches the site only at the next parser run); since 7.1.0 term holds 225 items",
       "notes": "About 1,280 URLs that must keep resolving in any migration.",
       "evidence": [
         "notes/research/01-inventory.md totals"
@@ -1080,7 +1099,7 @@
         "https://github.com/WordPress/wporg-developer"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Newest published note 2026-10-10",
       "notes": "Cannot become Markdown files without losing the notes model.",
       "evidence": [
         "notes/research/01-inventory.md section 12",
@@ -1088,6 +1107,44 @@
       ],
       "related_rows": [
         "code-reference-functions"
+      ]
+    },
+    {
+      "id": "code-reference-gutenberg-storybook",
+      "name": "Gutenberg Storybook (component reference)",
+      "category": "code reference",
+      "url": "https://wordpress.github.io/gutenberg/",
+      "example_url": "https://wordpress.github.io/gutenberg/?path=/docs/components-button--docs",
+      "site_or_host": "GitHub Pages (outside WordPress.org)",
+      "page_count": {
+        "value": 279,
+        "method": "Storybook index.json entries of type docs (925 more of type story)",
+        "date": "2026-10-14"
+      },
+      "content_model": "Storybook docs and stories generated from package source and *.story.js / README files in WordPress/gutenberg",
+      "source_of_truth": "GitHub: https://github.com/WordPress/gutenberg (packages/*/src stories and READMEs)",
+      "import_mechanism": "Storybook build in .github/workflows/storybook-pages.yml, published to the gh-pages branch",
+      "editing_path": "Pull request to WordPress/gutenberg",
+      "owner_team": "Gutenberg contributors (Core Editor)",
+      "maintainers_if_public": null,
+      "rendering": "Storybook",
+      "search": "Storybook sidebar filter",
+      "translation": null,
+      "markdown_output": "no",
+      "rest_api": null,
+      "repo_links": [
+        "https://github.com/WordPress/gutenberg"
+      ],
+      "status": "active",
+      "last_activity_signal": "gh-pages last commit 2026-10-14; Last-Modified 2026-10-14",
+      "notes": "Interactive reference for @wordpress/components and other packages. Linked from 9 files in the Gutenberg docs/ folder (including docs/README.md), so it is reachable from the Block Editor Handbook; complements the package READMEs imported there.",
+      "evidence": [
+        "curl wordpress.github.io/gutenberg/index.json 2026-10-14",
+        "gh api repos/WordPress/gutenberg branches/gh-pages and workflows 2026-10-14"
+      ],
+      "related_rows": [
+        "devhub-block-editor",
+        "upstream-gutenberg-docs"
       ]
     },
     {
@@ -1103,10 +1160,10 @@
         "date": "2026-10-14"
       },
       "content_model": "Hierarchical `handbook` post type (handbook plugin)",
-      "source_of_truth": "Mixed: GitHub https://github.com/WordPress/contributor-handbook for 54 pages, wp-admin for the rest",
+      "source_of_truth": "Mixed: GitHub https://github.com/WordPress/contributor-handbook for 55 pages, wp-admin for the rest",
       "import_mechanism": "handbook plugin importer (WPorg_Handbook_Importer, wporg-markdown), manifest URL set in handbook settings (DB, not code), WP-Cron 15 minutes (partial)",
-      "editing_path": "Pull request to WordPress/contributor-handbook for imported pages; wp-admin otherwise",
-      "owner_team": "Cross-team (Program / Community)",
+      "editing_path": "Pull request to WordPress/contributor-handbook for imported pages; wp-admin otherwise. The landing page asks for suggested edits by email to the Community Team (support@wordcamp.org).",
+      "owner_team": "Community team (named on the landing page for suggested edits); content is cross-team",
       "maintainers_if_public": null,
       "rendering": "wporg-make-2024 theme + handbook plugin (meta SVN)",
       "search": "Handbook-scoped search form on each handbook",
@@ -1117,10 +1174,11 @@
         "https://github.com/WordPress/contributor-handbook"
       ],
       "status": "active",
-      "last_activity_signal": "Newest modified 2026-09-28",
-      "notes": "54 of 86 pages authored by the `wordpressdotorg` importer user (id 5911429); the WordPress Credits program pages are human-authored. Repo still described as a 'Draft'.",
+      "last_activity_signal": "Newest modified 2026-09-28; main last commit 2026-09-28",
+      "notes": "54 of 86 pages authored by the `wordpressdotorg` importer user (id 5911429) and 55 render the GitHub template; the WordPress Credits program pages are human-authored. Repo still described as a 'Draft'. The Make theme (WordPress/wporg-make, wporg-make-2024 functions.php add_handbook_templates) renders the single-handbook-github template, with its \"Improve it on GitHub\" link, only for posts that carry wporg_markdown_source meta set by the importer.",
       "evidence": [
-        "curl make.wordpress.org/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
+        "curl make.wordpress.org/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14",
+        "curl of all 86 pages for the GitHub template 2026-10-14"
       ],
       "related_rows": []
     },
@@ -1151,10 +1209,11 @@
         "https://github.com/WordPress/WordPress-Documentation-Style-Guide"
       ],
       "status": "active",
-      "last_activity_signal": "Newest modified 2026-09-22",
-      "notes": "Import confirmed: all 105 pages authored by the `wordpressdotorg` importer user (id 5911429) (prior research had it unverified). Separate post type from the Docs team handbook.",
+      "last_activity_signal": "Newest modified 2026-09-22; main last commit 2026-09-22",
+      "notes": "Import confirmed: all 105 pages authored by the `wordpressdotorg` importer user (id 5911429) and all 105 render the GitHub template. Separate post type from the Docs team handbook. The Make theme (WordPress/wporg-make, wporg-make-2024 functions.php add_handbook_templates) renders the single-handbook-github template, with its \"Improve it on GitHub\" link, only for posts that carry wporg_markdown_source meta set by the importer.",
       "evidence": [
-        "curl make.wordpress.org/docs/wp-json/wp/v2/styleguide-handbook X-WP-Total, modified and author counts 2026-10-14"
+        "curl make.wordpress.org/docs/wp-json/wp/v2/styleguide-handbook X-WP-Total, modified and author counts 2026-10-14",
+        "curl of all 105 pages for the GitHub template 2026-10-14"
       ],
       "related_rows": [
         "contrib-docs"
@@ -1173,9 +1232,9 @@
         "date": "2026-10-14"
       },
       "content_model": "Hierarchical `handbook` post type (handbook plugin)",
-      "source_of_truth": "GitHub: https://github.com/WordPress/accessibility-team-handbook [likely, switched on about 2026-10-13]",
-      "import_mechanism": "handbook plugin importer (WPorg_Handbook_Importer, wporg-markdown), manifest URL set in handbook settings (DB, not code), WP-Cron 15 minutes [inferred]",
-      "editing_path": "Pull request with two Accessibility-team reviews (CONTRIBUTING)",
+      "source_of_truth": "GitHub: https://github.com/WordPress/accessibility-team-handbook",
+      "import_mechanism": "handbook plugin importer (WPorg_Handbook_Importer, wporg-markdown), manifest URL set in handbook settings (DB, not code), WP-Cron 15 minutes; first full import run 2026-10-13 20:42",
+      "editing_path": "Pull request with two Accessibility-team reviews (CONTRIBUTING); the README says changes happen in the GitHub repo",
       "owner_team": "Accessibility team",
       "maintainers_if_public": null,
       "rendering": "wporg-make-2024 theme + handbook plugin (meta SVN)",
@@ -1187,10 +1246,13 @@
         "https://github.com/WordPress/accessibility-team-handbook"
       ],
       "status": "active",
-      "last_activity_signal": "Newest modified 2026-10-13",
-      "notes": "13 of 14 pages modified within 3 seconds at 2026-10-13 20:42, the signature of a bulk import run; authors are human (importer keeps authors on update). Treat as GitHub-backed from 2026-10-13, unconfirmed.",
+      "last_activity_signal": "Newest modified 2026-10-13; main last commit 2026-10-06",
+      "notes": "All 14 pages render the GitHub template; 13 of 14 were modified within 3 seconds at 2026-10-13 20:42 (an import run), a week after the last merge (#20, 2026-10-06), which fits a first import after the repo's \"Prepare manifest for import\" PR (#15). Authors stay human because the importer keeps existing authors. The source URL is only shown to logged-in users, so the repo is identified by name and PR history. The Make theme (WordPress/wporg-make, wporg-make-2024 functions.php add_handbook_templates) renders the single-handbook-github template, with its \"Improve it on GitHub\" link, only for posts that carry wporg_markdown_source meta set by the importer.",
       "evidence": [
-        "curl make.wordpress.org/accessibility/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
+        "curl make.wordpress.org/accessibility/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14",
+        "curl of all 14 pages for the GitHub template 2026-10-14",
+        "gh api repos/WordPress/accessibility-team-handbook commits and pulls 2026-10-14",
+        "gh api repos/WordPress/wporg-make functions.php add_handbook_templates 2026-10-14"
       ],
       "related_rows": []
     },
@@ -1254,9 +1316,11 @@
       ],
       "status": "active",
       "last_activity_signal": "Newest modified 2026-10-13",
-      "notes": "Nine separate handbook post types: wordcamp-handbook 111, deputy-handbook 111, meetup-handbook 76, education-handbook 67, virtual-handbook 22 (newest 2025-04), contrib-day-handbook 13, kidscamp-handbook 9 (newest 2024-07), irt-handbook 5, community-handbook 3. These are the WordCamp and meetup organizer docs (wordcamp.org links here).",
+      "notes": "Nine separate handbook post types: wordcamp-handbook 111, deputy-handbook 111, meetup-handbook 76, education-handbook 67, virtual-handbook 22 (newest 2025-04), contrib-day-handbook 13, kidscamp-handbook 9 (newest 2024-07), irt-handbook 5, community-handbook 3. These are the WordCamp and meetup organizer docs, including speaker selection (wordcamp.org links here). WordPress/contributor-day-handbook was last committed 2021-05-14 and is not imported (no importer-authored pages, no GitHub template).",
       "evidence": [
-        "curl make.wordpress.org/community/wp-json/wp/v2/*-handbook (9 post types) X-WP-Total, modified and author counts 2026-10-14"
+        "curl make.wordpress.org/community/wp-json/wp/v2/*-handbook (9 post types) X-WP-Total, modified and author counts 2026-10-14",
+        "gh api repos/WordPress/contributor-day-handbook 2026-10-14",
+        "curl of all 417 pages for the GitHub template 2026-10-14"
       ],
       "related_rows": [
         "project-wordcamp-central"
@@ -1288,9 +1352,10 @@
       "repo_links": [],
       "status": "active",
       "last_activity_signal": "Newest modified 2026-10-01",
-      "notes": "Core Contributor Handbook; coding standards moved out to wpcs-docs in 2018.",
+      "notes": "Core Contributor Handbook (make.wordpress.org/core/handbook/ is this handbook, not a separate surface); coding standards moved out to wpcs-docs in 2018. 9 of the 115 published pages are the old coding-standards and inline-documentation entries, which now 301 to developer.wordpress.org/coding-standards/.",
       "evidence": [
-        "curl make.wordpress.org/core/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
+        "curl make.wordpress.org/core/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14",
+        "curl of all 115 pages for the GitHub template 2026-10-14"
       ],
       "related_rows": []
     },
@@ -1385,10 +1450,11 @@
         "https://github.com/WordPress/hosting-handbook"
       ],
       "status": "active",
-      "last_activity_signal": "Newest modified 2026-10-13",
-      "notes": "Verified: landing page links to github.com/wordpress/hosting-handbook/edit/main/index.md. 12 of 20 pages authored by the `wordpressdotorg` importer user (id 5911429).",
+      "last_activity_signal": "Newest modified 2026-10-13; main last commit 2026-10-13",
+      "notes": "Verified: landing page links to github.com/wordpress/hosting-handbook/edit/main/index.md. 12 of 20 pages authored by the `wordpressdotorg` importer user (id 5911429) and 19 of 20 render the GitHub template. The Make theme (WordPress/wporg-make, wporg-make-2024 functions.php add_handbook_templates) renders the single-handbook-github template, with its \"Improve it on GitHub\" link, only for posts that carry wporg_markdown_source meta set by the importer.",
       "evidence": [
-        "curl make.wordpress.org/hosting/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
+        "curl make.wordpress.org/hosting/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14",
+        "curl of all 20 pages for the GitHub template 2026-10-14"
       ],
       "related_rows": [
         "devhub-advanced-administration"
@@ -1631,9 +1697,9 @@
         "date": "2026-10-14"
       },
       "content_model": "Hierarchical `handbook` post type (handbook plugin)",
-      "source_of_truth": "GitHub: https://github.com/WordPress/plugins-handbook [likely; inferred]",
-      "import_mechanism": "handbook plugin importer (WPorg_Handbook_Importer, wporg-markdown), manifest URL set in handbook settings (DB, not code), WP-Cron 15 minutes [inferred from timing]",
-      "editing_path": "Pull request to WordPress/plugins-handbook [inferred]",
+      "source_of_truth": "GitHub: https://github.com/WordPress/plugins-handbook",
+      "import_mechanism": "handbook plugin importer (WPorg_Handbook_Importer, wporg-markdown), manifest URL set in handbook settings (DB, not code), WP-Cron 15 minutes",
+      "editing_path": "Pull request to WordPress/plugins-handbook",
       "owner_team": "Plugins team (Plugin Review)",
       "maintainers_if_public": null,
       "rendering": "wporg-make-2024 theme + handbook plugin (meta SVN)",
@@ -1645,11 +1711,12 @@
         "https://github.com/WordPress/plugins-handbook"
       ],
       "status": "active",
-      "last_activity_signal": "Newest modified 2026-05-23",
-      "notes": "Inferred GitHub-synced: the 'the-team' page was modified 2026-05-23 15:00, two minutes after PR #22 merged (14:58). Authors are human, so either the importer kept original authors or the edit was mirrored by hand. No GitHub edit link on the page.",
+      "last_activity_signal": "Newest modified 2026-05-23; main last commit 2026-05-23",
+      "notes": "11 of 12 pages render the GitHub template, so they were imported; one page is wp-admin only. The 'the-team' page was modified 2026-05-23 15:00, two minutes after PR #22 merged (14:58). Authors are human because the importer keeps existing authors. The source URL is only shown to logged-in users, so the repo is identified by name and commit timing. The Make theme (WordPress/wporg-make, wporg-make-2024 functions.php add_handbook_templates) renders the single-handbook-github template, with its \"Improve it on GitHub\" link, only for posts that carry wporg_markdown_source meta set by the importer.",
       "evidence": [
         "curl make.wordpress.org/plugins/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14",
-        "gh api repos/WordPress/plugins-handbook/commits 2026-10-14"
+        "gh api repos/WordPress/plugins-handbook/commits 2026-10-14",
+        "curl of all 12 pages for the GitHub template 2026-10-14"
       ],
       "related_rows": [
         "policy-plugin-guidelines"
@@ -1810,12 +1877,49 @@
         "https://github.com/WordPress/sustainability"
       ],
       "status": "active",
-      "last_activity_signal": "Newest modified 2025-12-28",
-      "notes": "All 17 pages authored by the `wordpressdotorg` importer user (id 5911429). Not in prior research's list of GitHub-backed handbooks.",
+      "last_activity_signal": "Newest modified 2025-12-28; trunk last commit 2025-12-28",
+      "notes": "All 17 pages authored by the `wordpressdotorg` importer user (id 5911429) and all render the GitHub template. Not in prior research's list of GitHub-backed handbooks.",
       "evidence": [
         "curl make.wordpress.org/sustainability/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
       "related_rows": []
+    },
+    {
+      "id": "contrib-make-site-pages",
+      "name": "Make team site pages outside the handbooks",
+      "category": "contributor handbook",
+      "url": "https://make.wordpress.org/support/user-manual/",
+      "example_url": "https://make.wordpress.org/core/components/",
+      "site_or_host": "make.wordpress.org (25 team sites)",
+      "page_count": {
+        "value": 341,
+        "method": "Sum of REST X-WP-Total /{team}/wp-json/wp/v2/pages over 25 Make sites (389) minus the 48 core release pages counted in release-core-version-pages; largest: docs 151, support 59, community 32, core 16",
+        "date": "2026-10-14"
+      },
+      "content_model": "WordPress `page` posts on each team P2, separate from the handbook post types",
+      "source_of_truth": "WordPress database",
+      "import_mechanism": "wp-admin editing",
+      "editing_path": "Team members with editor role on the team P2 edit in wp-admin",
+      "owner_team": "Respective Make teams",
+      "maintainers_if_public": null,
+      "rendering": "wporg-make-2024 (P2)",
+      "search": "Make site search",
+      "translation": "English only",
+      "markdown_output": "yes",
+      "rest_api": "make.wordpress.org/{team}/wp-json/wp/v2/pages",
+      "repo_links": [],
+      "status": "active",
+      "last_activity_signal": "37 of 389 modified in the last 12 months; newest 2026-10-13 (community)",
+      "notes": "Documentation-like pages that sit outside the handbooks: make/docs holds 151 pages including old Plugin and Theme Developer Handbook drafts (newest 2025-01-14), make/support has a legacy user-manual tree and per-release reported-issues pages, make/core has components, features and roadmap pages, make/community has sponsorship program and widget FAQ pages. Many are abandoned and not linked from navigation.",
+      "evidence": [
+        "curl REST pages X-WP-Total and modified dates on 25 Make sites 2026-10-14"
+      ],
+      "related_rows": [
+        "contrib-docs",
+        "contrib-support",
+        "contrib-core",
+        "release-core-version-pages"
+      ]
     },
     {
       "id": "contrib-test",
@@ -1844,8 +1948,8 @@
         "https://github.com/WordPress/test-handbook"
       ],
       "status": "active",
-      "last_activity_signal": "Newest modified 2026-10-02",
-      "notes": "All 36 pages authored by the `wordpressdotorg` importer user (id 5911429). No GitHub edit link rendered. Moved 2025-09.",
+      "last_activity_signal": "Newest modified 2026-10-02; trunk last commit 2026-10-02",
+      "notes": "All 36 pages authored by the `wordpressdotorg` importer user (id 5911429) and all render the GitHub template; the edit link goes through login for logged-out visitors, so the repo URL is not shown publicly. The landing page links to the Test Handbook GitHub page. Moved 2025-09.",
       "evidence": [
         "curl make.wordpress.org/test/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
@@ -1916,6 +2020,40 @@
       "related_rows": []
     },
     {
+      "id": "contrib-make-contribute",
+      "name": "Make WordPress contributor onboarding (Find your team)",
+      "category": "contributor handbook",
+      "url": "https://make.wordpress.org/contribute/",
+      "example_url": "https://make.wordpress.org/contribute/join/",
+      "site_or_host": "make.wordpress.org (root site)",
+      "page_count": {
+        "value": 2,
+        "method": "REST pages on make.wordpress.org: /contribute/ and /contribute/join/ (5 pages total on the root site)",
+        "date": "2026-10-14"
+      },
+      "content_model": "WordPress `page` posts with an interactive team-finder questionnaire",
+      "source_of_truth": "WordPress database",
+      "import_mechanism": "wp-admin editing",
+      "editing_path": "make.wordpress.org editors in wp-admin",
+      "owner_team": null,
+      "maintainers_if_public": null,
+      "rendering": "wporg-make-2024",
+      "search": "Make site search",
+      "translation": "English only",
+      "markdown_output": "yes",
+      "rest_api": "make.wordpress.org/wp-json/wp/v2/pages",
+      "repo_links": [],
+      "status": "active",
+      "last_activity_signal": "/contribute/ modified 2026-04-29; /contribute/join/ 2026-04-28",
+      "notes": "The entry point for new contributors, linked from llms.txt (\"Contributing to WordPress\"); routes to team handbooks and Learn courses. Owning team not stated on the page.",
+      "evidence": [
+        "curl make.wordpress.org REST pages and ?output_format=md 2026-10-14"
+      ],
+      "related_rows": [
+        "contrib-contributor-handbook"
+      ]
+    },
+    {
       "id": "contrib-tv",
       "name": "Make WordPress.tv team handbook",
       "category": "contributor handbook",
@@ -1968,13 +2106,13 @@
       "rendering": "Rosetta team theme",
       "search": "Site search",
       "translation": "Native-language content (locale style guides, local translation glossaries and processes)",
-      "markdown_output": null,
+      "markdown_output": "yes",
       "rest_api": "{locale}.wordpress.org/team/wp-json/wp/v2/handbook",
       "repo_links": [
         "https://github.com/WordPress/spain-handbook"
       ],
       "status": "active",
-      "last_activity_signal": "es newest modified 2026-07-05",
+      "last_activity_signal": "ja newest modified 2026-09-14; es newest modified 2026-07-05; WordPress/spain-handbook last commit 2025-01-14",
       "notes": "ja.wordpress.org/team/handbook/ (460 pages) is the largest non-English documentation body found on WordPress.org; content not inspected. Not covered by prior research.",
       "evidence": [
         "Probe of 201 Rosetta sites from make.wordpress.org/polyglots/teams/, 2026-10-14"
@@ -2001,7 +2139,7 @@
       "import_mechanism": "Bespoke wporg-cli plugin importer (class-markdown-import.php), 15 minutes, bin/handbook-manifest.json generated by `wp handbook gen-hb-manifest` (bot PR)",
       "editing_path": "Pull request to wp-cli/handbook",
       "owner_team": "WP-CLI maintainers",
-      "maintainers_if_public": null,
+      "maintainers_if_public": "CODEOWNERS in wp-cli/handbook: @wp-cli/committers",
       "rendering": "wporg-make-2024 theme + handbook plugin (meta SVN)",
       "search": "Handbook-scoped search form on each handbook",
       "translation": "English only (some locales keep their own copies under {locale}.wordpress.org/team/handbook/)",
@@ -2011,8 +2149,8 @@
         "https://github.com/wp-cli/handbook"
       ],
       "status": "active",
-      "last_activity_signal": "Newest modified 2026-10-14",
-      "notes": "User and developer documentation, not contributor process, despite living on a Make site. 104 of 152 pages authored by importer users. GitHub edit links verified.",
+      "last_activity_signal": "Newest modified 2026-10-14; main last commit 2026-10-11",
+      "notes": "User and developer documentation, not contributor process, despite living on a Make site. 104 of 152 pages authored by importer users (author 0); all 152 render the GitHub template. GitHub edit links verified.",
       "evidence": [
         "curl make.wordpress.org/cli/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
@@ -2194,7 +2332,7 @@
       ],
       "status": "active",
       "last_activity_signal": "Newest modified 2026-05-24",
-      "notes": "Event records rather than documentation; landing URL not verified.",
+      "notes": "Event records rather than documentation. Landing URL verified 200 (2026-10-14).",
       "evidence": [
         "curl 2026-10-14"
       ],
@@ -2334,14 +2472,15 @@
       "rest_api": "make.wordpress.org/core/wp-json/wp/v2/posts?tags=1443",
       "repo_links": [],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Latest dev-notes post 2026-10-09",
       "notes": "Primary developer change documentation per release; never merged into the handbooks, so knowledge stays in dated posts.",
       "evidence": [
         "curl make/core REST tags 2026-10-14"
       ],
       "related_rows": [
         "release-field-guides",
-        "devhub-developer-blog"
+        "devhub-developer-blog",
+        "release-core-version-pages"
       ]
     },
     {
@@ -2369,13 +2508,50 @@
       "rest_api": "make.wordpress.org/core/wp-json/wp/v2/posts?tags=114",
       "repo_links": [],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Latest 2026-08-05 (WordPress 7.1 Field Guide)",
       "notes": "Index of each release's dev notes.",
       "evidence": [
         "curl make/core REST tags 2026-10-14"
       ],
       "related_rows": [
-        "release-dev-notes"
+        "release-dev-notes",
+        "release-core-version-pages"
+      ]
+    },
+    {
+      "id": "release-core-version-pages",
+      "name": "Core release pages on make/core (per-version hubs)",
+      "category": "release documentation",
+      "url": "https://make.wordpress.org/core/7-2/",
+      "example_url": "https://make.wordpress.org/core/7-1/",
+      "site_or_host": "make.wordpress.org/core",
+      "page_count": {
+        "value": 48,
+        "method": "REST pages on make/core: 29 /core/X-Y/ version pages plus 19 older version-X-Y-project-schedule and teams pages (3.0 to 4.6)",
+        "date": "2026-10-14"
+      },
+      "content_model": "WordPress `page` per release with release squad, schedule and links to dev notes, field guide and dev-chat tags",
+      "source_of_truth": "WordPress database",
+      "import_mechanism": "wp-admin editing",
+      "editing_path": "Release squad and make/core editors in wp-admin",
+      "owner_team": "Core team (release squads)",
+      "maintainers_if_public": null,
+      "rendering": "wporg-make-2024 (P2)",
+      "search": "Make site search",
+      "translation": null,
+      "markdown_output": "yes",
+      "rest_api": "make.wordpress.org/core/wp-json/wp/v2/pages",
+      "repo_links": [],
+      "status": "active",
+      "last_activity_signal": "7.2 page modified 2026-10-06",
+      "notes": "The planning record for each release (squad, dates, links); pairs with the field guide and dev notes. Not linked from the HelpHub version pages.",
+      "evidence": [
+        "curl make/core REST pages and ?output_format=md for /core/7-2/ 2026-10-14"
+      ],
+      "related_rows": [
+        "release-dev-notes",
+        "release-field-guides",
+        "helphub-version-pages"
       ]
     },
     {
@@ -2405,14 +2581,15 @@
         "https://github.com/WordPress/wporg-main-2022"
       ],
       "status": "active",
-      "last_activity_signal": "7-1 page modified 2026-08-20",
+      "last_activity_signal": "Newest modified 2026-09-01 (6-3 page); 7-1 page 2026-08-20; releases index 2026-03-31",
       "notes": "Per-version marketing pages exist only from 6.3 on.",
       "evidence": [
         "REST /wp-json/wp/v2/pages listing 2026-10-14"
       ],
       "related_rows": [
         "helphub-version-pages",
-        "project-roadmap"
+        "project-roadmap",
+        "project-download"
       ]
     },
     {
@@ -2442,7 +2619,7 @@
         "https://github.com/WordPress/wporg-news-2021"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Latest Releases post 2026-10-06 (WordPress 7.1.3)",
       "notes": "Also 'Documentation' (18) and 'Docs project' (2) categories.",
       "evidence": [
         "curl News REST categories 2026-10-14"
@@ -2478,7 +2655,7 @@
         "https://github.com/WordPress/wporg-documentation-2022"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Newest modified 2026-10-09 (version-6-5-13)",
       "notes": "Not in the HelpHub Jetpack sitemap. Overlaps with download/releases and News release posts.",
       "evidence": [
         "notes/research/01-inventory.md section 1",
@@ -2515,9 +2692,9 @@
       "repo_links": [
         "https://github.com/WordPress/pattern-directory"
       ],
-      "status": "active",
-      "last_activity_signal": "Repo pushed 2026-10-12",
-      "notes": null,
+      "status": "stale",
+      "last_activity_signal": "Newest page modified 2024-04-17 (/patterns/about/); trunk last commit 2026-10-12 (directory code)",
+      "notes": "Of the 5 pages, 2 are documentation (/patterns/about/, /patterns/pattern-directory/); favorites, my-patterns and new-pattern are app screens.",
       "evidence": [
         "curl 2026-10-14"
       ],
@@ -2551,9 +2728,9 @@
       "repo_links": [
         "https://github.com/WordPress/wporg-photo-directory"
       ],
-      "status": "active",
-      "last_activity_signal": null,
-      "notes": null,
+      "status": "stale",
+      "last_activity_signal": "Guidelines and FAQ modified 2024-12-10; trunk last commit 2026-10-06 (directory code)",
+      "notes": "Of the 8 pages, guidelines, FAQ and license are documentation; the rest are browse and submit screens.",
       "evidence": [
         "curl 2026-10-14"
       ],
@@ -2568,7 +2745,11 @@
       "url": "https://wordpress.org/plugins/developers/",
       "example_url": "https://wordpress.org/plugins/developers/add/",
       "site_or_host": "wordpress.org/plugins (directory site)",
-      "page_count": null,
+      "page_count": {
+        "value": 5,
+        "method": "REST X-WP-Total /plugins/wp-json/wp/v2/pages",
+        "date": "2026-10-14"
+      },
       "content_model": "Directory site pages (plugin-directory plugin + wporg-plugins-2024 theme)",
       "source_of_truth": "WordPress database + meta SVN code",
       "import_mechanism": "wp-admin editing / code deploy",
@@ -2582,7 +2763,7 @@
       "rest_api": "wordpress.org/plugins/wp-json/plugins/v1, plugins/v2",
       "repo_links": [],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Newest page modified 2026-03-11 (/plugins/developers/releases/)",
       "notes": "wordpress.org/plugins/about/ 301s here.",
       "evidence": [
         "curl 2026-10-14"
@@ -2623,7 +2804,8 @@
       "related_rows": [
         "devhub-plugins",
         "machine-wporg-mcp",
-        "contrib-plugins"
+        "contrib-plugins",
+        "policy-foundation-trademark"
       ]
     },
     {
@@ -2671,7 +2853,11 @@
       "url": "https://wordpress.org/support/guidelines/",
       "example_url": "https://wordpress.org/support/forum-user-guide/",
       "site_or_host": "wordpress.org/support (bbPress site)",
-      "page_count": null,
+      "page_count": {
+        "value": 9,
+        "method": "REST X-WP-Total /support/wp-json/wp/v2/pages",
+        "date": "2026-10-14"
+      },
       "content_model": "Pages on the forums site (guidelines, welcome, forum user guide, FAQ)",
       "source_of_truth": "WordPress database; history in WordPress/wporg-support-guidelines (inactive)",
       "import_mechanism": "wp-admin editing",
@@ -2682,12 +2868,12 @@
       "search": "Global search",
       "translation": "Locale forums have their own",
       "markdown_output": "yes",
-      "rest_api": null,
+      "rest_api": "wordpress.org/support/wp-json/wp/v2/pages",
       "repo_links": [
         "https://github.com/WordPress/wporg-support-guidelines"
       ],
       "status": "active",
-      "last_activity_signal": "Forum User Guide modified 2024-06-29; guidelines repo pushed 2023-08-09",
+      "last_activity_signal": "Guidelines modified 2026-04-25; Forum User Guide 2024-06-29; guidelines repo last commit 2023-08-09",
       "notes": null,
       "evidence": [
         "curl ?output_format=md 2026-10-14"
@@ -2704,7 +2890,11 @@
       "url": "https://wordpress.org/themes/getting-started/",
       "example_url": "https://wordpress.org/themes/commercial/",
       "site_or_host": "wordpress.org/themes (directory site)",
-      "page_count": null,
+      "page_count": {
+        "value": 5,
+        "method": "REST X-WP-Total /themes/wp-json/wp/v2/pages",
+        "date": "2026-10-14"
+      },
       "content_model": "Directory site pages",
       "source_of_truth": "WordPress database + wporg-theme-directory code",
       "import_mechanism": "wp-admin editing / code deploy",
@@ -2714,13 +2904,13 @@
       "rendering": "wporg-theme-directory theme",
       "search": "Theme directory search",
       "translation": "Rosetta directories",
-      "markdown_output": null,
-      "rest_api": null,
+      "markdown_output": "yes",
+      "rest_api": "wordpress.org/themes/wp-json/wp/v2/pages",
       "repo_links": [
         "https://github.com/WordPress/wporg-theme-directory"
       ],
-      "status": "active",
-      "last_activity_signal": "Repo pushed 2026-09-04",
+      "status": "stale",
+      "last_activity_signal": "Getting Started page modified 2020-10-02; newest directory page 2024-04-30; theme repo trunk last commit 2026-09-04",
       "notes": "wordpress.org/themes/about/ 301s here.",
       "evidence": [
         "curl 2026-10-14"
@@ -2780,7 +2970,7 @@
       "search": "GlotPress",
       "translation": "Is the translation platform",
       "markdown_output": "no",
-      "rest_api": "GlotPress API [not probed]",
+      "rest_api": "translate.wordpress.org/api/projects/ (GlotPress API, 200 JSON); glossaries export as CSV at /locale/{locale}/default/glossary/-export/",
       "repo_links": [],
       "status": "active",
       "last_activity_signal": null,
@@ -2791,6 +2981,42 @@
       "related_rows": [
         "contrib-polyglots",
         "rosetta-team-handbooks"
+      ]
+    },
+    {
+      "id": "policy-foundation-trademark",
+      "name": "WordPress Foundation trademark policy",
+      "category": "directory & policy",
+      "url": "https://wordpressfoundation.org/trademark-policy/",
+      "example_url": null,
+      "site_or_host": "wordpressfoundation.org (outside WordPress.org)",
+      "page_count": {
+        "value": 1,
+        "method": "REST pages on wordpressfoundation.org (30 pages total; the rest are financials, scholarships and donation pages)",
+        "date": "2026-10-14"
+      },
+      "content_model": "WordPress `page`",
+      "source_of_truth": "WordPress database",
+      "import_mechanism": "wp-admin editing",
+      "editing_path": "WordPress Foundation",
+      "owner_team": "WordPress Foundation",
+      "maintainers_if_public": null,
+      "rendering": null,
+      "search": null,
+      "translation": null,
+      "markdown_output": "no",
+      "rest_api": "wordpressfoundation.org/wp-json/wp/v2/pages",
+      "repo_links": [],
+      "status": "active",
+      "last_activity_signal": "Modified 2026-05-08",
+      "notes": "Policy that the Plugin Directory guidelines link to for naming and trademark use. ?output_format=md returns HTML on this host.",
+      "evidence": [
+        "curl wordpressfoundation.org REST pages and ?output_format=md 2026-10-14",
+        "curl detailed-plugin-guidelines ?output_format=md link to wordpressfoundation.org/trademark-policy/ 2026-10-14"
+      ],
+      "related_rows": [
+        "policy-plugin-guidelines",
+        "project-license"
       ]
     },
     {
@@ -2821,7 +3047,7 @@
       ],
       "status": "active",
       "last_activity_signal": "Modified 2026-06-29",
-      "notes": "Five pages: /about/, /features/ (2023-07-11), /domains/, /logos/, /etiquette/. /about/swag/ 301s to mercantile.wordpress.org.",
+      "notes": "Five pages: /about/, /about/features/ (2023-07-11), /about/domains/, /about/logos/, /about/etiquette/. /about/swag/ 301s to mercantile.wordpress.org.",
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
@@ -2894,6 +3120,44 @@
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
       "related_rows": []
+    },
+    {
+      "id": "project-download",
+      "name": "Download, beta/nightly and source pages",
+      "category": "project info",
+      "url": "https://wordpress.org/download/",
+      "example_url": "https://wordpress.org/download/beta-nightly/",
+      "site_or_host": "wordpress.org (main site)",
+      "page_count": {
+        "value": 3,
+        "method": "REST pages on the WordPress.org main site: /download/, /download/beta-nightly/, /download/source/ (the release archive is release-download-releases; /download/counter/ excluded)",
+        "date": "2026-10-14"
+      },
+      "content_model": "Main-site `page`",
+      "source_of_truth": "WordPress database (some pages are theme templates in wporg-main-2022)",
+      "import_mechanism": "wp-admin editing; theme deploys",
+      "editing_path": "Meta and Marketing editors on the main site; theme changes via WordPress/wporg-main-2022 PRs",
+      "owner_team": null,
+      "maintainers_if_public": null,
+      "rendering": "wporg-main-2022 block theme",
+      "search": "Global WordPress.org search (Google Programmable Search)",
+      "translation": "Rosetta main sites translate theme strings; page content translation unverified",
+      "markdown_output": "yes",
+      "rest_api": "wordpress.org/wp-json/wp/v2/pages",
+      "repo_links": [
+        "https://github.com/WordPress/wporg-main-2022"
+      ],
+      "status": "active",
+      "last_activity_signal": "/download/ modified 2026-05-07; beta-nightly 2023-07-11; source 2023-12-20",
+      "notes": "Install and testing instructions (beta testing, nightly builds, SVN and Git access to source). Beta/Nightly still links to the old /support/article/ HelpHub path.",
+      "evidence": [
+        "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14",
+        "curl ?output_format=md 2026-10-14"
+      ],
+      "related_rows": [
+        "release-download-releases",
+        "project-requirements"
+      ]
     },
     {
       "id": "project-education",
@@ -2990,7 +3254,7 @@
         "https://github.com/WordPress/wporg-gutenberg"
       ],
       "status": "active",
-      "last_activity_signal": "Repo pushed 2026-09-28",
+      "last_activity_signal": "Pages modified 2024-11-13; WordPress/wporg-gutenberg trunk last commit 2026-09-28",
       "notes": null,
       "evidence": [
         "curl 2026-10-14"
@@ -3108,29 +3372,35 @@
       "url": "https://wordpress.org/book/",
       "example_url": "https://wordpress.org/book/table-of-contents/",
       "site_or_host": "wordpress.org/book",
-      "page_count": null,
+      "page_count": {
+        "value": 74,
+        "method": "REST X-WP-Total /book/wp-json/wp/v2/pages (7) + posts (67)",
+        "date": "2026-10-14"
+      },
       "content_model": "Book chapters as pages",
-      "source_of_truth": "GitHub: https://github.com/WordPress/library (formerly WordPress/book)",
-      "import_mechanism": "Unverified (repo also has wporg-book theme repo)",
-      "editing_path": "Pull request ('This book was written entirely on GitHub')",
+      "source_of_truth": "WordPress database on the wordpress.org/book site; content mirrored as Markdown in WordPress/library (import not confirmed)",
+      "import_mechanism": "Not confirmed: all 74 items are authored by the wordpressdotorg account (id 5911429); WordPress/library added a manifest.json mapping chapters to posts on 2026-10-07",
+      "editing_path": "Pull request to WordPress/library; edits have also been made directly on the site and copied back to the repo",
       "owner_team": null,
       "maintainers_if_public": null,
       "rendering": "wporg-book theme",
       "search": null,
       "translation": null,
       "markdown_output": "yes",
-      "rest_api": null,
+      "rest_api": "wordpress.org/book/wp-json/wp/v2/posts",
       "repo_links": [
         "https://github.com/WordPress/library",
         "https://github.com/WordPress/wp20-book",
         "https://github.com/WordPress/wporg-book"
       ],
       "status": "active",
-      "last_activity_signal": "WordPress/library pushed 2026-10-13",
-      "notes": "WordPress/book redirects to WordPress/library ('Volume 1, first ten years'); wp20-book is version 2.",
+      "last_activity_signal": "WordPress/library trunk last commit 2026-10-13; newest post modified 2026-10-07",
+      "notes": "WordPress/book redirects to WordPress/library ('Volume 1, first ten years'); wp20-book is version 2. The book posts are not the import-user signature of a handbook, since 5911429 is also the generic WordPress.org account.",
       "evidence": [
         "curl wordpress.org/book/?output_format=md 2026-10-14",
-        "gh api repos/WordPress/library"
+        "gh api repos/WordPress/library 2026-10-14",
+        "gh api repos/WordPress/library/commits 2026-10-14",
+        "curl wordpress.org/book REST X-WP-Total 2026-10-14"
       ],
       "related_rows": [
         "project-history"
@@ -3221,14 +3491,14 @@
       "rendering": null,
       "search": null,
       "translation": null,
-      "markdown_output": null,
+      "markdown_output": "yes",
       "rest_api": null,
       "repo_links": [
         "https://github.com/WordPress/wordpress-playground",
         "https://github.com/WordPress/wporg-wasm"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "wordpress-playground trunk last commit 2026-10-13; wporg-wasm main last commit 2026-07-27",
       "notes": "Docs are on DevHub (devhub-playground).",
       "evidence": [
         "curl 2026-10-14"
@@ -3394,14 +3664,14 @@
       "rendering": "wporg-showcase-2022",
       "search": "Subsite search",
       "translation": "None",
-      "markdown_output": "no",
+      "markdown_output": "partial",
       "rest_api": "wordpress.org/showcase/wp-json/wp/v2/posts",
       "repo_links": [
         "https://github.com/WordPress/wporg-showcase-2022"
       ],
       "status": "active",
-      "last_activity_signal": null,
-      "notes": "?output_format=md returned 403 on 2026-10-14, the only WordPress.org page probed that refused Markdown.",
+      "last_activity_signal": "Newest post 2026-10-10",
+      "notes": "?output_format=md returns text/markdown on the showcase home but HTML on /showcase/submit-a-wordpress-site/ (2026-10-14); it returned 403 on an earlier probe. The submit page holds the inclusion guidelines.",
       "evidence": [
         "curl 2026-10-14"
       ],
@@ -3466,7 +3736,7 @@
         "https://github.com/WordPress/wordcamp.org"
       ],
       "status": "active",
-      "last_activity_signal": "Repo pushed 2026-10-14",
+      "last_activity_signal": "WordPress/wordcamp.org production last commit 2026-10-13",
       "notes": "Organizer documentation is on make.wordpress.org/community (contrib-community), not on wordcamp.org. ?output_format=md returns HTML here.",
       "evidence": [
         "curl 2026-10-14"
@@ -3502,7 +3772,7 @@
         "https://github.com/WordPress/wporg-news-2021"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "Latest post 2026-10-06",
       "notes": "Release posts are counted separately (release-news-posts).",
       "evidence": [
         "curl 2026-10-14"
@@ -3539,11 +3809,14 @@
       ],
       "status": "active",
       "last_activity_signal": "Modified 2026-04-24",
-      "notes": "New in 2026; wp-cli.org now 301s here.",
+      "notes": "New in 2026; wp-cli.org now 301s here (see legacy-wp-cli-org-redirect).",
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [
+        "legacy-wp-cli-org-redirect",
+        "devhub-cli-commands"
+      ]
     },
     {
       "id": "legacy-core-trac-wiki",
@@ -3567,7 +3840,7 @@
       "repo_links": [],
       "status": "stale",
       "last_activity_signal": "SandBox last modified 2013-04 (search snippet)",
-      "notes": "403 to automated fetches (2026-10-14). Search found only default Trac pages (SandBox, InterWiki); contributor docs live in the make/core handbook.",
+      "notes": "403 to automated fetches, a JavaScript \"Checking your browser\" challenge (2026-10-14). Search found only default Trac pages (SandBox, InterWiki); contributor docs live in the make/core handbook.",
       "evidence": [
         "curl 403 2026-10-14",
         "WebSearch site:core.trac.wordpress.org/wiki 2026-10-14"
@@ -3599,7 +3872,7 @@
         "https://github.com/WordPress/developer-plugins-handbook"
       ],
       "status": "stale",
-      "last_activity_signal": "Pushed 2026-10-14",
+      "last_activity_signal": "Pushed 2026-10-14; main last commit 2026-10-14",
       "notes": "Active but disconnected: a cautionary example. Adopt it as the source or archive it.",
       "evidence": [
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md section 9",
@@ -3636,7 +3909,7 @@
         "https://github.com/WordPress/documentation-end-user"
       ],
       "status": "stale",
-      "last_activity_signal": "Last push 2024-02-16",
+      "last_activity_signal": "Last push 2024-02-16; trunk last commit 2024-02-16",
       "notes": "No article content migrated. Archive candidate under the 2025 repo criteria.",
       "evidence": [
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md final section",
@@ -3669,7 +3942,7 @@
         "https://github.com/WordPress/HelpHub"
       ],
       "status": "archived",
-      "last_activity_signal": "Archived",
+      "last_activity_signal": "Archived; last commit 2026-10-02, after the retirement README of 2026-09-29",
       "notes": "Code now lives in meta SVN support-helphub and WordPress/wporg-documentation-2022.",
       "evidence": [
         "gh repo list 2026-10-14"
@@ -3682,7 +3955,7 @@
       "id": "legacy-learn-lesson-plan-import",
       "name": "Legacy lesson-plan import (wptrainingteam.github.io)",
       "category": "legacy/archive",
-      "url": "https://wptrainingteam.github.io/",
+      "url": "https://github.com/wptrainingteam/wptrainingteam.github.io",
       "example_url": null,
       "site_or_host": "GitHub Pages",
       "page_count": null,
@@ -3698,13 +3971,15 @@
       "markdown_output": null,
       "rest_api": null,
       "repo_links": [
+        "https://github.com/wptrainingteam/wptrainingteam.github.io",
         "https://github.com/WordPress/Learn"
       ],
       "status": "archived",
-      "last_activity_signal": null,
-      "notes": "The only non-handbook use of the manifest importer; abandoned for wp-admin editing.",
+      "last_activity_signal": "Repo last push 2020-11-30",
+      "notes": "The only non-handbook use of the manifest importer; abandoned for wp-admin editing. The GitHub Pages site wptrainingteam.github.io returns 404, though the repo (not archived) still holds index.html and manifest.json.",
       "evidence": [
-        "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md section 11"
+        "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md section 11",
+        "curl wptrainingteam.github.io 404 and gh api repos/wptrainingteam/wptrainingteam.github.io 2026-10-14"
       ],
       "related_rows": [
         "learn-lesson-plans"
@@ -3734,7 +4009,7 @@
       "last_activity_signal": null,
       "notes": "Not verifiable: codex.wordpress.org blocks automated fetches. HelpHub's helphub-codex-languages module handles Codex language links. The 2019 read-only proposal suggested keeping edit rights for Rosetta managers.",
       "evidence": [
-        "https://meta.trac.wordpress.org/ticket/4487",
+        "https://meta.trac.wordpress.org/ticket/4487 (not re-verifiable: Trac returns 403 to curl and WebFetch, 2026-10-14)",
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md section 1"
       ],
       "related_rows": [
@@ -3787,14 +4062,14 @@
       "maintainers_if_public": null,
       "rendering": "Docusaurus",
       "search": "Docusaurus",
-      "translation": "Translations served here (es, fr, ja verified 200; pt-BR path 404 on 2026-10-14)",
+      "translation": "Translations served here: es, fr, ja, pt-br (lowercase path), bn, gu, tl return 200; hi, it, lg return 404 although i18n/ lists them; pt-BR (uppercase) 404 (2026-10-14)",
       "markdown_output": "no",
       "rest_api": "none",
       "repo_links": [
         "https://github.com/WordPress/wordpress-playground"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "wordpress-playground trunk last commit 2026-10-13",
       "notes": "Root meta-refreshes to developer.wordpress.org/playground/. The only translated developer docs on a WordPress project host; Kapa.ai 'Ask AI' phase planned.",
       "evidence": [
         "curl 2026-10-14",
@@ -3830,8 +4105,8 @@
       "evidence": [
         "notes/research/01-inventory.md section 15",
         "notes/research/04-rendering-architecture.md sections 1.7 and 1.10",
-        "https://meta.trac.wordpress.org/ticket/4487",
-        "https://meta.trac.wordpress.org/ticket/2575",
+        "https://meta.trac.wordpress.org/ticket/4487 (not re-verifiable: Trac returns 403 to curl and WebFetch, 2026-10-14)",
+        "https://meta.trac.wordpress.org/ticket/2575 (not re-verifiable: Trac returns 403 to curl and WebFetch, 2026-10-14)",
         "curl 2026-10-14"
       ],
       "related_rows": [
@@ -3868,6 +4143,41 @@
       ],
       "related_rows": [
         "legacy-codex"
+      ]
+    },
+    {
+      "id": "legacy-wp-cli-org-redirect",
+      "name": "wp-cli.org (retired WP-CLI site)",
+      "category": "legacy/archive",
+      "url": "https://wp-cli.org/",
+      "example_url": "https://wp-cli.org/commands/",
+      "site_or_host": "wp-cli.org (nginx redirect)",
+      "page_count": null,
+      "content_model": "nginx redirect; former Jekyll site from wp-cli/wp-cli.github.com",
+      "source_of_truth": "Redirect config (not public)",
+      "import_mechanism": "none",
+      "editing_path": null,
+      "owner_team": "WP-CLI maintainers",
+      "maintainers_if_public": null,
+      "rendering": null,
+      "search": null,
+      "translation": null,
+      "markdown_output": null,
+      "rest_api": null,
+      "repo_links": [
+        "https://github.com/wp-cli/wp-cli.github.com"
+      ],
+      "status": "frozen",
+      "last_activity_signal": "wp-cli/wp-cli.github.com main last commit 2026-10-08 (bot sync from wp-cli/.github)",
+      "notes": "Every path 301s to wordpress.org/cli/ (checked /, /commands/, /docs/), so old deep links to commands and docs land on the landing page instead of developer.wordpress.org/cli/commands/ or make.wordpress.org/cli/handbook/. The old site source is the wp-cli/wp-cli.github.com repo, which still receives bot syncs.",
+      "evidence": [
+        "curl wp-cli.org paths 301 2026-10-14",
+        "gh api repos/wp-cli/wp-cli.github.com 2026-10-14"
+      ],
+      "related_rows": [
+        "project-wp-cli-landing",
+        "devhub-cli-commands",
+        "contrib-cli"
       ]
     },
     {
@@ -3966,7 +4276,7 @@
       ],
       "status": "active",
       "last_activity_signal": null,
-      "notes": "Links 8 doc surfaces (DevHub, HelpHub, Block Editor, Themes, Plugins, WP-CLI, Coding Standards, REST API). 404 on developer., learn., make. and /documentation/. Omits Code Reference, Common APIs, Advanced Administration, Playground, SCF, Learn.",
+      "notes": "Links 8 doc surfaces (DevHub, HelpHub, Block Editor, Themes, Plugins, WP-CLI, Coding Standards, REST API). 404 on developer., learn., make. and /documentation/. Omits Code Reference, Common APIs, Advanced Administration, Playground, SCF, Learn. The file is Markdown served as text/plain; ?output_format=md on it returns 404.",
       "evidence": [
         "curl 2026-10-14",
         "notes/research/04-rendering-architecture.md section 1.8"
@@ -3988,7 +4298,7 @@
       "import_mechanism": "none (on the fly)",
       "editing_path": "Meta (production wiring private)",
       "owner_team": "Meta team",
-      "maintainers_if_public": "Dion Hulse announced; Dennis Snell's html-to-md",
+      "maintainers_if_public": null,
       "rendering": "html-to-md",
       "search": null,
       "translation": "Works on Rosetta pages",
@@ -3999,7 +4309,7 @@
       ],
       "status": "active",
       "last_activity_signal": "Announced 2026-03-03",
-      "notes": "Verified text/markdown on 2026-10-14 for HelpHub, DevHub, Code Reference, CLI, Developer Blog, Learn, Make handbooks and P2s, News, main-site pages, directories, Rosetta HelpHub, forums. Not on wordpress.tv, wordcamp.org, translate.wordpress.org; showcase returned 403. Includes page chrome; no source commit or edit path.",
+      "notes": "Verified text/markdown on 2026-10-14 for HelpHub, DevHub, Code Reference, CLI, Developer Blog, Learn, Make handbooks and P2s, News, main-site pages, directories, Rosetta HelpHub and team handbooks, forums and the showcase home. Not on wordpress.tv, wordcamp.org, translate.wordpress.org, docs.openverse.org, GitHub Pages hosts, or the showcase submit page. Includes page chrome; no source commit or edit path. Announced by Dion Hulse; the converter is Dennis Snell's dmsnell/html-to-md.",
       "evidence": [
         "https://make.wordpress.org/meta/2026/03/03/markdown-now-available-on-wordpress-org/",
         "curl content-type checks 2026-10-14"
@@ -4026,16 +4336,16 @@
       "search": null,
       "translation": null,
       "markdown_output": null,
-      "rest_api": "wordpress.org/wp-json/mcp/wporg; wp-abilities/v1 namespace on wordpress.org, DevHub and Learn (listing requires auth)",
+      "rest_api": null,
       "repo_links": [
         "https://github.com/WordPress/wordpress.org"
       ],
       "status": "active",
-      "last_activity_signal": "Meta changeset 14703 (2026-03-12) added plugin directory resources and prompts",
-      "notes": "No documentation domain yet. Resources draw on developer.wordpress.org content.",
+      "last_activity_signal": "Meta changeset 14703 (2026-03-12) added plugin directory resources and prompts; WordPress/wordpress.org mirror last commit 2026-10-14",
+      "notes": "No documentation domain yet. Resources draw on developer.wordpress.org content. The endpoint wordpress.org/wp-json/mcp/wporg and the wp-abilities/v1 listing return 401 without authentication (2026-10-14).",
       "evidence": [
         "curl https://wordpress.org/wp-json/ routes 2026-10-14",
-        "https://meta.trac.wordpress.org/changeset/14703",
+        "https://meta.trac.wordpress.org/changeset/14703 (confirmed by the WordPress/wordpress.org mirror commit of 2026-03-12, checked 2026-10-14)",
         "notes/research/04-rendering-architecture.md section 1.8"
       ],
       "related_rows": [
@@ -4095,7 +4405,7 @@
         "https://github.com/WordPress/wordpress.org"
       ],
       "status": "active",
-      "last_activity_signal": "Mirror pushed 2026-10-13",
+      "last_activity_signal": "Mirror pushed 2026-10-14; trunk last commit 2026-10-14",
       "notes": "The importer engine used by every GitHub-backed handbook.",
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4129,7 +4439,7 @@
         "https://github.com/WordPress/Advanced-administration-handbook"
       ],
       "status": "active",
-      "last_activity_signal": "Pushed 2026-09-29",
+      "last_activity_signal": "Pushed 2026-09-29; main last commit 2026-09-29",
       "notes": "No CI; hand-edited manifest; stray .obsidian/.",
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4162,8 +4472,8 @@
         "https://github.com/WordPress/Documentation-Issue-Tracker"
       ],
       "status": "active",
-      "last_activity_signal": "Pushed 2026-07-22",
-      "notes": "469 open issues (2026-10-11). fr_FR locale tracker created 2026-09-10.",
+      "last_activity_signal": "Pushed 2026-07-22; main last commit 2026-07-22; 469 open issues (2026-10-14)",
+      "notes": "469 open issues (2026-10-14). fr_FR locale tracker created 2026-09-10 (issues only; its git repository is empty).",
       "evidence": [
         "gh repo list WordPress 2026-10-14",
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md"
@@ -4196,14 +4506,15 @@
         "https://github.com/WordPress/gutenberg"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "trunk last commit 2026-10-14",
       "notes": "docs/manifest.json generated from docs/toc.json.",
       "evidence": [
         "gh repo list WordPress 2026-10-14",
         "wp-documentation-migration/notes/wporg-handbook-pipeline/research/03-handbook-landscape-survey.md"
       ],
       "related_rows": [
-        "devhub-block-editor"
+        "devhub-block-editor",
+        "code-reference-gutenberg-storybook"
       ]
     },
     {
@@ -4229,7 +4540,7 @@
         "https://github.com/WordPress/Learn"
       ],
       "status": "active",
-      "last_activity_signal": "Pushed 2026-10-12",
+      "last_activity_signal": "Pushed 2026-10-12; trunk last commit 2026-10-12",
       "notes": null,
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4262,7 +4573,7 @@
         "https://github.com/WordPress/phpdoc-parser"
       ],
       "status": "active",
-      "last_activity_signal": "Pushed 2026-10-13",
+      "last_activity_signal": "Pushed 2026-10-13; master last commit 2026-09-24",
       "notes": "Corpus-diff CI on every PR; can emit JSON.",
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4295,7 +4606,7 @@
         "https://github.com/WordPress/secure-custom-fields"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "trunk last commit 2026-08-26 (pushed 2026-09-29)",
       "notes": "CI fails PRs with a stale manifest.",
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4328,7 +4639,7 @@
         "https://github.com/WordPress/wordpress-develop"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "trunk last commit 2026-10-14",
       "notes": "Changes go through Trac tickets.",
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4361,7 +4672,7 @@
         "https://github.com/WordPress/wordpress-playground"
       ],
       "status": "active",
-      "last_activity_signal": "Pushed 2026-10-14",
+      "last_activity_signal": "Pushed 2026-10-14; trunk last commit 2026-10-13",
       "notes": null,
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4395,7 +4706,7 @@
         "https://github.com/WordPress/wpcs-docs"
       ],
       "status": "active",
-      "last_activity_signal": "Pushed 2026-05-19",
+      "last_activity_signal": "Pushed 2026-05-19; master last commit 2026-05-05",
       "notes": null,
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4428,7 +4739,7 @@
         "https://github.com/WordPress/wporg-developer"
       ],
       "status": "active",
-      "last_activity_signal": "Pushed 2026-10-12",
+      "last_activity_signal": "Pushed 2026-10-12; trunk last commit 2026-10-12",
       "notes": null,
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4461,7 +4772,7 @@
         "https://github.com/WordPress/wporg-documentation-2022"
       ],
       "status": "active",
-      "last_activity_signal": "Pushed 2026-09-09",
+      "last_activity_signal": "Pushed 2026-09-09; trunk last commit 2026-09-09",
       "notes": "Two upstreams (SVN and GitHub) can silently revert SVN-only changes.",
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4494,7 +4805,7 @@
         "https://github.com/WordPress/wporg-mu-plugins"
       ],
       "status": "active",
-      "last_activity_signal": "Pushed 2026-10-12",
+      "last_activity_signal": "Pushed 2026-10-12; trunk last commit 2026-10-12",
       "notes": null,
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4526,8 +4837,8 @@
       "repo_links": [
         "https://github.com/WP-API/docs"
       ],
-      "status": "active",
-      "last_activity_signal": "Last push 2025-06-04",
+      "status": "stale",
+      "last_activity_signal": "Last push 2025-06-04; master last commit 2025-06-04",
       "notes": null,
       "evidence": [
         "gh repo list WordPress 2026-10-14",
@@ -4560,7 +4871,7 @@
         "https://github.com/wp-cli/handbook"
       ],
       "status": "active",
-      "last_activity_signal": null,
+      "last_activity_signal": "main last commit 2026-10-11",
       "notes": "regenerate-manifest.yml opens bot PRs.",
       "evidence": [
         "gh repo list WordPress 2026-10-14",

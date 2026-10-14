@@ -65,15 +65,34 @@ interface MapData {
   rows: Row[];
 }
 
-/** Port of kind_source() from the former scripts/build-page.py. Order of checks matters. */
+/**
+ * Classifies `source_of_truth` for the filter by how the text STARTS, so a row such as
+ * "WordPress database (a GitHub mirror exists but is not imported)" files under the database,
+ * not under GitHub. Keep new source_of_truth values leading with the kind.
+ */
 export function kindSource(value: string | null | undefined): string {
-  const s = (value ?? "").toLowerCase();
-  if (s.includes("github") || s.startsWith("markdown") || s.includes("mixed: github")) return "GitHub repo";
-  if (s.includes("parsed from core") || s.includes("docblock")) return "Parsed from core";
-  if (s.includes("mediawiki")) return "MediaWiki";
-  if (s.includes("trac")) return "Trac";
-  if (s.includes("theme code") && !s.includes("database")) return "Theme code";
-  if (s.includes("database") || s.includes("bbpress") || s.includes("uploads")) return "WordPress database";
+  const s = (value ?? "").toLowerCase().trim();
+  const starts = (...prefixes: string[]) => prefixes.some((p) => s.startsWith(p));
+  if (starts("github", "mixed: github", "markdown", "mdx")) return "GitHub repo";
+  if (starts("parsed from core", "php docblocks", "parser code", "generated")) return "Parsed or generated";
+  if (starts("mediawiki")) return "MediaWiki";
+  if (starts("trac")) return "Trac";
+  if (starts("wordpress database", "wordpress.com database", "glotpress database")) return "WordPress database";
+  if (
+    starts(
+      "theme code",
+      "code in meta svn",
+      "plugin code",
+      "devhub theme",
+      "helphub theme",
+      "shared blocks",
+      "learn theme",
+      "private dotorg",
+      "redirect config",
+      "rendered html",
+    )
+  )
+    return "Site code or config";
   return "Other";
 }
 
