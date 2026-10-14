@@ -13,8 +13,9 @@ scripts/validate.py           schema + rules; run before every commit
 scripts/sort.py               sorts rows by category order then name (validate requires it)
 scripts/probe.py              re-measures URL status, REST totals, Markdown output, repo activity into `probe`
 scripts/changelog.py          Markdown diff between two versions of the JSON
-scripts/build-page.py         builds dist/index.html (self-contained) and copies the JSON next to it
-site/page-template.html       the page template; __DATA__ and the stat placeholders are filled by the builder
+site/                         the page: Vite + React 18 + TypeScript + Tailwind CSS + shadcn/ui; imports the JSON at build time
+site/src/lib/data.ts          row types and the source-of-truth / import-mechanism kind rules used by the filters
+site/src/index.css            the theme: WordPress.org palette and fonts as shadcn CSS variables (light and dark)
 .github/workflows/            validate on PR, weekly probe that opens a PR, publish the page on push
 ```
 
@@ -28,9 +29,12 @@ site/page-template.html       the page template; __DATA__ and the stat placehold
 - **Re-measure.** `python3 -I scripts/probe.py` (set `GITHUB_TOKEN` for the repo checks; `--only <id>` for one row;
   `--dry-run` to see without writing). It only writes `probe` and REST-measured `page_count` values. Then
   `sort.py`, `validate.py`, and `scripts/changelog.py <old> <new>` for the commit message.
-- **Build the page.** `python3 -I scripts/build-page.py` writes `dist/` (gitignored). Open `dist/index.html`.
+- **Build the page.** `cd site && npm ci && npm run build` writes `site/dist/` (gitignored): `index.html`, `assets/`
+  and a copy of `documentation-map.json`. Paths are relative, so serve the folder from any host or subpath
+  (`python3 -m http.server --directory site/dist`). `npm run dev` serves a live preview. Add UI pieces with the
+  shadcn CLI (`npx shadcn@4.21.4 add <component>`) and keep dependency versions pinned exactly.
 - **Publish.** Pushing to `trunk` publishes the page through GitHub Pages. To publish the same build elsewhere,
-  run the host's publish command against `dist/`.
+  run the host's publish command against `site/dist/`.
 
 ## Rules
 

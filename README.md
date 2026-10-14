@@ -31,8 +31,18 @@ so that anyone proposing a change to how WordPress documentation is made can sta
 
 Something wrong or missing? [Open a correction](https://github.com/ndiego/wporg-docs-map/issues/new?template=correction.yml)
 with the evidence, or send a pull request that edits the JSON. `AGENTS.md` describes the workflow for people and
-agents alike: edit `data/documentation-map.json`, run `scripts/sort.py` and `scripts/validate.py`, build with
-`scripts/build-page.py`, and let the workflows publish.
+agents alike: edit `data/documentation-map.json`, run `scripts/sort.py` and `scripts/validate.py`, and let the workflows publish.
+
+## Building the page
+
+The page in `site/` is a Vite + React + shadcn/ui app that reads the JSON at build time:
+
+```sh
+cd site && npm ci && npm run build
+```
+
+The static output lands in `site/dist/` (`index.html`, `assets/`, and a copy of `documentation-map.json`) with
+relative paths, so it works on GitHub Pages under `/wporg-docs-map/` or on any other host.
 
 ## Related
 
