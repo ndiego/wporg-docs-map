@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WordPress.org documentation map",
+  "type": "object",
+  "required": ["generated", "categories", "rows"],
+  "properties": {
+    "generated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "categories": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "name", "category", "url", "example_url", "site_or_host", "page_count", "content_model",
+          "source_of_truth", "import_mechanism", "editing_path", "owner_team", "maintainers_if_public",
+          "rendering", "search", "translation", "markdown_output", "rest_api", "repo_links", "status",
+          "last_activity_signal", "notes", "evidence", "related_rows"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "name": { "type": "string", "minLength": 1 },
+          "category": { "type": "string" },
+          "url": { "type": ["string", "null"], "pattern": "^https?://" },
+          "example_url": { "type": ["string", "null"], "pattern": "^https?://" },
+          "site_or_host": { "type": ["string", "null"] },
+          "page_count": {
+            "type": ["object", "null"],
+            "required": ["value", "method", "date"],
+            "properties": {
+              "value": { "type": ["integer", "null"], "minimum": 0 },
+              "method": { "type": ["string", "null"] },
+              "date": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+            }
+          },
+          "content_model": { "type": ["string", "null"] },
+          "source_of_truth": { "type": ["string", "null"] },
+          "import_mechanism": { "type": ["string", "null"] },
+          "editing_path": { "type": ["string", "null"] },
+          "owner_team": { "type": ["string", "null"] },
+          "maintainers_if_public": { "type": ["string", "null"] },
+          "rendering": { "type": ["string", "null"] },
+          "search": { "type": ["string", "null"] },
+          "translation": { "type": ["string", "null"] },
+          "markdown_output": { "type": ["string", "null"] },
+          "rest_api": { "type": ["string", "null"] },
+          "repo_links": { "type": "array", "items": { "type": "string", "pattern": "^https?://" } },
+          "status": { "type": "string", "enum": ["active", "stale", "frozen", "archived", "proposed"] },
+          "last_activity_signal": { "type": ["string", "null"] },
+          "notes": { "type": ["string", "null"] },
+          "evidence": { "type": "array", "items": { "type": "string" } },
+          "related_rows": { "type": "array", "items": { "type": "string" } },
+          "probe": {
+            "type": "object",
+            "description": "Written by scripts/probe.py; never edited by hand.",
+            "properties": {
+              "checked": { "type": "string" },
+              "url_status": { "type": ["integer", "null"] },
+              "url_final": { "type": ["string", "null"] },
+              "rest_total": { "type": ["integer", "null"] },
+              "markdown_content_type": { "type": ["string", "null"] },
+              "repos": { "type": "array" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+dist/
+.spacefast/
+__pycache__/
+.DS_Store

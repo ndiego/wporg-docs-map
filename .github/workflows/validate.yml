@@ -1,0 +1,28 @@
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [trunk]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate the data against the schema and the map's rules
+        run: python3 -I scripts/validate.py
+      - name: Build the page
+        run: python3 -I scripts/build-page.py
+      - name: Changelog preview (pull requests)
+        if: github.event_name == 'pull_request'
+        run: |
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+          git show "origin/${{ github.base_ref }}:data/documentation-map.json" > /tmp/old.json
+          python3 -I scripts/changelog.py /tmp/old.json data/documentation-map.json | tee -a "$GITHUB_STEP_SUMMARY"

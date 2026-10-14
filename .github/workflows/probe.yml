@@ -1,0 +1,53 @@
+name: Weekly probe
+
+# Re-measures every row (URL status, REST totals, Markdown output, repo activity) and opens a pull
+# request with the diff and a changelog when anything changed. Narrative fields are never touched.
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Keep the previous data for the changelog
+        run: cp data/documentation-map.json /tmp/old.json
+      - name: Probe
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 -I scripts/probe.py | tail -40
+      - name: Sort and validate
+        run: |
+          python3 -I scripts/sort.py
+          python3 -I scripts/validate.py
+      - name: Changelog
+        id: changelog
+        run: |
+          python3 -I scripts/changelog.py /tmp/old.json data/documentation-map.json > /tmp/changelog.md
+          cat /tmp/changelog.md
+          if grep -q "No changes" /tmp/changelog.md; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Prepend to CHANGELOG.md
+        if: steps.changelog.outputs.changed == 'true'
+        run: |
+          { head -n 2 CHANGELOG.md; echo; cat /tmp/changelog.md; echo; tail -n +3 CHANGELOG.md; } > /tmp/CHANGELOG.md
+          mv /tmp/CHANGELOG.md CHANGELOG.md
+      - name: Open a pull request
+        if: steps.changelog.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: probe/weekly
+          title: "Weekly probe: measurements changed"
+          commit-message: "Weekly probe: update measurements"
+          body-path: /tmp/changelog.md
+          labels: probe
+          delete-branch: true
