@@ -11,6 +11,7 @@ data/schema.json              the row schema; scripts/validate.py enforces it pl
 data/VERIFICATION.md          how the data was verified and what could not be
 data/rosetta.json             the Rosetta locale sites (xx.wordpress.org): one entry per locale (see data/rosetta.schema.json)
 data/ROSETTA-METHOD.md        how rosetta.json was collected, its caveats and what stands out
+data/rosetta-history.json     the sourced background shown on the Rosetta page: narrative, timeline, roles, numbered sources
 scripts/validate.py           schema + rules; run before every commit
 scripts/sort.py               sorts rows by category order then name (validate requires it)
 scripts/probe.py              re-measures URL status, REST totals, Markdown output, repo activity into `probe`
@@ -21,6 +22,7 @@ site/                         the pages: Vite + React 18 + TypeScript + Tailwind
                               (data/rosetta.json), sharing the top bar, theme toggle and footer (components/site-chrome.tsx)
 site/src/lib/data.ts          row types and the source-of-truth / import-mechanism kind rules used by the filters
 site/src/lib/rosetta.ts       locale types and the computed coverage, stats and gap readings for the Rosetta page
+site/src/lib/history.ts       types and citation numbering for rosetta-history.json (components/rosetta/background.tsx)
 site/src/index.css            the theme: WordPress.org palette and fonts as shadcn CSS variables (light and dark)
 .github/workflows/            validate on PR, weekly probe that opens a PR, publish the page on push
 ```
@@ -39,6 +41,10 @@ site/src/index.css            the theme: WordPress.org palette and fonts as shad
   45 minutes for all of them; `--only <subdomain>` for one, `--dry-run` to see without writing). It rewrites the
   measured fields of `data/rosetta.json` and adds locales new to the Polyglots teams page; `notes` and
   `evidence` stay as written. Then `validate.py`.
+- **Change the Rosetta background.** Edit `data/rosetta-history.json`. Every paragraph, timeline entry and role
+  cites source ids from its `sources` list; a source needs a title, an http(s) url, a publisher, a date (or
+  null) and one line on what it supports. Do not add a claim without a source you fetched. `validate.py`
+  checks the citations, dates and timeline order.
 - **Build the page.** `cd site && npm ci && npm run build` writes `site/dist/` (gitignored): `index.html`,
   `rosetta/index.html`, `assets/` and copies of `documentation-map.json` and `rosetta.json`. Paths are relative, so serve the folder from any host or subpath
   (`python3 -m http.server --directory site/dist`). `npm run dev` serves a live preview. Add UI pieces with the

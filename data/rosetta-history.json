@@ -1,0 +1,184 @@
+{
+  "updated": "2026-10-14",
+  "intro": "Rosetta sites are the localized WordPress.org sites at xx.wordpress.org. They began in September 2007 as a way for translation teams to publish a localized download and a blog without building release packages by hand, and grew into a network that can also hold a locale's support forums, HelpHub articles, team P2 and handbook. Everything below cites a primary source; where the record is unclear or could not be reached, it says so.",
+  "sections": [
+    {
+      "heading": "Before locale sites (2004 to 2007)",
+      "paragraphs": [
+        {
+          "text": "WordPress gained gettext-based internationalization in version 1.2, and in February 2005 the project announced the wp-polyglots mailing list to coordinate translations and \"pre-localized versions of WordPress available for download\". Translators committed their files to the i18n Subversion repository and assembled localized download archives themselves.",
+          "sources": ["news-2005-02-polyglots"]
+        }
+      ]
+    },
+    {
+      "heading": "Launch (September 2007)",
+      "paragraphs": [
+        {
+          "text": "On 10 September 2007 Nikolay Bachiyski asked the wp-polyglots list for beta testers of \"official local WordPress sites\". Each team would get a wordpress.org subdomain, a WordPress blog for installation instructions and news in its language, and \"an interface for building and releasing your localized releases\", so download archives no longer had to be built by hand. The working example was bg.wordpress.org.",
+          "sources": ["list-2007-09-10-beta-call"]
+        },
+        {
+          "text": "Three days later Matt Mullenweg described what each site contained: a one-page info site with the essential parts of WordPress.org, a blog, forums tied to the WordPress.org user system, and a pre-localized download. He also wrote that the forums and sites \"should be combined\", which took another nine years.",
+          "sources": ["list-2007-09-13-matt"]
+        },
+        {
+          "text": "On 30 September 2007 Bachiyski announced that \"the beta-testing of the locale sites is over\", thanked the French, Japanese, Indonesian and Turkish testers, and listed the setup steps for any team: choose a subdomain, give the locale code, name the administrators, conform the SVN repository to the Codex layout, and translate the theme's rosetta.pot file. That is the earliest dated use of the name \"rosetta\" for this system in the record. The WP20 book places the first Rosetta site, Bulgarian, in 2008; the mailing list shows bg.wordpress.org running a year earlier.",
+          "sources": ["list-2007-09-30-launch", "wp20-book-ch14"]
+        },
+        {
+          "text": "The Polyglots handbook explains the name: Rosetta is \"the code name of the theme for the local WordPress sites\", and \"the name was inspired from the ancient Rosetta Stone, which contained more or less the same text in three different languages\". No primary source records who chose it.",
+          "sources": ["handbook-rosetta", "handbook-setting-up-local-site"]
+        }
+      ]
+    },
+    {
+      "heading": "Separate install to shared network (2010 to 2014)",
+      "paragraphs": [
+        {
+          "text": "For its first seven years Rosetta was a separate WordPress install that shared user accounts with WordPress.org. In December 2010 the locale sites still ran the WordPress 2.9 branch and the original theme; in July 2011 Andrew Nacin moved their menus and header screenshots onto core's Menus and Custom Header features; a new design for all Rosetta sites appeared in April 2013. Translation moved from hand-edited files to GlotPress at translate.wordpress.org from 2010.",
+          "sources": ["post-2010-12-15-locale-sites-theme", "post-2011-07-14-rosetta-updates", "post-2013-04-08-new-design", "handbook-history-of-the-team"]
+        },
+        {
+          "text": "In March 2014 the Rosetta theme was imported into the public Meta Subversion repository under global.wordpress.org, followed by the plugins that run the sites. On 15 October 2014 the Polyglots chat notes record that \"Rosetta and .org installs are now merged\"; a Meta commit the same day updated the \"Rosetta bridge to reflect new network setup\". The Meta handbook now describes the result as a WordPress Multisite network, the Global Network, where each locale can have a main site, a team P2 at /team and an optional support site at /support.",
+          "sources": ["svn-r465-rosetta-theme", "post-2014-10-15-chat-notes", "meta-handbook-global-network"]
+        },
+        {
+          "text": "Language packs changed what the sites are for. WordPress 3.7 (October 2013) installed and updated language files automatically, and WordPress 4.0 (September 2014) added a language chooser to the installer that downloads a language pack on the fly. The Core team's plan for 4.0 kept the full localized package for first downloads from the locale site and used language packs for everything after. Community Summit notes from November 2014 found that most active communities used their Rosetta site only for that localized download, because editors could not extend it, and that Germany, France and Portugal had built external community sites instead.",
+          "sources": ["news-2013-10-basie", "core-2014-05-21-i18n-goals", "core-2014-09-05-language-chooser", "post-2014-11-03-summit-notes"]
+        }
+      ]
+    },
+    {
+      "heading": "Growing into a locale home (2015 to 2019)",
+      "paragraphs": [
+        {
+          "text": "From 2015 every Rosetta site got a localized theme and plugin directory, and the Meta team started importing directory plugins and themes into translate.wordpress.org so they could ship language packs. In July 2016 the old bbPress 1 forums at xx.forums.wordpress.org were upgraded and moved to xx.wordpress.org/support. In September 2016 a \"Rosetta\" plugin for managing sites in the global.wordpress.org network was committed, and in October 2016 Dominik Schilling announced team P2 sites at xx.wordpress.org/team for all 71 locales with a current release. Locale handbooks live under those team sites.",
+          "sources": ["handbook-theme-plugin-directories", "meta-2015-07-10-plugins-themes-translate", "meta-2016-07-29-forum-upgrades", "svn-r4027-rosetta-plugin", "post-2016-10-07-team-o2s", "handbook-team-o2"]
+        },
+        {
+          "text": "In 2017 the Polyglots team started a \"Rosetta outreach\" effort to build local editorial teams separate from translation teams, and the new support-forum theme reached Rosetta forums. In March 2018 the new About pages were rolled out across the network.",
+          "sources": ["post-2017-02-16-rosetta-outreach", "post-2017-03-02-support-theme", "meta-2018-03-29-about-pages"]
+        },
+        {
+          "text": "HelpHub, the end-user documentation, came to Rosetta sites in 2019. The Docs team proposed localizing it as a plugin on each locale's support site rather than through GlotPress; a meeting at WordCamp Europe in June 2019 agreed to activate it on selected sites, starting with ja.wordpress.org, with the English HelpHub as the source of truth. Trials on the Japanese and Serbian sites followed in July 2019. The feature chart above shows how far that rollout got.",
+          "sources": ["post-2019-02-25-helphub-plan", "meta-2019-06-20-helphub-wceu", "post-2019-07-30-helphub-trial"]
+        }
+      ]
+    },
+    {
+      "heading": "The sites today (2020 onward)",
+      "paragraphs": [
+        {
+          "text": "The Polyglots handbook counted \"over 200 locales\" in August 2020, and the teams page lists 208 today, 203 of them with a Rosetta site. The handbook calls the sites \"a sole official interface of WordPress for users who speak a language other than US English\" and expects each to carry a front page with a download link, a blog, a showcase and a contact page. Posts on a Rosetta site also reach the dashboard news feed of every WordPress install running that language.",
+          "sources": ["handbook-history-of-the-team", "polyglots-teams", "handbook-rosetta", "handbook-rosetta-expectations", "handbook-rosetta-for-the-community"]
+        },
+        {
+          "text": "In August 2023 the block-based WordPress.org theme was made available to Rosetta sites, switched on per locale once its strings were translated. By June 2024, 16 sites had moved and the Meta team set 1 July 2024 to move the rest. Spot checks on 14 October 2026 (bg, de, fr, ja, ko, mn) found every one on the new theme.",
+          "sources": ["post-2023-08-09-new-theme", "post-2024-06-13-transition"]
+        }
+      ]
+    }
+  ],
+  "timeline": [
+    { "date": "2005-02-14", "event": "The wp-polyglots mailing list is announced, with pre-localized downloads as a goal.", "sources": ["news-2005-02-polyglots"] },
+    { "date": "2007-09-10", "event": "Nikolay Bachiyski calls for beta testers of official local WordPress sites; bg.wordpress.org is the example.", "sources": ["list-2007-09-10-beta-call"] },
+    { "date": "2007-09-13", "event": "Matt Mullenweg lists what a site holds: info page, blog, forums, pre-localized download.", "sources": ["list-2007-09-13-matt"] },
+    { "date": "2007-09-30", "event": "Beta over after French, Japanese, Indonesian and Turkish tests; setup includes translating rosetta.pot.", "sources": ["list-2007-09-30-launch"] },
+    { "date": "2008", "event": "The WP20 book dates the first Rosetta site (Bulgarian) to 2008; the list record shows it running in 2007.", "sources": ["wp20-book-ch14"] },
+    { "date": "2009-11", "event": "GlotPress is announced; translate.wordpress.org follows for WordPress 3.0.", "sources": ["handbook-history-of-the-team"] },
+    { "date": "2010-12-15", "event": "Locale sites still run the 2.9 branch and the original Rosetta theme.", "sources": ["post-2010-12-15-locale-sites-theme"] },
+    { "date": "2011-07-14", "event": "Rosetta menus and header screenshots move to core Menus and Custom Header.", "sources": ["post-2011-07-14-rosetta-updates"] },
+    { "date": "2013-04-08", "event": "A new design for all Rosetta sites is live.", "sources": ["post-2013-04-08-new-design"] },
+    { "date": "2013-10-24", "event": "WordPress 3.7 installs and updates language files automatically.", "sources": ["news-2013-10-basie"] },
+    { "date": "2014-03-06", "event": "The Rosetta theme is imported into public Meta SVN (r465).", "sources": ["svn-r465-rosetta-theme"] },
+    { "date": "2014-09-05", "event": "WordPress 4.0 adds a language chooser that installs language packs during setup.", "sources": ["core-2014-09-05-language-chooser"] },
+    { "date": "2014-10-15", "event": "Rosetta and the WordPress.org install are merged into one network.", "sources": ["post-2014-10-15-chat-notes"] },
+    { "date": "2014-11-03", "event": "Community Summit notes: most communities use Rosetta only for the localized download.", "sources": ["post-2014-11-03-summit-notes"] },
+    { "date": "2015-07-14", "event": "Every Rosetta site gets a localized theme and plugin directory.", "sources": ["handbook-theme-plugin-directories"] },
+    { "date": "2016-07-29", "event": "Locale forums upgrade to bbPress 2 and move to xx.wordpress.org/support.", "sources": ["meta-2016-07-29-forum-upgrades"] },
+    { "date": "2016-09-11", "event": "The Rosetta plugin for managing the global.wordpress.org network is committed (r4027).", "sources": ["svn-r4027-rosetta-plugin"] },
+    { "date": "2016-10-07", "event": "Team P2 sites are live for all 71 locales with a current release.", "sources": ["post-2016-10-07-team-o2s"] },
+    { "date": "2017-02-16", "event": "Rosetta outreach begins: local editorial teams separate from translation teams.", "sources": ["post-2017-02-16-rosetta-outreach"] },
+    { "date": "2018-03-29", "event": "New About pages roll out across the Rosetta network.", "sources": ["meta-2018-03-29-about-pages"] },
+    { "date": "2019-06-20", "event": "WordCamp Europe agreement: HelpHub on selected Rosetta sites, English as the source of truth.", "sources": ["meta-2019-06-20-helphub-wceu"] },
+    { "date": "2019-07-30", "event": "HelpHub trials on the Japanese and Serbian sites; team handbooks at /team/handbook.", "sources": ["post-2019-07-30-helphub-trial"] },
+    { "date": "2020-08", "event": "The Polyglots handbook counts over 200 locales.", "sources": ["handbook-history-of-the-team"] },
+    { "date": "2023-08-09", "event": "The new WordPress.org theme becomes available to Rosetta sites, per locale.", "sources": ["post-2023-08-09-new-theme"] },
+    { "date": "2024-06-13", "event": "16 sites are on the new theme; the rest are scheduled for 1 July 2024.", "sources": ["post-2024-06-13-transition"] },
+    { "date": "2026-10-14", "event": "The teams page lists 208 locales, 203 with a Rosetta site (this page's dataset).", "sources": ["polyglots-teams"] }
+  ],
+  "roles": [
+    {
+      "name": "Locale Manager",
+      "description": "Has every Editor capability on the Rosetta site plus adding, promoting and removing users, appointing General Translation Editors and releasing WordPress packages. Automatically an Editor on the team site.",
+      "sources": ["handbook-roles"]
+    },
+    {
+      "name": "General Translation Editor (GTE)",
+      "description": "Validates translations on every project for one locale. Promoted by a Locale Manager, or by a Global Mentor when the locale has no active GTE.",
+      "sources": ["handbook-roles"]
+    },
+    {
+      "name": "Project Translation Editor (PTE)",
+      "description": "Validates translations for specific projects in one locale, appointed by a GTE. Cross-Locale PTEs are accounts of plugin or theme authors that can import strings for their own projects in every locale.",
+      "sources": ["handbook-roles"]
+    },
+    {
+      "name": "Global Mentor and Tech Lead",
+      "description": "Can administer every Rosetta site, assign Locale Managers and create new sites, forums and team sites in the Global Network.",
+      "sources": ["handbook-roles", "handbook-deployment"]
+    },
+    {
+      "name": "Forum Keymaster and HelpHub Manager",
+      "description": "Roles on a locale's support site, assigned when its forums or HelpHub are deployed.",
+      "sources": ["handbook-creating-locale-forum"]
+    },
+    {
+      "name": "Getting a site",
+      "description": "A new team posts a request on the Polyglots P2 with the locale code, country code, plural forms, native language name and admin usernames. Global Mentors then create the site, any forums and the team site.",
+      "sources": ["handbook-requesting-new-locale", "handbook-deployment"]
+    }
+  ],
+  "sources": [
+    { "id": "news-2005-02-polyglots", "title": "Polyglots", "url": "https://wordpress.org/news/2005/02/polyglots/", "publisher": "WordPress.org News", "date": "2005-02-14", "supports": "Announces the wp-polyglots list and pre-localized downloads." },
+    { "id": "list-2007-09-10-beta-call", "title": "Call for beta-testers: official international WordPress sites", "url": "https://lists.wordpress.org/pipermail/wp-polyglots/2007-September/001453.html", "publisher": "wp-polyglots mailing list, Nikolay Bachiyski", "date": "2007-09-10", "supports": "What a locale site provided at launch; bg.wordpress.org as the example." },
+    { "id": "list-2007-09-13-matt", "title": "Re: Call for beta-testers: official international WordPress sites", "url": "https://lists.wordpress.org/pipermail/wp-polyglots/2007-September/001494.html", "publisher": "wp-polyglots mailing list, Matt Mullenweg", "date": "2007-09-13", "supports": "The four parts of a site; forums and sites should be combined." },
+    { "id": "list-2007-09-30-launch", "title": "Locale sites getting real (beta-testing is over)", "url": "https://lists.wordpress.org/pipermail/wp-polyglots/2007-September/001552.html", "publisher": "wp-polyglots mailing list, Nikolay Bachiyski", "date": "2007-09-30", "supports": "End of the beta, the four test locales, the setup steps and rosetta.pot." },
+    { "id": "wp20-book-ch14", "title": "WP20 book, chapter 14: Parlez-vous WordPress s'il vous plait?", "url": "https://github.com/WordPress/wp20-book/blob/trunk/Content/BB-Chapter-14-Parlez-vous%20WordPress%20s'il%20vous%20plait_.md", "publisher": "WordPress/wp20-book on GitHub", "date": null, "supports": "Secondary source dating the first Rosetta site (Bulgarian) to 2008." },
+    { "id": "handbook-rosetta", "title": "Rosetta", "url": "https://make.wordpress.org/polyglots/handbook/for-locale-managers/rosetta/", "publisher": "Polyglots handbook", "date": null, "supports": "The name, the Rosetta Stone explanation, the site's properties and the \"sole official interface\" wording." },
+    { "id": "handbook-setting-up-local-site", "title": "Setting up your local site", "url": "https://make.wordpress.org/polyglots/handbook/for-locale-managers/setting-up-your-local-site/", "publisher": "Polyglots handbook", "date": null, "supports": "Purpose of a local site and the Rosetta Stone naming." },
+    { "id": "handbook-rosetta-expectations", "title": "Rosetta expectations", "url": "https://make.wordpress.org/polyglots/handbook/for-locale-managers/rosetta-expectations/", "publisher": "Polyglots handbook", "date": null, "supports": "What a Rosetta site is expected to contain." },
+    { "id": "handbook-rosetta-for-the-community", "title": "Rosetta for the community", "url": "https://make.wordpress.org/polyglots/handbook/for-locale-managers/rosetta-for-the-community/", "publisher": "Polyglots handbook", "date": null, "supports": "Site posts feed the dashboard news widget of every install in that language." },
+    { "id": "handbook-team-o2", "title": "Team P2 (o2)", "url": "https://make.wordpress.org/polyglots/handbook/for-locale-managers/team-o2/", "publisher": "Polyglots handbook", "date": null, "supports": "The team site and its handbook section." },
+    { "id": "handbook-theme-plugin-directories", "title": "Theme and plugin directories", "url": "https://make.wordpress.org/polyglots/handbook/for-locale-managers/theme-plugin-directories/", "publisher": "Polyglots handbook", "date": "2015-07-14", "supports": "Every Rosetta site gets a localized theme and plugin directory." },
+    { "id": "handbook-roles", "title": "Roles and capabilities", "url": "https://make.wordpress.org/polyglots/handbook/about/roles-and-capabilities/", "publisher": "Polyglots handbook", "date": null, "supports": "Definitions of Locale Manager, GTE, PTE, Cross-Locale PTE and Global Mentor." },
+    { "id": "handbook-history-of-the-team", "title": "History of the team", "url": "https://make.wordpress.org/polyglots/handbook/about/history-of-the-team/", "publisher": "Polyglots handbook", "date": "2020-08", "supports": "GlotPress timing and the \"over 200 locales\" count." },
+    { "id": "handbook-requesting-new-locale", "title": "Requesting a new locale", "url": "https://make.wordpress.org/polyglots/handbook/translating/teams/requesting-a-new-locale/", "publisher": "Polyglots handbook", "date": null, "supports": "What a team posts to request a locale and its Rosetta site." },
+    { "id": "handbook-deployment", "title": "Deployment", "url": "https://make.wordpress.org/polyglots/handbook/polyglots-global-team-leads-and-mentors/deployment/", "publisher": "Polyglots handbook", "date": null, "supports": "How Global Mentors create sites in the Global Network." },
+    { "id": "handbook-creating-locale-forum", "title": "Creating a new locale forum", "url": "https://make.wordpress.org/polyglots/handbook/polyglots-global-team-leads-and-mentors/deployment/creating-a-new-locale-forum/", "publisher": "Polyglots handbook", "date": null, "supports": "Forum and HelpHub setup and the Keymaster and HelpHub Manager roles." },
+    { "id": "meta-handbook-global-network", "title": "global.wordpress.org (the Rosetta sites)", "url": "https://make.wordpress.org/meta/handbook/about/projects/global-wordpress-org/", "publisher": "Meta handbook", "date": "2014-07-26", "supports": "Rosetta as a Multisite network with main, team and support sites." },
+    { "id": "post-2010-12-15-locale-sites-theme", "title": "Updating the locale sites with the WordPress.org theme, upgrading to 3.0.x branch", "url": "https://make.wordpress.org/polyglots/2010/12/15/updating-the-locale-sites-with-the-wordpress-org-theme-upgrading-to-3-0x-branch/", "publisher": "Make/Polyglots", "date": "2010-12-15", "supports": "Locale sites still on the 2.9 branch and the original theme." },
+    { "id": "post-2011-07-14-rosetta-updates", "title": "We're working on some Rosetta updates", "url": "https://make.wordpress.org/polyglots/2011/07/14/were-working-on-some-rosetta-updates-heres-the/", "publisher": "Make/Polyglots, Andrew Nacin", "date": "2011-07-14", "supports": "Menus and header screenshots moved to core features." },
+    { "id": "post-2013-04-08-new-design", "title": "New design for all Rosetta sites rocks", "url": "https://make.wordpress.org/polyglots/2013/04/08/new-design-for-all-rosetta-sites-rocks-d/", "publisher": "Make/Polyglots", "date": "2013-04-08", "supports": "A new design was live in April 2013; no announcement post was found." },
+    { "id": "news-2013-10-basie", "title": "WordPress 3.7 \"Basie\"", "url": "https://wordpress.org/news/2013/10/basie/", "publisher": "WordPress.org News", "date": "2013-10-24", "supports": "Automatic installation and updating of language files." },
+    { "id": "core-2014-05-21-i18n-goals", "title": "Internationalization goals for 4.0", "url": "https://make.wordpress.org/core/2014/05/21/internationalization-goals-for-4-0/", "publisher": "Make/Core", "date": "2014-05-21", "supports": "Localized packages for first downloads, language packs for updates." },
+    { "id": "core-2014-09-05-language-chooser", "title": "Language chooser in 4.0", "url": "https://make.wordpress.org/core/2014/09/05/language-chooser-in-4-0/", "publisher": "Make/Core", "date": "2014-09-05", "supports": "The installer downloads a language pack during setup." },
+    { "id": "svn-r465-rosetta-theme", "title": "Meta SVN r465: initial import of the Rosetta theme", "url": "https://meta.svn.wordpress.org/sites/trunk/global.wordpress.org/public_html/wp-content/themes/rosetta/", "publisher": "Meta Subversion repository", "date": "2014-03-06", "supports": "The theme's first public commit (svn log -r 465, \"See #392\")." },
+    { "id": "post-2014-10-15-chat-notes", "title": "Notes from the Polyglots chat on Oct 15", "url": "https://make.wordpress.org/polyglots/2014/10/15/notes-from-the-polyglots-chat-on-oct-15/", "publisher": "Make/Polyglots", "date": "2014-10-15", "supports": "\"Rosetta and .org installs are now merged\"; Meta SVN r909 the same day." },
+    { "id": "post-2014-11-03-summit-notes", "title": "Notes from the Rosetta sites discussion at the WCSF Community Summit", "url": "https://make.wordpress.org/polyglots/2014/11/03/notes-from-the-rosetta-sites-discussion-at-wcsf-community-summit/", "publisher": "Make/Polyglots", "date": "2014-11-03", "supports": "Communities used Rosetta mainly for downloads and built external sites." },
+    { "id": "meta-2015-07-10-plugins-themes-translate", "title": "Plugins, themes and translate.wordpress.org", "url": "https://make.wordpress.org/meta/2015/07/10/plugins-themes-and-translate-wordpress-org/", "publisher": "Make/Meta", "date": "2015-07-10", "supports": "Directory plugins and themes imported into translate.wordpress.org for language packs." },
+    { "id": "meta-2016-07-29-forum-upgrades", "title": "Rosetta forum upgrades in progress", "url": "https://make.wordpress.org/meta/2016/07/29/rosetta-forum-upgrades-in-progress/", "publisher": "Make/Meta", "date": "2016-07-29", "supports": "Forums upgraded to bbPress 2 and moved to xx.wordpress.org/support." },
+    { "id": "svn-r4027-rosetta-plugin", "title": "Meta SVN r4027: initial commit of the Rosetta plugin", "url": "https://meta.svn.wordpress.org/sites/trunk/wordpress.org/public_html/wp-content/plugins/rosetta/", "publisher": "Meta Subversion repository, Dominik Schilling", "date": "2016-09-11", "supports": "The plugin for managing sites in the global.wordpress.org network (svn log -r 4027, \"See #2003\")." },
+    { "id": "post-2016-10-07-team-o2s", "title": "New team o2s", "url": "https://make.wordpress.org/polyglots/2016/10/07/new-team-o2s/", "publisher": "Make/Polyglots, Dominik Schilling", "date": "2016-10-07", "supports": "Team sites for all 71 locales with a current release." },
+    { "id": "post-2017-02-16-rosetta-outreach", "title": "Local WordPress.org sites content: let's gather the data", "url": "https://make.wordpress.org/polyglots/2017/02/16/local-wordpress-org-sites-content-lets-gather-the-data/", "publisher": "Make/Polyglots", "date": "2017-02-16", "supports": "The Rosetta outreach effort and local editorial teams." },
+    { "id": "post-2017-03-02-support-theme", "title": "Bringing the new support theme to Rosetta sites", "url": "https://make.wordpress.org/polyglots/2017/03/02/bringing-the-new-support-theme-to-rosetta-sites/", "publisher": "Make/Polyglots", "date": "2017-03-02", "supports": "The new support theme offered to Rosetta forums." },
+    { "id": "meta-2018-03-29-about-pages", "title": "New About pages on all Rosetta sites", "url": "https://make.wordpress.org/meta/2018/03/29/new-about-pages-on-all-rosetta-sites/", "publisher": "Make/Meta", "date": "2018-03-29", "supports": "Shared About pages rolled out across the network." },
+    { "id": "post-2019-02-25-helphub-plan", "title": "HelpHub localisation plan", "url": "https://make.wordpress.org/polyglots/2019/02/25/helphub-localisation-plan/", "publisher": "Make/Polyglots", "date": "2019-02-25", "supports": "The proposal to localize HelpHub on Rosetta sites as a plugin." },
+    { "id": "meta-2019-06-20-helphub-wceu", "title": "HelpHub and handbooks localisation", "url": "https://make.wordpress.org/meta/2019/06/20/helphub-handbooks-localisation/", "publisher": "Make/Meta", "date": "2019-06-20", "supports": "WordCamp Europe agreement: activate on selected sites, starting with ja.wordpress.org; English stays the source of truth." },
+    { "id": "post-2019-07-30-helphub-trial", "title": "HelpHub and handbook i18n updates", "url": "https://make.wordpress.org/polyglots/2019/07/30/helphub-handbook-i18n-updates/", "publisher": "Make/Polyglots, Naoko Takano", "date": "2019-07-30", "supports": "Trials on the Japanese and Serbian sites; handbooks under /team/handbook." },
+    { "id": "post-2023-08-09-new-theme", "title": "New WordPress.org theme for your Rosetta site", "url": "https://make.wordpress.org/polyglots/2023/08/09/new-wordpress-org-theme-for-your-rosetta-site/", "publisher": "Make/Polyglots, Naoko Takano", "date": "2023-08-09", "supports": "The block theme available per locale once translated." },
+    { "id": "post-2024-06-13-transition", "title": "Transitioning all Rosetta sites to the new WP.org theme", "url": "https://make.wordpress.org/polyglots/2024/06/13/transitioning-all-rosetta-sites-to-the-new-wp-org-theme/", "publisher": "Make/Polyglots, Steve Dufresne", "date": "2024-06-13", "supports": "16 sites moved; 1 July 2024 set for the rest." },
+    { "id": "polyglots-teams", "title": "Translation teams", "url": "https://make.wordpress.org/polyglots/teams/", "publisher": "Make/Polyglots", "date": "2026-10-14", "supports": "208 locales listed, 203 with a Rosetta site, as read on this date." }
+  ]
+}

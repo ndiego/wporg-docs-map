@@ -8,7 +8,9 @@ repositories behind it. One row per surface, with the evidence for every claim.
 https://ndiego.github.io/wporg-docs-map/ (GitHub Pages, published from `trunk`).
 **The Rosetta locale sites:** https://wporg-docs-map.space.fast/rosetta/ and
 https://ndiego.github.io/wporg-docs-map/rosetta/, a second page that maps every locale site and how it compares
-with the main WordPress.org site, from [`data/rosetta.json`](data/rosetta.json).
+with the main WordPress.org site, from [`data/rosetta.json`](data/rosetta.json). Its background section (when the
+locale sites began, what they are for, who runs them) is sourced from
+[`data/rosetta-history.json`](data/rosetta-history.json).
 **The data:** [`data/documentation-map.json`](data/documentation-map.json), validated by
 [`data/schema.json`](data/schema.json). **How it was verified:** [`data/VERIFICATION.md`](data/VERIFICATION.md).
 **What changed over time:** [`CHANGELOG.md`](CHANGELOG.md).

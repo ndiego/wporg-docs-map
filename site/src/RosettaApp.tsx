@@ -8,11 +8,13 @@ import { ALL, FilterSelect } from "@/components/filter-select";
 import { CORRECTION, REPO, SiteFooter, SkipLink, Stat, TopBar } from "@/components/site-chrome";
 import { CoverageCharts } from "@/components/rosetta/coverage-charts";
 import { CompareMain } from "@/components/rosetta/compare-main";
+import { Background } from "@/components/rosetta/background";
 import { LocaleTable, sortLocales, type Sort } from "@/components/rosetta/locale-table";
 import { byAnchor, fmt, generated, has, locales, stats, statuses, type EnrichedLocale } from "@/lib/rosetta";
 import { cn } from "@/lib/utils";
 
 const METHOD = `${REPO}/blob/trunk/data/ROSETTA-METHOD.md`;
+const HISTORY = `${REPO}/blob/trunk/data/rosetta-history.json`;
 
 const TOGGLES: { key: keyof typeof has; label: string }[] = [
   { key: "helphub", label: "Has HelpHub" },
@@ -127,7 +129,10 @@ export default function RosettaApp() {
           </h1>
           <p className="mt-6 max-w-[68ch] text-lg leading-relaxed text-pretty text-muted-foreground">
             Every locale site in the Rosetta network, what each one actually runs (news, forums, HelpHub, a team
-            handbook) and how far that falls short of the main WordPress.org site.
+            handbook) and how far that falls short of the main WordPress.org site.{" "}
+            <a href="#background" className="text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">
+              New to Rosetta? Read the background.
+            </a>
           </p>
           <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 min-[1600px]:grid-cols-7">
             <Stat value={fmt.format(stats.total)} label="locales" />
@@ -243,11 +248,14 @@ export default function RosettaApp() {
         </section>
       </main>
 
+      <Background />
+
       <SiteFooter
         heading="How it is measured"
         links={[
           { href: "../rosetta.json", label: "Download the data (rosetta.json)" },
           { href: METHOD, label: "Method note (ROSETTA-METHOD.md)", external: true },
+          { href: HISTORY, label: "Background sources (rosetta-history.json)", external: true },
           { href: REPO, label: "Source and history on GitHub", external: true },
           { href: CORRECTION, label: "Report a correction", external: true },
         ]}

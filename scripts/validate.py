@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Validate data/documentation-map.json against data/schema.json and the map's own rules, and
-data/rosetta.json (when present) against data/rosetta.schema.json.
+"""Validate data/documentation-map.json against data/schema.json and the map's own rules,
+data/rosetta.json (when present) against data/rosetta.schema.json, and data/rosetta-history.json (when present)
+for complete, cited, dated sources.
 
 Standard library only, so it runs anywhere. Exit code 1 on any problem.
 Rules beyond the schema: unique ids, category in `categories`, related_rows point at existing ids,
@@ -18,6 +19,9 @@ DATA = ROOT / "data" / "documentation-map.json"
 SCHEMA = ROOT / "data" / "schema.json"
 ROSETTA = ROOT / "data" / "rosetta.json"
 ROSETTA_SCHEMA = ROOT / "data" / "rosetta.schema.json"
+HISTORY = ROOT / "data" / "rosetta-history.json"
+URL = re.compile(r"^https?://\S+$")
+DATE = re.compile(r"^\d{4}(-\d{2}(-\d{2})?)?$")
 
 problems = []
 
@@ -101,8 +105,52 @@ def validate_rosetta():
     return f"OK: rosetta.json, {len(locs)} locales, {active} active"
 
 
+def validate_history():
+    """data/rosetta-history.json: the sourced background shown on the Rosetta page. Every cited source id
+    must exist, every source needs an http(s) url, dates are YYYY, YYYY-MM or YYYY-MM-DD, and the timeline is
+    in date order. Returns a one-line summary, or None when the file does not exist."""
+    if not HISTORY.exists():
+        return None
+    data = json.loads(HISTORY.read_text())
+    srcs = data.get("sources", [])
+    ids = [s.get("id") for s in srcs]
+    dupes = {i for i in ids if ids.count(i) > 1}
+    check(not dupes, f"history: duplicate source ids: {sorted(dupes)}")
+    check(DATE.match(data.get("updated") or ""), "history: updated must be an ISO date")
+    for s in srcs:
+        where = f"history source {s.get('id')}"
+        for key in ("id", "title", "url", "publisher", "supports"):
+            check(isinstance(s.get(key), str) and s[key].strip(), f"{where}: missing {key}")
+        check(URL.match(s.get("url") or ""), f"{where}: url is not http(s)")
+        check(s.get("date") is None or DATE.match(s["date"]), f"{where}: date must be YYYY, YYYY-MM or YYYY-MM-DD")
+        check("—" not in (s.get("supports") or ""), f"{where}: no em-dashes in prose")
+    cited = set()
+
+    def cites(obj, where):
+        for i in obj.get("sources", []):
+            check(i in ids, f"{where}: cites unknown source {i!r}")
+            cited.add(i)
+        check(len(obj.get("sources", [])) > 0, f"{where}: has no sources")
+
+    for sec in data.get("sections", []):
+        for n, p in enumerate(sec.get("paragraphs", [])):
+            check("—" not in p.get("text", ""), f"history section {sec.get('heading')!r} paragraph {n}: no em-dashes in prose")
+            cites(p, f"history section {sec.get('heading')!r} paragraph {n}")
+    dates = [t.get("date") or "" for t in data.get("timeline", [])]
+    check(all(DATE.match(d) for d in dates), "history: every timeline date must be YYYY, YYYY-MM or YYYY-MM-DD")
+    check(dates == sorted(dates), "history: timeline is not in date order")
+    for t in data.get("timeline", []):
+        cites(t, f"history timeline {t.get('date')}")
+    for r in data.get("roles", []):
+        cites(r, f"history role {r.get('name')}")
+    uncited = sorted(set(ids) - cited)
+    check(not uncited, f"history: sources never cited: {uncited}")
+    return f"OK: rosetta-history.json, {len(srcs)} sources, {len(data.get('timeline', []))} timeline entries"
+
+
 def main():
     rosetta_summary = validate_rosetta()
+    history_summary = validate_history()
     data = json.loads(DATA.read_text())
     schema = json.loads(SCHEMA.read_text())
     validate(data, schema, "$")
@@ -128,6 +176,8 @@ def main():
           f"{sum(r['page_count']['value'] for r in counted):,} pages counted")
     if rosetta_summary:
         print(rosetta_summary)
+    if history_summary:
+        print(history_summary)
 
 
 if __name__ == "__main__":

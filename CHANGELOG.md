@@ -5,6 +5,9 @@ added, removed, or change status, source of truth or import mechanism.
 
 ## 2026-10-14
 
+- Added a sourced background section to the Rosetta page (`data/rosetta-history.json`): when the locale sites
+  began (September 2007), what they are for, who runs them, a dated timeline and 39 numbered sources, checked by
+  `scripts/validate.py`.
 - Added the Rosetta locale sites map: `data/rosetta.json` (203 locales from the Polyglots teams list, 5 without a
   site), `data/ROSETTA-METHOD.md`, a second page at `/rosetta/`, and `scripts/probe.py --rosetta` run weekly.
 - First public version: 131 surfaces in 11 categories, compiled 2026-10-13 and re-verified row by row on
