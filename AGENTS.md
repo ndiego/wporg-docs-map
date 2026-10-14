@@ -33,8 +33,9 @@ site/src/index.css            the theme: WordPress.org palette and fonts as shad
   and a copy of `documentation-map.json`. Paths are relative, so serve the folder from any host or subpath
   (`python3 -m http.server --directory site/dist`). `npm run dev` serves a live preview. Add UI pieces with the
   shadcn CLI (`npx shadcn@4.21.4 add <component>`) and keep dependency versions pinned exactly.
-- **Publish.** Pushing to `trunk` publishes the page through GitHub Pages. To publish the same build elsewhere,
-  run the host's publish command against `site/dist/`.
+- **Publish.** Pushing to `trunk` publishes the page through GitHub Pages. The shared link is the Spacefast space:
+  after building, run `spacefast publish site/dist -y -m "<what changed>"` (the space is recorded in
+  `site/.spacefast/state.json`, which is gitignored; the first publish used `--slug wporg-docs-map --access public`).
 
 ## Rules
 

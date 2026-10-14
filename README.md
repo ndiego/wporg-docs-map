@@ -4,7 +4,8 @@ A living map of every form of documentation on WordPress.org: what each surface 
 of truth, how content reaches the site, who edits and owns it, how big it is, its translation state, and the
 repositories behind it. One row per surface, with the evidence for every claim.
 
-**The page:** https://ndiego.github.io/wporg-docs-map/ (published from `trunk`).
+**The page:** https://wporg-docs-map.space.fast/ (Spacefast, the link to share) and
+https://ndiego.github.io/wporg-docs-map/ (GitHub Pages, published from `trunk`).
 **The data:** [`data/documentation-map.json`](data/documentation-map.json), validated by
 [`data/schema.json`](data/schema.json). **How it was verified:** [`data/VERIFICATION.md`](data/VERIFICATION.md).
 **What changed over time:** [`CHANGELOG.md`](CHANGELOG.md).
