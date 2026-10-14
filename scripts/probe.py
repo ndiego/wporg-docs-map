@@ -10,7 +10,12 @@ Standard library only. For each row:
     (set GITHUB_TOKEN to avoid the 60 requests/hour anonymous limit)
 Narrative fields are never changed. The diff this produces is what the weekly PR shows.
 
+With --rosetta it measures the Rosetta locale sites in data/rosetta.json instead (see rosetta.py):
+REST totals, newest dates, forums, HelpHub, team site and handbook, translation state. It adds locales that
+appear on the Polyglots teams page, never removes any, and never touches `notes`.
+
 Usage: python3 -I scripts/probe.py [--only <id>] [--dry-run] [--timeout 20]
+       python3 -I scripts/probe.py --rosetta [--only <subdomain>] [--dry-run] [--timeout 15]
 """
 import argparse
 import datetime
@@ -31,11 +36,11 @@ TODAY = datetime.date.today().isoformat()
 WPORG = re.compile(r"^https?://([a-z0-9-]+\.)*wordpress\.org(/|$)")
 
 
-def fetch(url, method="GET", timeout=20, headers=None):
+def fetch(url, method="GET", timeout=20, headers=None, limit=4096):
     req = urllib.request.Request(url, method=method, headers={"User-Agent": UA, **(headers or {})})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.status, dict(resp.headers), resp.geturl(), (resp.read(4096) if method == "GET" else b"")
+            return resp.status, dict(resp.headers), resp.geturl(), (resp.read(limit) if method == "GET" else b"")
     except urllib.error.HTTPError as e:
         return e.code, dict(e.headers), e.geturl() if hasattr(e, "geturl") else url, b""
     except Exception as e:  # noqa: BLE001
@@ -113,8 +118,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--only")
     ap.add_argument("--dry-run", action="store_true")
-    ap.add_argument("--timeout", type=int, default=20)
+    ap.add_argument("--timeout", type=int, default=None, help="seconds per request (20 for the map, 15 for --rosetta)")
+    ap.add_argument("--rosetta", action="store_true", help="probe data/rosetta.json instead of the map")
     args = ap.parse_args()
+    if args.rosetta:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import rosetta  # noqa: PLC0415
+
+        return rosetta.run(fetch, only=args.only, dry_run=args.dry_run, timeout=args.timeout or 15)
+    args.timeout = args.timeout or 20
     data = json.loads(DATA.read_text())
     report = []
     for r in data["rows"]:

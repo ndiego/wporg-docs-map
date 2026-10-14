@@ -9,12 +9,18 @@ generated from it or checks it. Edit the JSON, never the page.
 data/documentation-map.json   the map: one row per documentation surface, 24 fields each (see data/schema.json)
 data/schema.json              the row schema; scripts/validate.py enforces it plus ordering and id rules
 data/VERIFICATION.md          how the data was verified and what could not be
+data/rosetta.json             the Rosetta locale sites (xx.wordpress.org): one entry per locale (see data/rosetta.schema.json)
+data/ROSETTA-METHOD.md        how rosetta.json was collected, its caveats and what stands out
 scripts/validate.py           schema + rules; run before every commit
 scripts/sort.py               sorts rows by category order then name (validate requires it)
 scripts/probe.py              re-measures URL status, REST totals, Markdown output, repo activity into `probe`
+scripts/rosetta.py            the Rosetta measurements behind `probe.py --rosetta`
 scripts/changelog.py          Markdown diff between two versions of the JSON
-site/                         the page: Vite + React 18 + TypeScript + Tailwind CSS + shadcn/ui; imports the JSON at build time
+site/                         the pages: Vite + React 18 + TypeScript + Tailwind CSS + shadcn/ui; imports the JSON at build time
+                              index.html is the documentation map; rosetta/index.html is the Rosetta locale sites page
+                              (data/rosetta.json), sharing the top bar, theme toggle and footer (components/site-chrome.tsx)
 site/src/lib/data.ts          row types and the source-of-truth / import-mechanism kind rules used by the filters
+site/src/lib/rosetta.ts       locale types and the computed coverage, stats and gap readings for the Rosetta page
 site/src/index.css            the theme: WordPress.org palette and fonts as shadcn CSS variables (light and dark)
 .github/workflows/            validate on PR, weekly probe that opens a PR, publish the page on push
 ```
@@ -29,8 +35,12 @@ site/src/index.css            the theme: WordPress.org palette and fonts as shad
 - **Re-measure.** `python3 -I scripts/probe.py` (set `GITHUB_TOKEN` for the repo checks; `--only <id>` for one row;
   `--dry-run` to see without writing). It only writes `probe` and REST-measured `page_count` values. Then
   `sort.py`, `validate.py`, and `scripts/changelog.py <old> <new>` for the commit message.
-- **Build the page.** `cd site && npm ci && npm run build` writes `site/dist/` (gitignored): `index.html`, `assets/`
-  and a copy of `documentation-map.json`. Paths are relative, so serve the folder from any host or subpath
+- **Re-measure the locale sites.** `python3 -I scripts/probe.py --rosetta` (about 15 requests per locale, roughly
+  45 minutes for all of them; `--only <subdomain>` for one, `--dry-run` to see without writing). It rewrites the
+  measured fields of `data/rosetta.json` and adds locales new to the Polyglots teams page; `notes` and
+  `evidence` stay as written. Then `validate.py`.
+- **Build the page.** `cd site && npm ci && npm run build` writes `site/dist/` (gitignored): `index.html`,
+  `rosetta/index.html`, `assets/` and copies of `documentation-map.json` and `rosetta.json`. Paths are relative, so serve the folder from any host or subpath
   (`python3 -m http.server --directory site/dist`). `npm run dev` serves a live preview. Add UI pieces with the
   shadcn CLI (`npx shadcn@4.21.4 add <component>`) and keep dependency versions pinned exactly.
 - **Publish.** Pushing to `trunk` publishes the page through GitHub Pages. The shared link is the Spacefast space:

@@ -6,6 +6,9 @@ repositories behind it. One row per surface, with the evidence for every claim.
 
 **The page:** https://wporg-docs-map.space.fast/ (Spacefast, the link to share) and
 https://ndiego.github.io/wporg-docs-map/ (GitHub Pages, published from `trunk`).
+**The Rosetta locale sites:** https://wporg-docs-map.space.fast/rosetta/ and
+https://ndiego.github.io/wporg-docs-map/rosetta/, a second page that maps every locale site and how it compares
+with the main WordPress.org site, from [`data/rosetta.json`](data/rosetta.json).
 **The data:** [`data/documentation-map.json`](data/documentation-map.json), validated by
 [`data/schema.json`](data/schema.json). **How it was verified:** [`data/VERIFICATION.md`](data/VERIFICATION.md).
 **What changed over time:** [`CHANGELOG.md`](CHANGELOG.md).
@@ -42,7 +45,8 @@ The page in `site/` is a Vite + React + shadcn/ui app that reads the JSON at bui
 cd site && npm ci && npm run build
 ```
 
-The static output lands in `site/dist/` (`index.html`, `assets/`, and a copy of `documentation-map.json`) with
+The static output lands in `site/dist/` (`index.html`, `rosetta/index.html`, `assets/`, and copies of
+`documentation-map.json` and `rosetta.json`) with
 relative paths, so it works on GitHub Pages under `/wporg-docs-map/` or on any other host.
 
 ## Related

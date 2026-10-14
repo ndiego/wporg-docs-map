@@ -1,28 +1,34 @@
-import { copyFileSync, mkdirSync, readFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-const DATA = path.resolve(import.meta.dirname, "../data/documentation-map.json");
+const DATA_DIR = path.resolve(import.meta.dirname, "../data");
+const DATASETS = ["documentation-map.json", "rosetta.json"];
 
-// Copies the dataset next to index.html so the page can link to it (and the dev server can serve it).
+// Copies the datasets to the root of dist so both pages can link to them (and the dev server can serve them).
 function copyData(): Plugin {
   let outDir = "dist";
   return {
-    name: "copy-documentation-map",
+    name: "copy-datasets",
     configResolved(c) {
       outDir = path.resolve(c.root, c.build.outDir);
     },
     configureServer(server) {
-      server.middlewares.use("/documentation-map.json", (_req, res) => {
-        res.setHeader("Content-Type", "application/json");
-        res.end(readFileSync(DATA));
-      });
+      for (const name of DATASETS) {
+        server.middlewares.use(`/${name}`, (_req, res) => {
+          res.setHeader("Content-Type", "application/json");
+          res.end(readFileSync(path.join(DATA_DIR, name)));
+        });
+      }
     },
     closeBundle() {
       mkdirSync(outDir, { recursive: true });
-      copyFileSync(DATA, path.join(outDir, "documentation-map.json"));
+      for (const name of DATASETS) {
+        const src = path.join(DATA_DIR, name);
+        if (existsSync(src)) copyFileSync(src, path.join(outDir, name));
+      }
     },
   };
 }
@@ -33,7 +39,16 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "./src"),
-      "@data": path.resolve(import.meta.dirname, "../data"),
+      "@data": DATA_DIR,
+    },
+  },
+  build: {
+    rollupOptions: {
+      // Two pages: the documentation map at the root, the Rosetta sites at rosetta/.
+      input: {
+        main: path.resolve(import.meta.dirname, "index.html"),
+        rosetta: path.resolve(import.meta.dirname, "rosetta/index.html"),
+      },
     },
   },
   server: { fs: { allow: [".."] } },

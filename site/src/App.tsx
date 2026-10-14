@@ -1,83 +1,25 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Braces, ChevronsDownUp, ChevronsUpDown, Moon, RotateCcw, Search, Sun } from "lucide-react";
+import { ChevronsDownUp, ChevronsUpDown, RotateCcw, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ALL, FilterSelect } from "@/components/filter-select";
 import { Toggle } from "@/components/ui/toggle";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CategorySection } from "@/components/category-section";
-import { useTheme } from "@/hooks/use-theme";
+import { CORRECTION, REPO, SiteFooter, SkipLink, Stat, TopBar } from "@/components/site-chrome";
 import { byId, categories, countedRows, fmt, generated, rows, totalPages, uniqueValues, type EnrichedRow } from "@/lib/data";
 import { cn } from "@/lib/utils";
-
-const REPO = "https://github.com/ndiego/wporg-docs-map";
-const CORRECTION = `${REPO}/issues/new?template=correction.yml`;
-const ALL = "all";
 
 const statuses = uniqueValues("status");
 const sotKinds = uniqueValues("sot_kind");
 const importKinds = uniqueValues("import_kind");
 const perCategory = Object.fromEntries(categories.map((c) => [c, rows.filter((r) => r.category === c).length]));
 
-function GithubMark(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden {...props}>
-      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
-    </svg>
-  );
-}
-
 function prefersReducedMotion() {
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-function FilterSelect({
-  label,
-  allLabel,
-  value,
-  options,
-  onChange,
-}: {
-  label: string;
-  allLabel: string;
-  value: string;
-  options: string[];
-  onChange: (v: string) => void;
-}) {
-  return (
-    <Select value={value} onValueChange={onChange}>
-      <SelectTrigger
-        aria-label={label}
-        className={cn("h-9 w-full min-w-0 bg-card sm:w-auto", value !== ALL && "border-primary text-primary")}
-      >
-        <SelectValue />
-      </SelectTrigger>
-      <SelectContent position="popper" align="start">
-        <SelectItem value={ALL}>{allLabel}</SelectItem>
-        {options.map((o) => (
-          <SelectItem key={o} value={o}>
-            {o}
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
-  );
-}
-
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <Card className="gap-1 py-5 shadow-none ring-border">
-      <CardContent className="px-4 sm:px-5">
-        <p className="font-heading text-3xl leading-none font-medium whitespace-nowrap tabular-nums sm:text-4xl">{value}</p>
-        <p className="mt-2 text-sm text-muted-foreground">{label}</p>
-      </CardContent>
-    </Card>
-  );
-}
-
 export default function App() {
-  const { theme, toggle } = useTheme();
   const [query, setQuery] = useState("");
   const [status, setStatus] = useState(ALL);
   const [sot, setSot] = useState(ALL);
@@ -192,42 +134,8 @@ export default function App() {
 
   return (
     <TooltipProvider delayDuration={250}>
-      <a
-        href="#main"
-        className="sr-only z-50 rounded-sm bg-primary px-3 py-2 text-primary-foreground focus:not-sr-only focus:fixed focus:top-2 focus:left-2"
-      >
-        Skip to the map
-      </a>
-
-      {/* Local navigation bar, after WordPress.org's charcoal section headers. */}
-      <div className="bg-[#1e1e1e] text-white dark:border-b dark:bg-[#151515]">
-        <div className="mx-auto flex h-14 max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-8">
-          <p className="truncate text-[15px] font-medium tracking-tight">
-            WordPress.org <span className="text-white/60">Documentation Map</span>
-          </p>
-          <nav aria-label="Project" className="flex items-center gap-1">
-            <Button asChild variant="ghost" size="sm" className="text-white/80 hover:bg-white/10 hover:text-white">
-              <a href="documentation-map.json">
-                <Braces /> <span className="hidden sm:inline">Data</span>
-              </a>
-            </Button>
-            <Button asChild variant="ghost" size="sm" className="text-white/80 hover:bg-white/10 hover:text-white">
-              <a href={REPO} target="_blank" rel="noopener noreferrer">
-                <GithubMark /> <span className="hidden sm:inline">GitHub</span>
-              </a>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon-sm"
-              onClick={toggle}
-              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-              className="text-white/80 hover:bg-white/10 hover:text-white"
-            >
-              {theme === "dark" ? <Sun /> : <Moon />}
-            </Button>
-          </nav>
-        </div>
-      </div>
+      <SkipLink>Skip to the map</SkipLink>
+      <TopBar current="map" dataHref="documentation-map.json" />
 
       <header className="border-b bg-surface">
         <div className="mx-auto max-w-[1400px] px-4 pt-14 pb-12 sm:px-8 sm:pt-20 sm:pb-16">
@@ -326,35 +234,20 @@ export default function App() {
         )}
       </main>
 
-      <footer className="border-t bg-surface">
-        <div className="mx-auto grid max-w-[1400px] gap-8 px-4 py-12 text-sm text-muted-foreground sm:px-8 md:grid-cols-[2fr_1fr]">
-          <div className="max-w-[70ch] space-y-3 leading-relaxed">
-            <p className="font-heading text-2xl text-foreground">How it is measured</p>
-            <p>
-              Page counts come from each site's REST API, sitemaps or repository manifests, each with its method and date,
-              and a weekly probe re-checks every row's URL, REST total, Markdown output and repository activity.
-            </p>
-            <p>Generated from data dated {generated}.</p>
-          </div>
-          <ul className="space-y-2">
-            <li>
-              <a className="text-primary underline-offset-2 hover:underline" href="documentation-map.json">
-                Download the data (documentation-map.json)
-              </a>
-            </li>
-            <li>
-              <a className="text-primary underline-offset-2 hover:underline" href={REPO} target="_blank" rel="noopener noreferrer">
-                Source and history on GitHub
-              </a>
-            </li>
-            <li>
-              <a className="text-primary underline-offset-2 hover:underline" href={CORRECTION} target="_blank" rel="noopener noreferrer">
-                Report a correction
-              </a>
-            </li>
-          </ul>
-        </div>
-      </footer>
+      <SiteFooter
+        heading="How it is measured"
+        links={[
+          { href: "documentation-map.json", label: "Download the data (documentation-map.json)" },
+          { href: REPO, label: "Source and history on GitHub", external: true },
+          { href: CORRECTION, label: "Report a correction", external: true },
+        ]}
+      >
+        <p>
+          Page counts come from each site's REST API, sitemaps or repository manifests, each with its method and date,
+          and a weekly probe re-checks every row's URL, REST total, Markdown output and repository activity.
+        </p>
+        <p>Generated from data dated {generated}.</p>
+      </SiteFooter>
     </TooltipProvider>
   );
 }

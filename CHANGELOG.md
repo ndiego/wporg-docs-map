@@ -5,6 +5,8 @@ added, removed, or change status, source of truth or import mechanism.
 
 ## 2026-10-14
 
+- Added the Rosetta locale sites map: `data/rosetta.json` (203 locales from the Polyglots teams list, 5 without a
+  site), `data/ROSETTA-METHOD.md`, a second page at `/rosetta/`, and `scripts/probe.py --rosetta` run weekly.
 - First public version: 131 surfaces in 11 categories, compiled 2026-10-13 and re-verified row by row on
   2026-10-14 (see `data/VERIFICATION.md`).
 - Re-verification (2026-10-14) added 7 surfaces: Gutenberg Storybook, Make team site pages outside the handbooks,

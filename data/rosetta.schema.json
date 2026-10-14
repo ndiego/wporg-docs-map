@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WordPress.org Rosetta locale sites",
+  "description": "data/rosetta.json: one entry per Rosetta site (xx.wordpress.org) listed on the Polyglots teams page. Measured fields are rewritten by `scripts/probe.py --rosetta`; `notes` and `evidence` are written by people or agents.",
+  "type": "object",
+  "required": ["generated", "main_site_features", "locales"],
+  "properties": {
+    "generated": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "main_site_features": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "locales": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "locale", "subdomain", "english_name", "native_name", "url", "site_status", "home", "support", "team",
+          "translation", "features", "notes", "evidence"
+        ],
+        "properties": {
+          "locale": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$" },
+          "subdomain": { "type": "string", "pattern": "^[A-Za-z0-9_-]+$" },
+          "english_name": { "type": "string", "minLength": 1 },
+          "native_name": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "pattern": "^https://[A-Za-z0-9_-]+\\.wordpress\\.org/$" },
+          "site_status": { "type": "string", "enum": ["active", "inactive", "redirect", "error"] },
+          "home": {
+            "type": "object",
+            "required": ["posts", "pages", "newest_post", "types"],
+            "properties": {
+              "posts": { "type": ["integer", "null"], "minimum": 0 },
+              "pages": { "type": ["integer", "null"], "minimum": 0 },
+              "newest_post": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "types": { "type": "array", "items": { "type": "string" } },
+              "type_counts": {
+                "type": "object",
+                "description": "X-WP-Total for each content type other than post and page, keyed by type name."
+              },
+              "download": { "type": ["boolean", "null"] },
+              "showcase": { "type": ["boolean", "null"] }
+            }
+          },
+          "support": {
+            "type": "object",
+            "required": ["exists", "forums", "helphub_articles", "helphub_versions", "newest_article"],
+            "properties": {
+              "exists": { "type": "boolean" },
+              "forums": { "type": ["boolean", "null"] },
+              "forum_count": { "type": ["integer", "null"], "minimum": 0 },
+              "newest_topic": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "helphub_articles": { "type": ["integer", "null"], "minimum": 0 },
+              "helphub_versions": { "type": ["integer", "null"], "minimum": 0 },
+              "newest_article": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "types": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "team": {
+            "type": "object",
+            "required": ["exists", "posts", "handbook_pages", "newest_post"],
+            "properties": {
+              "exists": { "type": "boolean" },
+              "posts": { "type": ["integer", "null"], "minimum": 0 },
+              "handbook_pages": { "type": ["integer", "null"], "minimum": 0 },
+              "newest_post": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "types": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "translation": {
+            "type": "object",
+            "required": ["core_dev_percent", "localized_package", "contributors"],
+            "properties": {
+              "core_dev_percent": { "type": ["number", "null"], "minimum": 0 },
+              "polyglots_percent": { "type": ["integer", "null"], "minimum": 0 },
+              "localized_release": { "type": ["string", "null"] },
+              "language_pack": { "type": ["string", "null"] },
+              "localized_package": { "type": ["boolean", "null"] },
+              "contributors": { "type": ["integer", "null"], "minimum": 0 },
+              "past_contributors": { "type": ["integer", "null"], "minimum": 0 },
+              "locale_managers": { "type": ["integer", "null"], "minimum": 0 },
+              "gtes": { "type": ["integer", "null"], "minimum": 0 },
+              "ptes": { "type": ["integer", "null"], "minimum": 0 }
+            }
+          },
+          "features": { "type": "object", "description": "One boolean per main_site_features entry." },
+          "notes": { "type": ["string", "null"] },
+          "evidence": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "probe": {
+            "type": "object",
+            "description": "Written by scripts/probe.py --rosetta; never edited by hand.",
+            "properties": {
+              "checked": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "url_status": { "type": ["integer", "null"] },
+              "url_final": { "type": ["string", "null"] },
+              "title": { "type": ["string", "null"] },
+              "requests": { "type": "integer", "minimum": 0 }
+            }
+          }
+        }
+      }
+    },
+    "no_site_locales": {
+      "type": "array",
+      "description": "Locales on the Polyglots teams page without a Rosetta site.",
+      "items": {
+        "type": "object",
+        "required": ["locale", "english_name"],
+        "properties": {
+          "locale": { "type": "string" },
+          "english_name": { "type": "string" },
+          "native_name": { "type": "string" },
+          "polyglots_percent": { "type": ["integer", "null"], "minimum": 0 }
+        }
+      }
+    }
+  }
+}

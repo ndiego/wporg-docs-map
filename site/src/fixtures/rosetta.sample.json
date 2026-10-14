@@ -1,0 +1,550 @@
+{
+ "generated": "2026-10-14",
+ "main_site_features": [
+  "home pages",
+  "news",
+  "showcase",
+  "download",
+  "support forums",
+  "helphub articles",
+  "helphub versions",
+  "team p2",
+  "team handbook"
+ ],
+ "locales": [
+  {
+   "locale": "fr_FR",
+   "subdomain": "fr",
+   "english_name": "French",
+   "native_name": "Français",
+   "url": "https://fr.wordpress.org/",
+   "site_status": "active",
+   "home": {
+    "posts": 120,
+    "pages": 30,
+    "newest_post": "2026-09-30",
+    "types": [
+     "post",
+     "page"
+    ]
+   },
+   "support": {
+    "exists": true,
+    "forums": true,
+    "helphub_articles": 450,
+    "helphub_versions": 12,
+    "newest_article": "2026-08-01"
+   },
+   "team": {
+    "exists": true,
+    "posts": 300,
+    "handbook_pages": 85,
+    "newest_post": "2026-10-01"
+   },
+   "translation": {
+    "core_dev_percent": 99.5,
+    "localized_package": true,
+    "contributors": 1200
+   },
+   "features": {
+    "home pages": true,
+    "news": true,
+    "showcase": true,
+    "download": true,
+    "support forums": true,
+    "helphub articles": true,
+    "helphub versions": true,
+    "team p2": true,
+    "team handbook": true
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://fr.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 200
+   }
+  },
+  {
+   "locale": "de_DE",
+   "subdomain": "de",
+   "english_name": "German",
+   "native_name": "Deutsch",
+   "url": "https://de.wordpress.org/",
+   "site_status": "active",
+   "home": {
+    "posts": 400,
+    "pages": 22,
+    "newest_post": "2026-10-10",
+    "types": [
+     "post",
+     "page"
+    ]
+   },
+   "support": {
+    "exists": true,
+    "forums": true,
+    "helphub_articles": 610,
+    "helphub_versions": 14,
+    "newest_article": "2026-09-12"
+   },
+   "team": {
+    "exists": true,
+    "posts": 520,
+    "handbook_pages": 120,
+    "newest_post": "2026-10-08"
+   },
+   "translation": {
+    "core_dev_percent": 100.0,
+    "localized_package": true,
+    "contributors": 1500
+   },
+   "features": {
+    "home pages": true,
+    "news": true,
+    "showcase": true,
+    "download": true,
+    "support forums": true,
+    "helphub articles": true,
+    "helphub versions": true,
+    "team p2": true,
+    "team handbook": true
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://de.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 200
+   }
+  },
+  {
+   "locale": "ja",
+   "subdomain": "ja",
+   "english_name": "Japanese",
+   "native_name": "日本語",
+   "url": "https://ja.wordpress.org/",
+   "site_status": "active",
+   "home": {
+    "posts": 210,
+    "pages": 40,
+    "newest_post": "2026-10-02",
+    "types": [
+     "post",
+     "page"
+    ]
+   },
+   "support": {
+    "exists": true,
+    "forums": true,
+    "helphub_articles": 320,
+    "helphub_versions": 10,
+    "newest_article": "2026-07-20"
+   },
+   "team": {
+    "exists": true,
+    "posts": 800,
+    "handbook_pages": 60,
+    "newest_post": "2026-10-11"
+   },
+   "translation": {
+    "core_dev_percent": 98.2,
+    "localized_package": true,
+    "contributors": 900
+   },
+   "features": {
+    "home pages": true,
+    "news": true,
+    "showcase": true,
+    "download": true,
+    "support forums": true,
+    "helphub articles": true,
+    "helphub versions": true,
+    "team p2": true,
+    "team handbook": true
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://ja.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 200
+   }
+  },
+  {
+   "locale": "es_ES",
+   "subdomain": "es",
+   "english_name": "Spanish (Spain)",
+   "native_name": "Español",
+   "url": "https://es.wordpress.org/",
+   "site_status": "active",
+   "home": {
+    "posts": 150,
+    "pages": 18,
+    "newest_post": "2026-06-14",
+    "types": [
+     "post",
+     "page"
+    ]
+   },
+   "support": {
+    "exists": true,
+    "forums": true,
+    "helphub_articles": 40,
+    "helphub_versions": 2,
+    "newest_article": "2025-12-01"
+   },
+   "team": {
+    "exists": true,
+    "posts": 90,
+    "handbook_pages": 12,
+    "newest_post": "2026-05-01"
+   },
+   "translation": {
+    "core_dev_percent": 96.7,
+    "localized_package": true,
+    "contributors": 1100
+   },
+   "features": {
+    "home pages": true,
+    "news": true,
+    "showcase": false,
+    "download": true,
+    "support forums": true,
+    "helphub articles": true,
+    "helphub versions": true,
+    "team p2": true,
+    "team handbook": true
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://es.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 200
+   }
+  },
+  {
+   "locale": "pt_BR",
+   "subdomain": "br",
+   "english_name": "Portuguese (Brazil)",
+   "native_name": "Português do Brasil",
+   "url": "https://br.wordpress.org/",
+   "site_status": "active",
+   "home": {
+    "posts": 95,
+    "pages": 12,
+    "newest_post": "2026-09-01",
+    "types": [
+     "post",
+     "page"
+    ]
+   },
+   "support": {
+    "exists": true,
+    "forums": true,
+    "helphub_articles": null,
+    "helphub_versions": null,
+    "newest_article": null
+   },
+   "team": {
+    "exists": true,
+    "posts": 60,
+    "handbook_pages": 5,
+    "newest_post": "2026-04-03"
+   },
+   "translation": {
+    "core_dev_percent": 97.1,
+    "localized_package": true,
+    "contributors": 950
+   },
+   "features": {
+    "home pages": true,
+    "news": true,
+    "showcase": false,
+    "download": true,
+    "support forums": true,
+    "helphub articles": false,
+    "helphub versions": false,
+    "team p2": true,
+    "team handbook": true
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://br.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 200
+   }
+  },
+  {
+   "locale": "it_IT",
+   "subdomain": "it",
+   "english_name": "Italian",
+   "native_name": "Italiano",
+   "url": "https://it.wordpress.org/",
+   "site_status": "active",
+   "home": {
+    "posts": 60,
+    "pages": 9,
+    "newest_post": "2025-11-20",
+    "types": [
+     "post",
+     "page"
+    ]
+   },
+   "support": {
+    "exists": true,
+    "forums": true,
+    "helphub_articles": 0,
+    "helphub_versions": 0,
+    "newest_article": null
+   },
+   "team": {
+    "exists": true,
+    "posts": 20,
+    "handbook_pages": null,
+    "newest_post": "2025-03-10"
+   },
+   "translation": {
+    "core_dev_percent": 94.0,
+    "localized_package": true,
+    "contributors": 600
+   },
+   "features": {
+    "home pages": true,
+    "news": true,
+    "showcase": false,
+    "download": true,
+    "support forums": true,
+    "helphub articles": false,
+    "helphub versions": false,
+    "team p2": true,
+    "team handbook": false
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://it.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 200
+   }
+  },
+  {
+   "locale": "nl_NL",
+   "subdomain": "nl",
+   "english_name": "Dutch",
+   "native_name": "Nederlands",
+   "url": "https://nl.wordpress.org/",
+   "site_status": "active",
+   "home": {
+    "posts": 30,
+    "pages": 7,
+    "newest_post": "2024-02-11",
+    "types": [
+     "post",
+     "page"
+    ]
+   },
+   "support": {
+    "exists": true,
+    "forums": true,
+    "helphub_articles": 0,
+    "helphub_versions": 0,
+    "newest_article": null
+   },
+   "team": {
+    "exists": false,
+    "posts": null,
+    "handbook_pages": null,
+    "newest_post": null
+   },
+   "translation": {
+    "core_dev_percent": 92.3,
+    "localized_package": true,
+    "contributors": 400
+   },
+   "features": {
+    "home pages": true,
+    "news": true,
+    "showcase": false,
+    "download": true,
+    "support forums": true,
+    "helphub articles": false,
+    "helphub versions": false,
+    "team p2": false,
+    "team handbook": false
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://nl.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 200
+   }
+  },
+  {
+   "locale": "sw",
+   "subdomain": "sw",
+   "english_name": "Swahili",
+   "native_name": "Kiswahili",
+   "url": "https://sw.wordpress.org/",
+   "site_status": "inactive",
+   "home": {
+    "posts": 1,
+    "pages": 2,
+    "newest_post": "2019-05-01",
+    "types": [
+     "post",
+     "page"
+    ]
+   },
+   "support": {
+    "exists": true,
+    "forums": false,
+    "helphub_articles": 0,
+    "helphub_versions": 0,
+    "newest_article": null
+   },
+   "team": {
+    "exists": false,
+    "posts": null,
+    "handbook_pages": null,
+    "newest_post": null
+   },
+   "translation": {
+    "core_dev_percent": 31.4,
+    "localized_package": false,
+    "contributors": 12
+   },
+   "features": {
+    "home pages": true,
+    "news": true,
+    "showcase": false,
+    "download": false,
+    "support forums": false,
+    "helphub articles": false,
+    "helphub versions": false,
+    "team p2": false,
+    "team handbook": false
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://sw.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 404
+   }
+  },
+  {
+   "locale": "ckb",
+   "subdomain": "ckb",
+   "english_name": "Kurdish (Sorani)",
+   "native_name": "كوردی",
+   "url": "https://ckb.wordpress.org/",
+   "site_status": "redirect",
+   "home": {
+    "posts": null,
+    "pages": null,
+    "newest_post": null,
+    "types": []
+   },
+   "support": {
+    "exists": false,
+    "forums": null,
+    "helphub_articles": null,
+    "helphub_versions": null,
+    "newest_article": null
+   },
+   "team": {
+    "exists": false,
+    "posts": null,
+    "handbook_pages": null,
+    "newest_post": null
+   },
+   "translation": {
+    "core_dev_percent": 12.0,
+    "localized_package": null,
+    "contributors": 3
+   },
+   "features": {
+    "home pages": false,
+    "news": false,
+    "showcase": false,
+    "download": false,
+    "support forums": false,
+    "helphub articles": false,
+    "helphub versions": false,
+    "team p2": false,
+    "team handbook": false
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://ckb.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 301
+   }
+  },
+  {
+   "locale": "xx_FAKE",
+   "subdomain": "xx",
+   "english_name": "Fixture Locale",
+   "native_name": "Fixture",
+   "url": "https://xx.wordpress.org/",
+   "site_status": "error",
+   "home": {
+    "posts": null,
+    "pages": null,
+    "newest_post": null,
+    "types": []
+   },
+   "support": {
+    "exists": false,
+    "forums": null,
+    "helphub_articles": null,
+    "helphub_versions": null,
+    "newest_article": null
+   },
+   "team": {
+    "exists": false,
+    "posts": null,
+    "handbook_pages": null,
+    "newest_post": null
+   },
+   "translation": {
+    "core_dev_percent": null,
+    "localized_package": null,
+    "contributors": null
+   },
+   "features": {
+    "home pages": false,
+    "news": false,
+    "showcase": false,
+    "download": false,
+    "support forums": false,
+    "helphub articles": false,
+    "helphub versions": false,
+    "team p2": false,
+    "team handbook": false
+   },
+   "notes": "FIXTURE VALUES, not measured. Replace with data/rosetta.json.",
+   "evidence": [
+    "https://xx.wordpress.org/wp-json/wp/v2/posts?per_page=1 (fixture)"
+   ],
+   "probe": {
+    "checked": "2026-10-14",
+    "url_status": 404
+   }
+  }
+ ]
+}

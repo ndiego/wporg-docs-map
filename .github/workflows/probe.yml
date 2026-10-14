@@ -1,7 +1,8 @@
 name: Weekly probe
 
-# Re-measures every row (URL status, REST totals, Markdown output, repo activity) and opens a pull
-# request with the diff and a changelog when anything changed. Narrative fields are never touched.
+# Re-measures every row (URL status, REST totals, Markdown output, repo activity) and every Rosetta locale
+# site (data/rosetta.json), and opens a pull request with the diff and a changelog when anything changed.
+# Narrative fields are never touched.
 
 on:
   schedule:
@@ -26,6 +27,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 -I scripts/probe.py | tail -40
+      - name: Probe the Rosetta locale sites
+        run: |
+          python3 -I scripts/probe.py --rosetta | tee /tmp/rosetta.log | tail -20
+          grep -e ' -> ' -e '^+ new locale' -e 'no longer on' /tmp/rosetta.log > /tmp/rosetta-changes.txt || true
       - name: Sort and validate
         run: |
           python3 -I scripts/sort.py
@@ -34,8 +39,14 @@ jobs:
         id: changelog
         run: |
           python3 -I scripts/changelog.py /tmp/old.json data/documentation-map.json > /tmp/changelog.md
+          changed=true
+          if grep -q "No changes" /tmp/changelog.md; then changed=false; fi
+          if [ -s /tmp/rosetta-changes.txt ]; then
+            { echo; echo "Rosetta locale sites:"; echo; sed 's/^/- /' /tmp/rosetta-changes.txt; } >> /tmp/changelog.md
+            changed=true
+          fi
           cat /tmp/changelog.md
-          if grep -q "No changes" /tmp/changelog.md; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+          echo "changed=$changed" >> "$GITHUB_OUTPUT"
       - name: Prepend to CHANGELOG.md
         if: steps.changelog.outputs.changed == 'true'
         run: |
