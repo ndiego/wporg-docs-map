@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14",
+  "generated": "2026-11-02",
   "categories": [
     "end-user docs",
     "developer handbook",
@@ -51,7 +51,22 @@
       ],
       "related_rows": [
         "project-about"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/data-liberation",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "helphub-feedback",
@@ -89,7 +104,21 @@
       ],
       "related_rows": [
         "helphub-articles"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Documentation-Issue-Tracker",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "helphub-articles",
@@ -134,7 +163,29 @@
         "rosetta-helphub",
         "repo-documentation-issue-tracker",
         "repo-wporg-documentation-2022"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-documentation-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/Documentation-Issue-Tracker",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "helphub-landing-pages",
@@ -172,7 +223,22 @@
       ],
       "related_rows": [
         "helphub-articles"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-documentation-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "helphub-media",
@@ -209,7 +275,12 @@
       "related_rows": [
         "helphub-articles",
         "devhub-advanced-administration"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null
+      }
     },
     {
       "id": "rosetta-helphub",
@@ -248,7 +319,19 @@
       "related_rows": [
         "helphub-articles",
         "rosetta-team-handbooks"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Documentation-Issue-Tracker-fr_FR",
+            "status": 404
+          }
+        ]
+      }
     },
     {
       "id": "support-forums",
@@ -278,7 +361,13 @@
       ],
       "related_rows": [
         "policy-forum-guidelines"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "devhub-advanced-administration",
@@ -318,7 +407,22 @@
       "related_rows": [
         "upstream-advanced-administration",
         "helphub-articles"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Advanced-administration-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-block-editor",
@@ -360,7 +464,19 @@
       "related_rows": [
         "upstream-gutenberg-docs",
         "devhub-themes"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/gutenberg (docs/)",
+            "status": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-coding-standards",
@@ -400,7 +516,22 @@
       "related_rows": [
         "upstream-wpcs-docs",
         "contrib-core"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wpcs-docs",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-apis",
@@ -435,7 +566,13 @@
       ],
       "related_rows": [
         "devhub-plugins"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "devhub-dashicons",
@@ -471,7 +608,22 @@
       ],
       "related_rows": [
         "devhub-home"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-home",
@@ -508,7 +660,22 @@
       ],
       "related_rows": [
         "devhub-dashicons"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-openverse-docs",
@@ -547,7 +714,21 @@
       ],
       "related_rows": [
         "contrib-openverse"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/openverse",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-playground",
@@ -587,7 +768,19 @@
       "related_rows": [
         "legacy-playground-docusaurus",
         "upstream-playground-docs"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-playground (packages/docs/)",
+            "status": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-plugins",
@@ -627,7 +820,22 @@
         "legacy-developer-plugins-handbook-mirror",
         "policy-plugin-guidelines",
         "policy-readme-standard"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/developer-plugins-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-rest-api",
@@ -667,7 +875,22 @@
       "related_rows": [
         "upstream-wp-api-docs",
         "machine-api-wordpress-org"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WP-API/docs",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-scf",
@@ -706,7 +929,19 @@
       ],
       "related_rows": [
         "upstream-scf"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/secure-custom-fields (docs/)",
+            "status": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-themes",
@@ -743,7 +978,13 @@
       "related_rows": [
         "devhub-block-editor",
         "contrib-themes"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "devhub-developer-blog",
@@ -781,7 +1022,29 @@
       ],
       "related_rows": [
         "release-dev-notes"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/developer-blog-content",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/wporg-developer-blog",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "devhub-cli-commands",
@@ -824,7 +1087,29 @@
         "contrib-cli",
         "upstream-wp-cli-handbook",
         "project-wp-cli-landing"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/wp-cli/handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/wp-cli/wp-cli",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "code-reference-classes",
@@ -867,7 +1152,36 @@
         "code-reference-user-notes",
         "upstream-wordpress-develop",
         "upstream-phpdoc-parser"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-develop",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/phpdoc-parser",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "code-reference-explanations",
@@ -903,7 +1217,22 @@
       ],
       "related_rows": [
         "code-reference-functions"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "code-reference-functions",
@@ -946,7 +1275,36 @@
         "code-reference-user-notes",
         "upstream-wordpress-develop",
         "upstream-phpdoc-parser"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-develop",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/phpdoc-parser",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "code-reference-hooks",
@@ -989,7 +1347,36 @@
         "code-reference-user-notes",
         "upstream-wordpress-develop",
         "upstream-phpdoc-parser"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-develop",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/phpdoc-parser",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "code-reference-methods",
@@ -1032,7 +1419,36 @@
         "code-reference-user-notes",
         "upstream-wordpress-develop",
         "upstream-phpdoc-parser"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-develop",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/phpdoc-parser",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "code-reference-archives",
@@ -1070,7 +1486,36 @@
       ],
       "related_rows": [
         "code-reference-functions"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-develop",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/phpdoc-parser",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "code-reference-user-notes",
@@ -1107,7 +1552,22 @@
       ],
       "related_rows": [
         "code-reference-functions"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "code-reference-gutenberg-storybook",
@@ -1145,7 +1605,21 @@
       "related_rows": [
         "devhub-block-editor",
         "upstream-gutenberg-docs"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/gutenberg",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-contributor-handbook",
@@ -1180,7 +1654,22 @@
         "curl make.wordpress.org/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14",
         "curl of all 86 pages for the GitHub template 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/contributor-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-styleguide",
@@ -1217,7 +1706,22 @@
       ],
       "related_rows": [
         "contrib-docs"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/WordPress-Documentation-Style-Guide",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-accessibility",
@@ -1254,7 +1758,22 @@
         "gh api repos/WordPress/accessibility-team-handbook commits and pulls 2026-10-14",
         "gh api repos/WordPress/wporg-make functions.php add_handbook_templates 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/accessibility-team-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-ai",
@@ -1286,7 +1805,13 @@
       "evidence": [
         "curl make.wordpress.org/ai/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-community",
@@ -1324,7 +1849,22 @@
       ],
       "related_rows": [
         "project-wordcamp-central"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/contributor-day-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-core",
@@ -1357,7 +1897,13 @@
         "curl make.wordpress.org/core/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14",
         "curl of all 115 pages for the GitHub template 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-design",
@@ -1389,7 +1935,13 @@
       "evidence": [
         "curl make.wordpress.org/design/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-docs",
@@ -1421,7 +1973,13 @@
       "evidence": [
         "curl make.wordpress.org/docs/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-hosting",
@@ -1458,7 +2016,22 @@
       ],
       "related_rows": [
         "devhub-advanced-administration"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/hosting-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-marketing",
@@ -1490,7 +2063,13 @@
       "evidence": [
         "curl make.wordpress.org/marketing/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-media-corps",
@@ -1522,7 +2101,13 @@
       "evidence": [
         "curl make.wordpress.org/media-corps/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-meta",
@@ -1554,7 +2139,13 @@
       "evidence": [
         "curl make.wordpress.org/meta/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-mobile",
@@ -1586,7 +2177,13 @@
       "evidence": [
         "curl make.wordpress.org/mobile/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-openverse",
@@ -1618,7 +2215,13 @@
       "evidence": [
         "curl make.wordpress.org/openverse/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-performance",
@@ -1650,7 +2253,13 @@
       "evidence": [
         "curl make.wordpress.org/performance/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-photos",
@@ -1682,7 +2291,13 @@
       "evidence": [
         "curl make.wordpress.org/photos/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-plugins",
@@ -1720,7 +2335,22 @@
       ],
       "related_rows": [
         "policy-plugin-guidelines"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/plugins-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-polyglots",
@@ -1752,7 +2382,13 @@
       "evidence": [
         "curl make.wordpress.org/polyglots/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-program",
@@ -1784,7 +2420,13 @@
       "evidence": [
         "curl make.wordpress.org/program/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-empty-stubs",
@@ -1816,7 +2458,13 @@
       "evidence": [
         "curl make.wordpress.org/{chat,playground,project,tide,updates}/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-support",
@@ -1848,7 +2496,13 @@
       "evidence": [
         "curl make.wordpress.org/support/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-sustainability",
@@ -1882,7 +2536,22 @@
       "evidence": [
         "curl make.wordpress.org/sustainability/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/sustainability",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-make-site-pages",
@@ -1919,7 +2588,13 @@
         "contrib-support",
         "contrib-core",
         "release-core-version-pages"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-test",
@@ -1953,7 +2628,22 @@
       "evidence": [
         "curl make.wordpress.org/test/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/test-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-themes",
@@ -1985,7 +2675,13 @@
       "evidence": [
         "curl make.wordpress.org/themes/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-training",
@@ -2017,7 +2713,13 @@
       "evidence": [
         "curl make.wordpress.org/training/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-make-contribute",
@@ -2051,7 +2753,13 @@
       ],
       "related_rows": [
         "contrib-contributor-handbook"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "contrib-tv",
@@ -2083,7 +2791,13 @@
       "evidence": [
         "curl make.wordpress.org/tv/wp-json/wp/v2/handbook X-WP-Total, modified and author counts 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "rosetta-team-handbooks",
@@ -2120,7 +2834,22 @@
       "related_rows": [
         "rosetta-helphub",
         "contrib-polyglots"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/spain-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "contrib-cli",
@@ -2156,7 +2885,22 @@
       ],
       "related_rows": [
         "devhub-cli-commands"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/wp-cli/handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "learn-activity-kits",
@@ -2192,7 +2936,22 @@
       ],
       "related_rows": [
         "contrib-training"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Learn",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "learn-courses",
@@ -2229,7 +2988,22 @@
       ],
       "related_rows": [
         "learn-lessons"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Learn",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "learn-lesson-plans",
@@ -2266,7 +3040,22 @@
       ],
       "related_rows": [
         "legacy-learn-lesson-plan-import"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Learn",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "learn-lessons",
@@ -2302,7 +3091,22 @@
       ],
       "related_rows": [
         "learn-courses"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Learn",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "learn-online-workshops",
@@ -2338,7 +3142,22 @@
       ],
       "related_rows": [
         "learn-courses"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Learn",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "learn-tutorials",
@@ -2374,7 +3193,22 @@
       ],
       "related_rows": [
         "wordpress-tv"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Learn",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "wordpress-tv",
@@ -2409,7 +3243,12 @@
       "related_rows": [
         "contrib-tv",
         "learn-tutorials"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null
+      }
     },
     {
       "id": "release-gutenberg-whats-new",
@@ -2445,7 +3284,22 @@
       ],
       "related_rows": [
         "devhub-block-editor"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/gutenberg",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "release-dev-notes",
@@ -2481,7 +3335,13 @@
         "release-field-guides",
         "devhub-developer-blog",
         "release-core-version-pages"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "release-field-guides",
@@ -2516,7 +3376,13 @@
       "related_rows": [
         "release-dev-notes",
         "release-core-version-pages"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "release-core-version-pages",
@@ -2552,7 +3418,13 @@
         "release-dev-notes",
         "release-field-guides",
         "helphub-version-pages"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "release-download-releases",
@@ -2590,7 +3462,22 @@
         "helphub-version-pages",
         "project-roadmap",
         "project-download"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "release-news-posts",
@@ -2626,7 +3513,22 @@
       ],
       "related_rows": [
         "project-news"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-news-2021",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "helphub-version-pages",
@@ -2664,7 +3566,22 @@
       "related_rows": [
         "release-download-releases",
         "release-news-posts"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-documentation-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "policy-pattern-directory",
@@ -2700,7 +3617,22 @@
       ],
       "related_rows": [
         "machine-api-wordpress-org"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/pattern-directory",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "policy-photo-directory",
@@ -2736,7 +3668,22 @@
       ],
       "related_rows": [
         "contrib-photos"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-photo-directory",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "policy-plugins-developers",
@@ -2770,7 +3717,13 @@
       ],
       "related_rows": [
         "policy-readme-standard"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8"
+      }
     },
     {
       "id": "policy-plugin-guidelines",
@@ -2806,7 +3759,22 @@
         "machine-wporg-mcp",
         "contrib-plugins",
         "policy-foundation-trademark"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-plugin-guidelines",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "policy-readme-standard",
@@ -2844,7 +3812,22 @@
       "related_rows": [
         "policy-plugins-developers",
         "machine-wporg-mcp"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress.org",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "policy-forum-guidelines",
@@ -2881,7 +3864,22 @@
       "related_rows": [
         "support-forums",
         "contrib-support"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-support-guidelines",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "policy-theme-getting-started",
@@ -2917,7 +3915,22 @@
       ],
       "related_rows": [
         "policy-theme-review-guidelines"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-theme-directory",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "policy-theme-review-guidelines",
@@ -2950,7 +3963,22 @@
       "related_rows": [
         "contrib-themes",
         "policy-plugin-guidelines"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/theme-review-action",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "policy-translate-glossaries",
@@ -2981,7 +4009,13 @@
       "related_rows": [
         "contrib-polyglots",
         "rosetta-team-handbooks"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/html; charset=utf-8"
+      }
     },
     {
       "id": "policy-foundation-trademark",
@@ -3017,7 +4051,12 @@
       "related_rows": [
         "policy-plugin-guidelines",
         "project-license"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null
+      }
     },
     {
       "id": "project-about",
@@ -3051,7 +4090,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-accessibility",
@@ -3085,7 +4139,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-blocks",
@@ -3119,7 +4188,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-download",
@@ -3157,7 +4241,22 @@
       "related_rows": [
         "release-download-releases",
         "project-requirements"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-education",
@@ -3191,7 +4290,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-enterprise",
@@ -3225,7 +4339,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-gutenberg",
@@ -3261,7 +4390,22 @@
       ],
       "related_rows": [
         "devhub-block-editor"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-gutenberg",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-history",
@@ -3295,7 +4439,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-hosting",
@@ -3329,7 +4488,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-license",
@@ -3363,7 +4537,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-book",
@@ -3404,7 +4593,36 @@
       ],
       "related_rows": [
         "project-history"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/library",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/wp20-book",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/wporg-book",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-mobile",
@@ -3438,7 +4656,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-philosophy",
@@ -3472,7 +4705,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-playground-landing",
@@ -3505,7 +4753,29 @@
       ],
       "related_rows": [
         "devhub-playground"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-playground",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/wporg-wasm",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-privacy",
@@ -3539,7 +4809,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-requirements",
@@ -3573,7 +4858,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-roadmap",
@@ -3607,7 +4907,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-security",
@@ -3641,7 +4956,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-showcase",
@@ -3677,7 +5007,22 @@
       ],
       "related_rows": [
         "contrib-marketing"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-showcase-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-stats",
@@ -3711,7 +5056,22 @@
       "evidence": [
         "curl https://wordpress.org/wp-json/wp/v2/pages listing 2026-10-14"
       ],
-      "related_rows": []
+      "related_rows": [],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-wordcamp-central",
@@ -3743,7 +5103,21 @@
       ],
       "related_rows": [
         "contrib-community"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordcamp.org",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-news",
@@ -3779,7 +5153,22 @@
       ],
       "related_rows": [
         "release-news-posts"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-news-2021",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "project-wp-cli-landing",
@@ -3816,7 +5205,22 @@
       "related_rows": [
         "legacy-wp-cli-org-redirect",
         "devhub-cli-commands"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-main-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "legacy-core-trac-wiki",
@@ -3847,7 +5251,13 @@
       ],
       "related_rows": [
         "contrib-core"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 403,
+        "url_final": null,
+        "markdown_content_type": null
+      }
     },
     {
       "id": "legacy-developer-plugins-handbook-mirror",
@@ -3880,7 +5290,21 @@
       ],
       "related_rows": [
         "devhub-plugins"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/developer-plugins-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "legacy-documentation-end-user",
@@ -3917,7 +5341,21 @@
       ],
       "related_rows": [
         "helphub-articles"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/documentation-end-user",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "legacy-helphub-repo",
@@ -3949,7 +5387,21 @@
       ],
       "related_rows": [
         "repo-wporg-documentation-2022"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/HelpHub",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "legacy-learn-lesson-plan-import",
@@ -3983,7 +5435,28 @@
       ],
       "related_rows": [
         "learn-lesson-plans"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/wptrainingteam/wptrainingteam.github.io",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          },
+          {
+            "url": "https://github.com/WordPress/Learn",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "legacy-locale-codices",
@@ -4014,7 +5487,12 @@
       ],
       "related_rows": [
         "legacy-codex"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 403,
+        "url_final": null
+      }
     },
     {
       "id": "legacy-meta-trac-wiki",
@@ -4044,7 +5522,13 @@
       ],
       "related_rows": [
         "contrib-meta"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 403,
+        "url_final": null,
+        "markdown_content_type": null
+      }
     },
     {
       "id": "legacy-playground-docusaurus",
@@ -4077,7 +5561,21 @@
       ],
       "related_rows": [
         "devhub-playground"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-playground",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "legacy-codex",
@@ -4112,7 +5610,12 @@
       "related_rows": [
         "legacy-locale-codices",
         "helphub-articles"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 403,
+        "url_final": null
+      }
     },
     {
       "id": "legacy-wordpress-org-docs-redirect",
@@ -4143,7 +5646,12 @@
       ],
       "related_rows": [
         "legacy-codex"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 403,
+        "url_final": "https://codex.wordpress.org/"
+      }
     },
     {
       "id": "legacy-wp-cli-org-redirect",
@@ -4178,7 +5686,21 @@
         "project-wp-cli-landing",
         "devhub-cli-commands",
         "contrib-cli"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": "https://wordpress.org/cli/",
+        "repos": [
+          {
+            "url": "https://github.com/wp-cli/wp-cli.github.com",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "machine-api-wordpress-org",
@@ -4211,7 +5733,22 @@
       "related_rows": [
         "devhub-rest-api",
         "legacy-codex"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": "https://developer.wordpress.org/rest-api/",
+        "markdown_content_type": "text/html; charset=UTF-8",
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress.org",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "machine-sitemaps",
@@ -4246,7 +5783,13 @@
       ],
       "related_rows": [
         "helphub-articles"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": null
+      }
     },
     {
       "id": "machine-llms-txt",
@@ -4283,7 +5826,22 @@
       ],
       "related_rows": [
         "machine-markdown-output"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress.org",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "machine-markdown-output",
@@ -4316,7 +5874,22 @@
       ],
       "related_rows": [
         "machine-llms-txt"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "text/markdown; charset=utf-8",
+        "repos": [
+          {
+            "url": "https://github.com/dmsnell/html-to-md",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "machine-wporg-mcp",
@@ -4350,7 +5923,21 @@
       ],
       "related_rows": [
         "policy-plugin-guidelines"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 401,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress.org",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "machine-rest-docs-sites",
@@ -4380,7 +5967,13 @@
       ],
       "related_rows": [
         "devhub-cli-commands"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "markdown_content_type": "application/json; charset=UTF-8"
+      }
     },
     {
       "id": "repo-meta-svn",
@@ -4414,7 +6007,21 @@
       "related_rows": [
         "contrib-hosting",
         "machine-wporg-mcp"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress.org",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "upstream-advanced-administration",
@@ -4447,7 +6054,21 @@
       ],
       "related_rows": [
         "devhub-advanced-administration"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Advanced-administration-handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "repo-documentation-issue-tracker",
@@ -4481,7 +6102,21 @@
       "related_rows": [
         "helphub-articles",
         "devhub-themes"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Documentation-Issue-Tracker",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "upstream-gutenberg-docs",
@@ -4515,7 +6150,21 @@
       "related_rows": [
         "devhub-block-editor",
         "code-reference-gutenberg-storybook"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/gutenberg",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "repo-wporg-learn",
@@ -4548,7 +6197,21 @@
       ],
       "related_rows": [
         "learn-courses"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/Learn",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "upstream-phpdoc-parser",
@@ -4581,7 +6244,21 @@
       ],
       "related_rows": [
         "code-reference-functions"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/phpdoc-parser",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "upstream-scf",
@@ -4614,7 +6291,21 @@
       ],
       "related_rows": [
         "devhub-scf"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/secure-custom-fields",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "upstream-wordpress-develop",
@@ -4647,7 +6338,21 @@
       ],
       "related_rows": [
         "code-reference-functions"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-develop",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "upstream-playground-docs",
@@ -4681,7 +6386,21 @@
       "related_rows": [
         "devhub-playground",
         "legacy-playground-docusaurus"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wordpress-playground",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "upstream-wpcs-docs",
@@ -4714,7 +6433,21 @@
       ],
       "related_rows": [
         "devhub-coding-standards"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wpcs-docs",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "repo-wporg-developer",
@@ -4747,7 +6480,21 @@
       ],
       "related_rows": [
         "devhub-home"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-developer",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "repo-wporg-documentation-2022",
@@ -4780,7 +6527,21 @@
       ],
       "related_rows": [
         "helphub-articles"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-documentation-2022",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "repo-wporg-mu-plugins",
@@ -4813,7 +6574,21 @@
       ],
       "related_rows": [
         "devhub-home"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WordPress/wporg-mu-plugins",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "upstream-wp-api-docs",
@@ -4846,7 +6621,21 @@
       ],
       "related_rows": [
         "devhub-rest-api"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/WP-API/docs",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     },
     {
       "id": "upstream-wp-cli-handbook",
@@ -4880,7 +6669,21 @@
       "related_rows": [
         "devhub-cli-commands",
         "contrib-cli"
-      ]
+      ],
+      "probe": {
+        "checked": "2026-11-02",
+        "url_status": 200,
+        "url_final": null,
+        "repos": [
+          {
+            "url": "https://github.com/wp-cli/handbook",
+            "status": 200,
+            "archived": null,
+            "pushed_at": null,
+            "default_branch": null
+          }
+        ]
+      }
     }
   ]
 }

@@ -1,5 +1,433 @@
 # Changelog
 
+
+## 2026-11-02
+
+- **Data Liberation migration guides**
+  - url status: None -> 200
+- **HelpHub article feedback ('Was this article helpful?')**
+  - url status: None -> 200
+- **HelpHub articles (WordPress user documentation)**
+  - url status: None -> 200
+- **HelpHub landing and section pages**
+  - url status: None -> 200
+- **HelpHub media library**
+  - url status: None -> 200
+- **Rosetta locale HelpHub copies**
+  - url status: None -> 200
+- **Support forums (knowledge source)**
+  - url status: None -> 200
+- **Advanced Administration Handbook**
+  - url status: None -> 200
+- **Block Editor Handbook**
+  - url status: None -> 200
+- **Coding Standards Handbook**
+  - url status: None -> 200
+- **Common APIs Handbook**
+  - url status: None -> 200
+- **Dashicons reference**
+  - url status: None -> 200
+- **DevHub home, Code Reference landing and resource pages**
+  - url status: None -> 200
+- **Openverse developer documentation**
+  - url status: None -> 200
+- **Playground Handbook**
+  - url status: None -> 200
+- **Plugin Handbook**
+  - url status: None -> 200
+- **REST API Handbook**
+  - url status: None -> 200
+- **Secure Custom Fields Handbook**
+  - url status: None -> 200
+- **Theme Handbook**
+  - url status: None -> 200
+- **WordPress Developer Blog**
+  - url status: None -> 200
+- **WP-CLI Commands reference**
+  - url status: None -> 200
+- **Code Reference: classes**
+  - url status: None -> 200
+- **Code Reference: explanations ('More information')**
+  - url status: None -> 200
+- **Code Reference: functions**
+  - url status: None -> 200
+- **Code Reference: hooks**
+  - url status: None -> 200
+- **Code Reference: methods**
+  - url status: None -> 200
+- **Code Reference: since, package and source-file archives**
+  - url status: None -> 200
+- **Code Reference: user contributed notes**
+  - url status: None -> 200
+- **Gutenberg Storybook (component reference)**
+  - url status: None -> 200
+- **Contributor Handbook (make.wordpress.org/handbook)**
+  - url status: None -> 200
+- **Documentation Style Guide**
+  - url status: None -> 200
+- **Make Accessibility team handbook**
+  - url status: None -> 200
+- **Make AI team handbook**
+  - url status: None -> 200
+- **Make Community team handbooks (9 handbooks)**
+  - url status: None -> 200
+- **Make Core team handbook**
+  - url status: None -> 200
+- **Make Design team handbook**
+  - url status: None -> 200
+- **Make Documentation team handbook**
+  - url status: None -> 200
+- **Make Hosting team handbook**
+  - url status: None -> 200
+- **Make Marketing team handbook**
+  - url status: None -> 200
+- **Make Media Corps handbook**
+  - url status: None -> 200
+- **Make Meta team handbook**
+  - url status: None -> 200
+- **Make Mobile team handbook**
+  - url status: None -> 200
+- **Make Openverse team handbook**
+  - url status: None -> 200
+- **Make Performance team handbook**
+  - url status: None -> 200
+- **Make Photos team handbook**
+  - url status: None -> 200
+- **Make Plugins team handbook**
+  - url status: None -> 200
+- **Make Polyglots team handbook**
+  - url status: None -> 200
+- **Make Program team handbook**
+  - url status: None -> 200
+- **Make sites with empty handbooks (chat, playground, project, tide, updates)**
+  - url status: None -> 200
+- **Make Support team handbook**
+  - url status: None -> 200
+- **Make Sustainability team handbook**
+  - url status: None -> 200
+- **Make team site pages outside the handbooks**
+  - url status: None -> 200
+- **Make Test team handbook**
+  - url status: None -> 200
+- **Make Themes team handbook**
+  - url status: None -> 200
+- **Make Training team handbook**
+  - url status: None -> 200
+- **Make WordPress contributor onboarding (Find your team)**
+  - url status: None -> 200
+- **Make WordPress.tv team handbook**
+  - url status: None -> 200
+- **Rosetta locale team handbooks**
+  - url status: None -> 200
+- **WP-CLI Handbook**
+  - url status: None -> 200
+- **Learn WordPress activity kits (activity library)**
+  - url status: None -> 200
+- **Learn WordPress courses**
+  - url status: None -> 200
+- **Learn WordPress lesson plans**
+  - url status: None -> 200
+- **Learn WordPress lessons**
+  - url status: None -> 200
+- **Learn WordPress online workshops (events)**
+  - url status: None -> 200
+- **Learn WordPress tutorials (video workshops)**
+  - url status: None -> 200
+- **WordPress.tv video library**
+  - url status: None -> 200
+- **'What's new in Gutenberg' release posts**
+  - url status: None -> 200
+- **Core dev notes (make.wordpress.org/core)**
+  - url status: None -> 200
+- **Core release Field Guides**
+  - url status: None -> 200
+- **Core release pages on make/core (per-version hubs)**
+  - url status: None -> 200
+- **Release archive and per-version release pages**
+  - url status: None -> 200
+- **WordPress News release announcements**
+  - url status: None -> 200
+- **WordPress version pages (HelpHub)**
+  - url status: None -> 200
+- **Pattern Directory about and guidelines**
+  - url status: None -> 200
+- **Photo Directory guidelines and FAQ**
+  - url status: None -> 200
+- **Plugin Directory developer information**
+  - url status: None -> 200
+- **Plugin Directory guidelines**
+  - url status: None -> 200
+- **Plugin readme.txt standard and validator**
+  - url status: None -> 200
+- **Support forum guidelines and user guide**
+  - url status: None -> 200
+- **Theme Directory getting started and commercial themes info**
+  - url status: None -> 200
+- **Theme review requirements**
+  - url status: None -> 200
+- **translate.wordpress.org glossaries and locale style guides**
+  - url status: None -> 200
+- **WordPress Foundation trademark policy**
+  - url status: None -> 200
+- **About WordPress (overview, features, domains, logos, etiquette)**
+  - url status: None -> 200
+- **Accessibility statement**
+  - url status: None -> 200
+- **Blocks**
+  - url status: None -> 200
+- **Download, beta/nightly and source pages**
+  - url status: None -> 200
+- **Education, Campus Connect and WordPress Credits**
+  - url status: None -> 200
+- **Enterprise**
+  - url status: None -> 200
+- **Gutenberg project page**
+  - url status: None -> 200
+- **History**
+  - url status: None -> 200
+- **Hosting recommendations**
+  - url status: None -> 200
+- **License (GPLv2)**
+  - url status: None -> 200
+- **Milestones: The Story of WordPress (book)**
+  - url status: None -> 200
+- **Mobile apps**
+  - url status: None -> 200
+- **Philosophy**
+  - url status: None -> 200
+- **Playground landing and app**
+  - url status: None -> 200
+- **Privacy policy and data requests**
+  - url status: None -> 200
+- **Requirements**
+  - url status: None -> 200
+- **Roadmap**
+  - url status: None -> 200
+- **Security**
+  - url status: None -> 200
+- **Showcase**
+  - url status: None -> 200
+- **Stats**
+  - url status: None -> 200
+- **WordCamp Central and WordCamp sites**
+  - url status: None -> 200
+- **WordPress News blog**
+  - url status: None -> 200
+- **WP-CLI landing page**
+  - url status: None -> 200
+- **Core Trac wiki**
+  - url status: None -> 403
+- **developer-plugins-handbook (unimported GitHub mirror)**
+  - url status: None -> 200
+- **documentation-end-user (2023 HelpHub-to-GitHub repo)**
+  - url status: None -> 200
+- **HelpHub plugin repo (2016)**
+  - url status: None -> 200
+- **Legacy lesson-plan import (wptrainingteam.github.io)**
+  - url status: None -> 200
+- **Locale codices**
+  - url status: None -> 403
+- **Meta Trac wiki**
+  - url status: None -> 403
+- **Playground Docusaurus site (translations)**
+  - url status: None -> 200
+- **WordPress Codex**
+  - url status: None -> 403
+- **wordpress.org/docs/ (redirect to the Codex)**
+  - url status: None -> 403
+- **wp-cli.org (retired WP-CLI site)**
+  - url status: None -> 200
+- **api.wordpress.org endpoints**
+  - url status: None -> 200
+- **Jetpack sitemaps and robots.txt**
+  - url status: None -> 200
+- **llms.txt**
+  - url status: None -> 200
+- **Markdown output (?output_format=md / Accept: text/markdown)**
+  - url status: None -> 200
+- **WordPress.org MCP server (wporg-abilities)**
+  - url status: None -> 401
+- **WP REST API on documentation sites**
+  - url status: None -> 200
+- **WordPress.org meta SVN (wporg-markdown, handbook plugin, support-helphub, wporg-cli, wporg-abilities)**
+  - url status: None -> 200
+- **WordPress/Advanced-administration-handbook**
+  - url status: None -> 200
+- **WordPress/Documentation-Issue-Tracker**
+  - url status: None -> 200
+- **WordPress/gutenberg docs/**
+  - url status: None -> 200
+- **WordPress/Learn**
+  - url status: None -> 200
+- **WordPress/phpdoc-parser**
+  - url status: None -> 200
+- **WordPress/secure-custom-fields docs/**
+  - url status: None -> 200
+- **WordPress/wordpress-develop (inline docs)**
+  - url status: None -> 200
+- **WordPress/wordpress-playground packages/docs**
+  - url status: None -> 200
+- **WordPress/wpcs-docs**
+  - url status: None -> 200
+- **WordPress/wporg-developer**
+  - url status: None -> 200
+- **WordPress/wporg-documentation-2022**
+  - url status: None -> 200
+- **WordPress/wporg-mu-plugins**
+  - url status: None -> 200
+- **WP-API/docs**
+  - url status: None -> 200
+- **wp-cli/handbook and wp-cli command repos**
+  - url status: None -> 200
+
+Rosetta locale sites:
+
+- af (af): inactive, 14 requests  translation.contributors 15 -> 17
+- am (am): inactive, 11 requests  translation.contributors 2 -> 3
+- ar (ar): active, 14 requests  translation.contributors 191 -> 199
+- arq (arq): inactive, 11 requests  translation.contributors 1 -> 2
+- ast (ast): inactive, 11 requests  translation.contributors 9 -> 11
+- az (az): inactive, 13 requests  translation.contributors 5 -> 6
+- az-tr (az_TR): inactive, 11 requests  translation.contributors 0 -> 1
+- bal (bal): inactive, 10 requests  translation.contributors 0 -> 2
+- bcc (bcc): inactive, 11 requests  translation.contributors 5 -> 2
+- bel (bel): inactive, 11 requests  translation.contributors 24 -> 28
+- bg (bg_BG): active, 14 requests  translation.contributors 83 -> 90
+- bho (bho): inactive, 10 requests  translation.contributors 5 -> 6
+- bn (bn_BD): active, 16 requests  home.posts 4 -> 5; translation.contributors 384 -> 280
+- bn-in (bn_IN): inactive, 12 requests  translation.contributors 33 -> 37
+- br (pt_BR): active, 16 requests  home.posts 394 -> 398; team.posts 342 -> 354; translation.contributors 340 -> 358
+- bre (bre): inactive, 11 requests  translation.contributors 2 -> 3
+- bs (bs_BA): inactive, 12 requests  translation.contributors 11 -> 12
+- ca (ca): active, 14 requests  translation.contributors 83 -> 85
+- ca-valencia (ca_valencia): inactive, 12 requests  translation.contributors 4 -> 5
+- ceb (ceb): inactive, 11 requests  translation.contributors 6 -> 7
+- cl (es_CL): inactive, 12 requests  translation.contributors 183 -> 194
+- cn (zh_CN): active, 16 requests  home.posts 99 -> 125; team.posts 25 -> 31; translation.contributors 129 -> 141
+- cs (cs_CZ): active, 13 requests  translation.contributors 817 -> 863
+- cy (cy): inactive, 12 requests  translation.contributors 5 -> 6
+- da (da_DK): active, 14 requests  translation.contributors 239 -> 242
+- de (de_DE): active, 14 requests  home.posts 78 -> 79; translation.contributors 1613 -> 1597
+- de-at (de_AT): inactive, 12 requests  translation.contributors 35 -> 42
+- de-ch (de_CH): active, 12 requests  translation.contributors 50 -> 56
+- de_CH_informal (de_CH_informal): error, 4 requests  translation.contributors 50 -> 54
+- de_DE_formal (de_DE_formal): error, 4 requests  translation.contributors 420 -> 422
+- dsb (dsb): inactive, 12 requests  translation.contributors 0 -> 1
+- el (el): active, 14 requests  translation.contributors 169 -> 175
+- en-au (en_AU): inactive, 12 requests  translation.contributors 126 -> 133
+- en-ca (en_CA): inactive, 12 requests  translation.contributors 67 -> 71
+- en-gb (en_GB): inactive, 12 requests  translation.contributors 398 -> 417
+- en-nz (en_NZ): inactive, 12 requests  translation.contributors 55 -> 58
+- en-za (en_ZA): inactive, 12 requests  translation.contributors 52 -> 56
+- eo (eo): inactive, 14 requests  translation.contributors 7 -> 9
+- es (es_ES): active, 16 requests  home.posts 498 -> 502; translation.contributors 1948 -> 1996
+- es-ar (es_AR): inactive, 15 requests  translation.contributors 63 -> 69
+- es-co (es_CO): inactive, 10 requests  translation.contributors 119 -> 121
+- es-cr (es_CR): inactive, 12 requests  translation.contributors 204 -> 232
+- es-do (es_DO): inactive, 12 requests  translation.contributors 9 -> 10
+- es-ec (es_EC): inactive, 12 requests  translation.contributors 37 -> 39
+- es-gt (es_GT): inactive, 12 requests  translation.contributors 16 -> 17
+- es-hn (es_HN): inactive, 12 requests  translation.contributors 10 -> 11
+- es-mx (es_MX): inactive, 15 requests  translation.contributors 246 -> 261
+- es-pr (es_PR): inactive, 10 requests  translation.contributors 10 -> 11
+- es-uy (es_UY): inactive, 12 requests  translation.contributors 11 -> 12
+- fa (fa_IR): active, 14 requests  translation.contributors 407 -> 422
+- fa-af (fa_AF): inactive, 10 requests  translation.contributors 2 -> 3
+- fao (fo): inactive, 10 requests  translation.contributors 7 -> 6
+- fi (fi): active, 14 requests  translation.contributors 101 -> 111
+- fr (fr_FR): active, 15 requests  home.posts 88 -> 89; team.posts 303 -> 304; translation.contributors 763 -> 782
+- fr-be (fr_BE): inactive, 12 requests  translation.contributors 22 -> 23
+- fr-ca (fr_CA): inactive, 12 requests  translation.contributors 57 -> 62
+- ga (ga): inactive, 10 requests  translation.contributors 2 -> 3
+- gd (gd): inactive, 12 requests  translation.contributors 1 -> 2
+- gl (gl_ES): active, 12 requests  translation.contributors 83 -> 88
+- gu (gu): inactive, 14 requests  translation.contributors 299 -> 300
+- hat (hat): inactive, 10 requests  translation.contributors 0 -> 1
+- hau (hau): inactive, 12 requests  translation.contributors 0 -> 1
+- he (he_IL): active, 14 requests  translation.contributors 72 -> 77
+- hi (hi_IN): inactive, 14 requests  translation.contributors 173 -> 172
+- hr (hr): active, 14 requests  translation.contributors 150 -> 161
+- hsb (hsb): inactive, 12 requests  translation.contributors 0 -> 1
+- hu (hu_HU): inactive, 12 requests  translation.contributors 172 -> 230
+- hy (hy): inactive, 13 requests  translation.contributors 10 -> 11
+- ibo (ibo): inactive, 10 requests  translation.contributors 0 -> 1
+- id (id_ID): active, 14 requests  translation.contributors 75 -> 82
+- ido (ido): inactive, 10 requests  translation.contributors 0 -> 1
+- is (is_IS): inactive, 12 requests  translation.contributors 6 -> 7
+- it (it_IT): active, 16 requests  home.posts 538 -> 540; translation.contributors 1012 -> 1047
+- ja (ja): active, 16 requests  home.posts 645 -> 649; translation.contributors 935 -> 989
+- jv (jv_ID): inactive, 10 requests  translation.contributors 2 -> 3
+- ka (ka_GE): inactive, 14 requests  translation.contributors 3 -> 4
+- kin (kin): inactive, 10 requests  translation.contributors 9 -> 10
+- kir (kir): inactive, 10 requests  translation.contributors 3 -> 4
+- km (km): inactive, 12 requests  translation.contributors 3 -> 4
+- kmr (kmr): inactive, 10 requests  translation.contributors 11 -> 12
+- kn (kn): inactive, 10 requests  translation.contributors 26 -> 28
+- ko (ko_KR): active, 16 requests  translation.contributors 134 -> 103
+- ku (ckb): active, 10 requests  home.posts 0 -> 1; translation.contributors 13 -> 14; status inactive -> active
+- lo (lo): inactive, 10 requests  translation.contributors 23 -> 24
+- lt (lt_LT): inactive, 12 requests  translation.contributors 18 -> 21
+- ltz (lb_LU): inactive, 10 requests  translation.contributors 3 -> 7
+- lv (lv): inactive, 12 requests  translation.contributors 37 -> 36
+- mai (mai): inactive, 12 requests  translation.contributors 0 -> 1
+- me (me_ME): inactive, 10 requests  translation.contributors 2 -> 3
+- mg (mg_MG): inactive, 12 requests  translation.contributors 10 -> 11
+- mk (mk_MK): inactive, 12 requests  translation.contributors 17 -> 18
+- ml (ml_IN): inactive, 10 requests  translation.contributors 110 -> 106
+- mn (mn): inactive, 10 requests  translation.contributors 9 -> 10
+- mr (mr): active, 14 requests  translation.contributors 66 -> 68
+- ms (ms_MY): inactive, 12 requests  translation.contributors 20 -> 19
+- mya (my_MM): active, 12 requests  translation.contributors 7 -> 8
+- nb (nb_NO): inactive, 12 requests  translation.contributors 104 -> 106
+- ne (ne_NP): active, 12 requests  translation.contributors 75 -> 74
+- nl (nl_NL): active, 16 requests  translation.contributors 1171 -> 1277
+- nl-be (nl_BE): inactive, 12 requests  translation.contributors 147 -> 158
+- nl_NL_formal (nl_NL_formal): error, 4 requests  translation.contributors 131 -> 137
+- nn (nn_NO): inactive, 12 requests  translation.contributors 13 -> 14
+- oci (oci): inactive, 12 requests  translation.contributors 3 -> 4
+- ory (ory): inactive, 10 requests  translation.contributors 13 -> 14
+- pe (es_PE): active, 12 requests  translation.contributors 14 -> 15
+- pirate (art_xpirate): inactive, 10 requests  translation.contributors 0 -> 1
+- pl (pl_PL): active, 14 requests  home.posts 88 -> 89; translation.contributors 424 -> 427
+- ps (ps): inactive, 10 requests  translation.contributors 4 -> 5
+- pt (pt_PT): active, 14 requests  translation.contributors 96 -> 86
+- pt-ao (pt_AO): inactive, 16 requests  translation.contributors 3 -> 4
+- pt_PT_ao90 (pt_PT_ao90): error, 4 requests  translation.contributors 6 -> 7
+- ro (ro_RO): active, 14 requests  translation.contributors 272 -> 285
+- ru (ru_RU): active, 16 requests  team.posts 34 -> 35; translation.contributors 1041 -> 1054
+- si (si_LK): inactive, 10 requests  translation.contributors 4 -> 5
+- sk (sk_SK): active, 14 requests  translation.contributors 130 -> 117
+- skr (skr): inactive, 12 requests  translation.contributors 3 -> 4
+- sl (sl_SI): inactive, 12 requests  translation.contributors 26 -> 24
+- snd (snd): inactive, 16 requests  translation.contributors 1 -> 2
+- so (so_SO): inactive, 10 requests  translation.contributors 3 -> 4
+- sq (sq): inactive, 13 requests  translation.contributors 17 -> 24
+- sq-xk (sq_XK): inactive, 10 requests  translation.contributors 0 -> 1
+- sr (sr_RS): inactive, 16 requests  translation.contributors 377 -> 385
+- su (su_ID): inactive, 10 requests  translation.contributors 1 -> 2
+- sv (sv_SE): active, 14 requests  team.posts 115 -> 116; translation.contributors 289 -> 313
+- sw (sw): inactive, 13 requests  translation.contributors 26 -> 30
+- ta-lk (ta_LK): inactive, 10 requests  translation.contributors 5 -> 6
+- te (te): inactive, 12 requests  translation.contributors 4 -> 5
+- tg (tg): inactive, 10 requests  translation.contributors 26 -> 27
+- th (th): inactive, 14 requests  translation.contributors 22 -> 23
+- tl (tl): inactive, 14 requests  translation.contributors 27 -> 28
+- tr (tr_TR): inactive, 12 requests  translation.contributors 1514 -> 1645
+- tt (tt_RU): inactive, 10 requests  translation.contributors 1 -> 2
+- tuk (tuk): inactive, 10 requests  translation.contributors 1 -> 2
+- tw (zh_TW): active, 14 requests  translation.contributors 40 -> 42
+- ug (ug_CN): active, 12 requests  translation.contributors 3 -> 4
+- uk (uk): active, 14 requests  home.posts 16 -> 17; translation.contributors 195 -> 208
+- ur (ur): inactive, 14 requests  translation.contributors 70 -> 68
+- uz (uz_UZ): inactive, 12 requests  translation.contributors 8 -> 9
+- ve (es_VE): inactive, 15 requests  translation.contributors 31 -> 32
+- vi (vi): active, 16 requests  translation.contributors 83 -> 85
+- xho (xho): inactive, 12 requests  translation.contributors 0 -> 1
+- yor (yor): inactive, 14 requests  translation.contributors 3 -> 4
+- zh-hk (zh_HK): inactive, 13 requests  translation.contributors 13 -> 15
+- zh-sg (zh_SG): inactive, 10 requests  translation.contributors 3 -> 4
+- zul (zul): inactive, 10 requests  translation.contributors 0 -> 1
+
 Newest first. The weekly probe adds an entry when measurements change; people and agents add one when rows are
 added, removed, or change status, source of truth or import mechanism.
 
